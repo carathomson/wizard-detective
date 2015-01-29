@@ -5,6 +5,7 @@
  */
 package wizarddetective;
 
+import byui.cit260.wizardDetective.model.Inventory;
 import byui.cit260.wizardDetective.model.Player;
 
 /**
@@ -24,6 +25,13 @@ public class WizardDetective {
         
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
+        
+        
+        Inventory itemOne = new Inventory();
+        
+        itemOne.
     }
+        
+ 
     
 }

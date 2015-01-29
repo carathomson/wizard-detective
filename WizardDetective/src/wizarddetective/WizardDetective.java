@@ -5,6 +5,7 @@
  */
 package wizarddetective;
 
+import byui.cit260.wizardDetective.model.Game;
 import byui.cit260.wizardDetective.model.Player;
 
 /**
@@ -24,6 +25,11 @@ public class WizardDetective {
         
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
+       
+        Game gameOne = new Game();
+        
+        gameOne.setTime(9.00);
+        gameOne.setWinner("Congrats: Fred Flinstone");
     }
     
 }

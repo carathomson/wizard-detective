@@ -18,8 +18,6 @@ public class Inventory implements Serializable{
 
     public Inventory() {
     }
-
-    
     
     public String getInventoryType() {
         return inventoryType;
@@ -61,6 +59,11 @@ public class Inventory implements Serializable{
             return false;
         }
         return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Inventory{" + "inventoryType=" + inventoryType + ", quantity=" + quantity + '}';
     }
     
     

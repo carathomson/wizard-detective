@@ -27,9 +27,14 @@ public class WizardDetective {
         System.out.println(playerInfo);
         
         
-        Inventory itemOne = new Inventory();
+        Inventory inventoryType = new Inventory();
         
-        itemOne.
+        inventoryType.setInventoryType("Backpack");
+        inventoryType.setQuantity(0.00);
+        
+        String inventoryInfo = inventoryType.toString();
+        System.out.println(inventoryInfo);
+        
     }
         
  

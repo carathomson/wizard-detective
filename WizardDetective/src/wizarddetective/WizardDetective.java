@@ -1,3 +1,4 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -5,6 +6,7 @@
  */
 package wizarddetective;
 
+import byui.cit260.wizardDetective.model.Game;
 import byui.cit260.wizardDetective.model.Inventory;
 import byui.cit260.wizardDetective.model.Player;
 
@@ -34,6 +36,17 @@ public class WizardDetective {
         
         String inventoryInfo = inventoryType.toString();
         System.out.println(inventoryInfo);
+        
+        
+        Game gameOne = new Game();
+        
+        gameOne.setTime(9.00);
+        gameOne.setWinner("Congrats: Fred Flinstone");
+        
+        
+        Inventory itemOne = new Inventory();
+        
+//        itemOne.
         
     }
         

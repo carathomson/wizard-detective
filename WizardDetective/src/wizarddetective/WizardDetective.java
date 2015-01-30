@@ -5,7 +5,7 @@
  */
 package wizarddetective;
 
-import byui.cit260.wizardDetective.model.Game;
+import byui.cit260.wizardDetective.model.Inventory;
 import byui.cit260.wizardDetective.model.Player;
 
 /**
@@ -30,6 +30,13 @@ public class WizardDetective {
         
         gameOne.setTime(9.00);
         gameOne.setWinner("Congrats: Fred Flinstone");
+        
+        
+        Inventory itemOne = new Inventory();
+        
+        itemOne.
     }
+        
+ 
     
 }

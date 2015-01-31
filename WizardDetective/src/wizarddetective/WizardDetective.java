@@ -6,12 +6,16 @@
  */
 package wizarddetective;
 
+import byui.cit260.wizardDetective.model.Actor;
 import byui.cit260.wizardDetective.model.Backpack;
 import byui.cit260.wizardDetective.model.Clue;
 import byui.cit260.wizardDetective.model.Game;
 import byui.cit260.wizardDetective.model.Inventory;
+import byui.cit260.wizardDetective.model.Location;
+import byui.cit260.wizardDetective.model.Map;
 import byui.cit260.wizardDetective.model.Notebook;
 import byui.cit260.wizardDetective.model.Player;
+import byui.cit260.wizardDetective.model.Scene;
 import byui.cit260.wizardDetective.model.Tool;
 
 /**
@@ -97,7 +101,49 @@ public class WizardDetective {
         System.out.println(toolInfo);
         
         
+        //Map Instance
+        Map mapOne = new Map();
         
+        mapOne.setCoordinate(53);
+        mapOne.setLocation(456);
+        mapOne.setSize(36);
+        
+        String mapInfo = mapOne.toString();
+        System.out.println(mapInfo);
+        
+        //Location Instance
+        Location locationOne = new Location();
+        
+        locationOne.setCoordinate(45);
+        locationOne.setName(" Ballroom ");
+        locationOne.setScene(23);
+        locationOne.setVisited(63);
+        
+        String locationInfo = locationOne.toString();
+        System.out.println(locationInfo);
+        
+        //Scene Instance
+        Scene sceneOne = new Scene();
+        
+        sceneOne.setActors(3);
+        sceneOne.setClues(4);
+        sceneOne.setDescription(" Laboratory ");
+        sceneOne.setTools(5);
+        
+        String sceneInfo = sceneOne.toString();
+        System.out.println(sceneInfo);
+        
+        //Actor Instance
+        Actor actorOne = new Actor();
+        
+        actorOne.setClues(4);
+        actorOne.setConversation(" Hello, how are you? ");
+        actorOne.setDescription(" Tall, blonde, mustached ");
+        actorOne.setLocation(" Crime Scene ");
+        actorOne.setName(" Charles McScootertood ");
+        
+        String actorInfo = actorOne.toString();
+        System.out.println(actorInfo);
     }
         
  

@@ -48,11 +48,14 @@ public class WizardDetective {
         
         //Game instance
         Game gameOne = new Game();
+       
+        gameOne.setTime(78.36);
+        gameOne.setWinner(" Congrats Billy!!! ");
+        gameOne.setLoadGame(68.3);
+        gameOne.setSaveGame(79.36);
         
-        gameOne.setTime(9.00);
-        gameOne.setWinner("Congrats: Fred Flinstone");
-        
-        
+        String gameInfo = gameOne.toString();
+        System.out.println(gameInfo);
         //Notebook instance
         Notebook entryInfo = new Notebook();
         

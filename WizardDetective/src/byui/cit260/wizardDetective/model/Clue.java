@@ -14,12 +14,20 @@ import java.util.Objects;
  */
 public class Clue implements Serializable{
     
+    private String clueType;
     private String name;
     private String discription;
 
     public Clue() {
     }
-    
+
+    public String getClueType() {
+        return clueType;
+    }
+
+    public void setClueType(String clueType) {
+        this.clueType = clueType;
+    }
 
     public String getName() {
         return name;
@@ -39,9 +47,10 @@ public class Clue implements Serializable{
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 37 * hash + Objects.hashCode(this.name);
-        hash = 37 * hash + Objects.hashCode(this.discription);
+        int hash = 5;
+        hash = 71 * hash + Objects.hashCode(this.clueType);
+        hash = 71 * hash + Objects.hashCode(this.name);
+        hash = 71 * hash + Objects.hashCode(this.discription);
         return hash;
     }
 
@@ -54,6 +63,9 @@ public class Clue implements Serializable{
             return false;
         }
         final Clue other = (Clue) obj;
+        if (!Objects.equals(this.clueType, other.clueType)) {
+            return false;
+        }
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
@@ -65,8 +77,10 @@ public class Clue implements Serializable{
 
     @Override
     public String toString() {
-        return "Clue{" + "name=" + name + ", discription=" + discription + '}';
+        return "Clue{" + "clueType=" + clueType + ", name=" + name + ", discription=" + discription + '}';
     }
+    
+    
     
     
     

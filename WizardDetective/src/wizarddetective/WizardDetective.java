@@ -74,6 +74,7 @@ public class WizardDetective {
         //Clue instance
         Clue clueDetail = new Clue();
         
+        clueDetail.setClueType("Normal");
         clueDetail.setName("Blood on Floor");
         clueDetail.setDiscription("Drops of blood were found the floor outside of room 204.");
         

@@ -12,6 +12,7 @@ import byui.cit260.wizardDetective.model.Game;
 import byui.cit260.wizardDetective.model.Inventory;
 import byui.cit260.wizardDetective.model.Notebook;
 import byui.cit260.wizardDetective.model.Player;
+import byui.cit260.wizardDetective.model.Tool;
 
 /**
  *
@@ -80,6 +81,20 @@ public class WizardDetective {
         
         String clueInfo = clueDetail.toString();
         System.out.println(clueInfo);
+        
+        
+        //Tool instance
+        Tool toolDetail = new Tool();
+        
+        toolDetail.setToolName("gun");
+        toolDetail.setToolAction("Shoot");
+        toolDetail.setToolType("weapon");
+        
+        String toolInfo = toolDetail.toString();
+        System.out.println(toolInfo);
+        
+        
+        
     }
         
  

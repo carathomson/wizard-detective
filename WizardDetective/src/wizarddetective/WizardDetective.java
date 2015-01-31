@@ -7,6 +7,7 @@
 package wizarddetective;
 
 import byui.cit260.wizardDetective.model.Backpack;
+import byui.cit260.wizardDetective.model.Clue;
 import byui.cit260.wizardDetective.model.Game;
 import byui.cit260.wizardDetective.model.Inventory;
 import byui.cit260.wizardDetective.model.Notebook;
@@ -54,7 +55,7 @@ public class WizardDetective {
         //Notebook instance
         Notebook entryInfo = new Notebook();
         
-        entryInfo.setClue("Blood on floor");
+        entryInfo.setClue("Clue 2");
         entryInfo.setRequiredAmount(2);
         
         String notebookInfo = entryInfo.toString();
@@ -69,6 +70,15 @@ public class WizardDetective {
         String backpackInfo = item.toString();
         System.out.println(backpackInfo);
         
+        
+        //Clue instance
+        Clue clueDetail = new Clue();
+        
+        clueDetail.setName("Blood on Floor");
+        clueDetail.setDiscription("Drops of blood were found the floor outside of room 204.");
+        
+        String clueInfo = clueDetail.toString();
+        System.out.println(clueInfo);
     }
         
  

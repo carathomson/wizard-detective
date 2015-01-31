@@ -8,6 +8,7 @@ package wizarddetective;
 
 import byui.cit260.wizardDetective.model.Game;
 import byui.cit260.wizardDetective.model.Inventory;
+import byui.cit260.wizardDetective.model.Notebook;
 import byui.cit260.wizardDetective.model.Player;
 
 /**
@@ -20,6 +21,9 @@ public class WizardDetective {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        
+        
         Player playerOne = new Player();
         
         playerOne.setName("Fred Flinstone");
@@ -27,6 +31,7 @@ public class WizardDetective {
         
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
+        
         
         
         Inventory inventoryType = new Inventory();
@@ -38,6 +43,7 @@ public class WizardDetective {
         System.out.println(inventoryInfo);
         
         
+        
         Game gameOne = new Game();
         
         gameOne.setTime(9.00);
@@ -47,6 +53,15 @@ public class WizardDetective {
         Inventory itemOne = new Inventory();
         
 //        itemOne.
+        
+        
+        Notebook entryInfo = new Notebook();
+        
+        entryInfo.setClue("Blood on floor");
+        entryInfo.setRequiredAmount(2);
+        
+        String notebookInfo = entryInfo.toString();
+        System.out.println(notebookInfo);
         
     }
         

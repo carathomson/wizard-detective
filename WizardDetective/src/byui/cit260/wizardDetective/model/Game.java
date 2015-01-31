@@ -8,22 +8,21 @@ package byui.cit260.wizardDetective.model;
 import java.io.Serializable;
 import java.util.Objects;
 
+
 /**
  *
  * @author Lynn
  */
-public class Game implements Serializable {
-    
-    //class instance variables
-    private double time;
-    private String winner;
-    private double saveGame;
-    private double loadGame;
+public class Game implements Serializable{
+ //class instance variables
+private double time;
+private String winner;
+private double saveGame;
+private double loadGame;
 
     public Game() {
     }
-    
-    
+
 
     public double getTime() {
         return time;
@@ -55,15 +54,15 @@ public class Game implements Serializable {
 
     public void setLoadGame(double loadGame) {
         this.loadGame = loadGame;
-    } 
+    }
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 31 * hash + (int) (Double.doubleToLongBits(this.time) ^ (Double.doubleToLongBits(this.time) >>> 32));
-        hash = 31 * hash + Objects.hashCode(this.winner);
-        hash = 31 * hash + (int) (Double.doubleToLongBits(this.saveGame) ^ (Double.doubleToLongBits(this.saveGame) >>> 32));
-        hash = 31 * hash + (int) (Double.doubleToLongBits(this.loadGame) ^ (Double.doubleToLongBits(this.loadGame) >>> 32));
+        int hash = 7;
+        hash = 17 * hash + (int) (Double.doubleToLongBits(this.time) ^ (Double.doubleToLongBits(this.time) >>> 32));
+        hash = 17 * hash + Objects.hashCode(this.winner);
+        hash = 17 * hash + (int) (Double.doubleToLongBits(this.saveGame) ^ (Double.doubleToLongBits(this.saveGame) >>> 32));
+        hash = 17 * hash + (int) (Double.doubleToLongBits(this.loadGame) ^ (Double.doubleToLongBits(this.loadGame) >>> 32));
         return hash;
     }
 
@@ -71,8 +70,8 @@ public class Game implements Serializable {
     public String toString() {
         return "Game{" + "time=" + time + ", winner=" + winner + ", saveGame=" + saveGame + ", loadGame=" + loadGame + '}';
     }
-    
 
+    
     @Override
     public boolean equals(Object obj) {
         if (obj == null) {
@@ -96,7 +95,12 @@ public class Game implements Serializable {
         }
         return true;
     }
+
     
+
+
+} 
     
-    
-}
+   
+  
+

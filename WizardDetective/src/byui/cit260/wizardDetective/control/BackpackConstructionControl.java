@@ -10,5 +10,24 @@ package byui.cit260.wizardDetective.control;
  * @author carathomson
  */
 public class BackpackConstructionControl {
-    
+
+    public double calcBackpackSize(double height, double width, double depth) {
+
+        if (height > 25 || height < 1) {
+            return -1;
+        }
+
+        if (width > 20 || width < 1) {
+            return -2;
+        }
+
+        if (depth > 12 || depth < 1) {
+            return -3;
+        }
+
+        double volume = (height * width * depth);
+
+        return volume;
+
+    }
 }

@@ -18,7 +18,7 @@ public class SearchAreaControl {
         }
         
         if (speed < 25 || speed > 100) {
-            return -1;
+            return -2;
         }
             
         double distance = (speed * time / 60);

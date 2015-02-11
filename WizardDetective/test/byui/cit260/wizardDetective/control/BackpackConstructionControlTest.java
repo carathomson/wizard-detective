@@ -143,6 +143,39 @@ public class BackpackConstructionControlTest {
         
         result = instance.calcBackpackSize(height, width, depth);
         assertEquals(expResult, result, 0.001);
-                
+                        
+        
+        //test 12
+                System.out.println("testCaseTwelve");
+        height = 26.0;
+        width = 20.0;
+        depth = 12.0;
+        expResult = -1.0;
+        
+        result = instance.calcBackpackSize(height, width, depth);
+        assertEquals(expResult, result, 0.001);
+                        
+        
+        //test 13
+                System.out.println("testCaseThirteen");
+        height = 25.0;
+        width = 0.0;
+        depth = 12.0;
+        expResult = -2.0;
+        
+        result = instance.calcBackpackSize(height, width, depth);
+        assertEquals(expResult, result, 0.001);
+        
+                       
+        
+        //test 14
+                System.out.println("testCaseFourteen");
+        height = 25.0;
+        width = 20.0;
+        depth = -4.0;
+        expResult = -3.0;
+        
+        result = instance.calcBackpackSize(height, width, depth);
+        assertEquals(expResult, result, 0.001);
     }
 }

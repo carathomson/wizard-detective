@@ -103,7 +103,7 @@ public class SearchAreaControlTest {
         
         
         //test 9
-        System.out.println("testCasetwo");
+        System.out.println("testCaseNine");
         time = 6.0;
         speed = 25.0;
         

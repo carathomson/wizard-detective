@@ -11,18 +11,23 @@ package byui.cit260.wizardDetective.control;
  */
 public class PunchCodeControl {
     public double calcPunchCodeHack (double input1, double input2, double input3, double input4){
-    if (input1 < 0){
+    if (input1 < 0 || input2 <0 || input3 < 0 || input4 < 0){
         return -1;
     }
-    if (input2 < 0){
-        return -1;
+   // if inputs equal each other (can't have same number)
+    if (input1 == input2 || input1 == input3 || input1 == input4){
+        return -2;
     }
-    if (input3 < 0){
-        return -1;
+    if (input2 == input3 || input2 == input1 || input2 == input4) {
+        return -2;
     }
-    if (input4 < 0) {
-        return -1;
+    if (input3 == input2 || input3 == input1 || input3 == input4) {
+        return -2;
     }
+    if (input4 == input3 || input4 == input1 || input4 == input2) {
+        return -2;
+    }
+   //equation for the punch code
     double password =  input1 + input2 + input3 + input4;
     return password;
     

@@ -118,6 +118,210 @@ public class PunchCodeControlTest {
        result = instance.calcPunchCodeHack(input1, input2, input3, input4);
         
        assertEquals(expResult, result, 0.0001);
+       
+       /**
+         * Test Case 6
+         */
+        System.out.println("/tTest Case #6");
+        //input values
+         input1 = 10.0;
+         input2 = 10.0;
+         input3 = 9.0;
+         input4 = 8.0;
+        
+                
+       expResult = -2;//expected result
+        
+       result = instance.calcPunchCodeHack(input1, input2, input3, input4);
+        
+       assertEquals(expResult, result, 0.0001);
+       
+        /**
+         * Test Case 7
+         */
+        System.out.println("/tTest Case #7");
+        //input values
+         input1 = 10.0;
+         input2 = 8.0;
+         input3 = 10.0;
+         input4 = 4.0;
+        
+                
+       expResult = -2;//expected result
+        
+       result = instance.calcPunchCodeHack(input1, input2, input3, input4);
+        
+       assertEquals(expResult, result, 0.0001);
+       
+       /**
+         * Test Case 8
+         */
+        System.out.println("/tTest Case #8");
+        //input values
+         input1 = 10.0;
+         input2 = 8.0;
+         input3 = 4.0;
+         input4 = 10.0;
+        
+                
+       expResult = -2;//expected result
+        
+       result = instance.calcPunchCodeHack(input1, input2, input3, input4);
+        
+       assertEquals(expResult, result, 0.0001);
+       
+       /**
+         * Test Case 9
+         */
+        System.out.println("/tTest Case #9");
+        //input values
+         input1 = 8.0;
+         input2 = 8.0;
+         input3 = 10.0;
+         input4 = 4.0;
+        
+                
+       expResult = -2;//expected result
+        
+       result = instance.calcPunchCodeHack(input1, input2, input3, input4);
+        
+       assertEquals(expResult, result, 0.0001);
+       
+       /**
+         * Test Case 10
+         */
+        System.out.println("/tTest Case #10");
+        //input values
+         input1 = 3.0;
+         input2 = 8.0;
+         input3 = 8.0;
+         input4 = 4.0;
+        
+                
+       expResult = -2;//expected result
+        
+       result = instance.calcPunchCodeHack(input1, input2, input3, input4);
+        
+       assertEquals(expResult, result, 0.0001);
+       
+       /**
+         * Test Case 11
+         */
+        System.out.println("/tTest Case #11");
+        //input values
+         input1 = 5.0;
+         input2 = 8.0;
+         input3 = 10.0;
+         input4 = 8.0;
+        
+                
+       expResult = -2;//expected result
+        
+       result = instance.calcPunchCodeHack(input1, input2, input3, input4);
+        
+       assertEquals(expResult, result, 0.0001);
+       
+       /**
+         * Test Case 12
+         */
+        System.out.println("/tTest Case #12");
+        //input values
+         input1 = 10.0;
+         input2 = 8.0;
+         input3 = 10.0;
+         input4 = 4.0;
+        
+                
+       expResult = -2;//expected result
+        
+       result = instance.calcPunchCodeHack(input1, input2, input3, input4);
+        
+       assertEquals(expResult, result, 0.0001);
+       
+       /**
+         * Test Case 13
+         */
+        System.out.println("/tTest Case #13");
+        //input values
+         input1 = 8.0;
+         input2 = 10.0;
+         input3 = 10.0;
+         input4 = 4.0;
+        
+                
+       expResult = -2;//expected result
+        
+       result = instance.calcPunchCodeHack(input1, input2, input3, input4);
+        
+       assertEquals(expResult, result, 0.0001);
+       
+       /**
+         * Test Case 14
+         */
+        System.out.println("/tTest Case #14");
+        //input values
+         input1 = 4.0;
+         input2 = 8.0;
+         input3 = 10.0;
+         input4 = 10.0;
+        
+                
+       expResult = -2;//expected result
+        
+       result = instance.calcPunchCodeHack(input1, input2, input3, input4);
+        
+       assertEquals(expResult, result, 0.0001);
+       
+       /**
+         * Test Case 15
+         */
+        System.out.println("/tTest Case #15");
+        //input values
+         input1 = 4.0;
+         input2 = 8.0;
+         input3 = 10.0;
+         input4 = 4.0;
+        
+                
+       expResult = -2;//expected result
+        
+       result = instance.calcPunchCodeHack(input1, input2, input3, input4);
+        
+       assertEquals(expResult, result, 0.0001);
+       
+        /**
+         * Test Case 16
+         */
+        System.out.println("/tTest Case #16");
+        //input values
+         input1 = 5.0;
+         input2 = 4.0;
+         input3 = 10.0;
+         input4 = 4.0;
+        
+                
+       expResult = -2;//expected result
+        
+       result = instance.calcPunchCodeHack(input1, input2, input3, input4);
+        
+       assertEquals(expResult, result, 0.0001);
+       
+        /**
+         * Test Case 17
+         */
+        System.out.println("/tTest Case #17");
+        //input values
+         input1 = 5.0;
+         input2 = 8.0;
+         input3 = 4.0;
+         input4 = 4.0;
+        
+                
+       expResult = -2;//expected result
+        
+       result = instance.calcPunchCodeHack(input1, input2, input3, input4);
+        
+       assertEquals(expResult, result, 0.0001);
     }
     
 }

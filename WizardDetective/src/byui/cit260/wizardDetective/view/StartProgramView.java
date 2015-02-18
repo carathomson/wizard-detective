@@ -12,7 +12,10 @@ package byui.cit260.wizardDetective.view;
 public class StartProgramView {
     public void startProgram() {
 
+        
         this.displayBanner();
+        //prompt player to enter name and retrieve name
+        
         
 /*
 * BEGIN
@@ -54,4 +57,6 @@ public class StartProgramView {
         
         System.out.println("**************************************");
     }
+    
+    
 }

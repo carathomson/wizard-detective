@@ -5,6 +5,8 @@
  */
 package byui.cit260.wizardDetective.view;
 
+import byui.cit260.wizardDetective.control.ProgramControl;
+import byui.cit260.wizardDetective.model.Player;
 import java.util.Scanner;
 
 /**
@@ -18,6 +20,13 @@ public class StartProgramView {
         this.displayBanner();
         //prompt player to enter name and retrieve name
         String playersName = this.getPlayersName();
+        //Create and save the player object
+        Player player = ProgramControl.createPlayer(playersName);
+        //Display personalized welcome message
+        this.displayWelcomeMessage(player);
+        //Display the main view
+        MainMenuView mainMenu = new MainMenuView();
+        mainMenu.displayMenu();
         
         
 /*
@@ -87,4 +96,11 @@ public class StartProgramView {
     
     
 }
+
+    public void displayWelcomeMessage(Player player) {
+        System.out.println("\n\n===========================================");
+        System.out.println("\tWelcome to the game " + player.getName());
+        System.out.println("\tWe hope you have a lot of fun!");
+        System.out.println("===============================================");
+    }
 }

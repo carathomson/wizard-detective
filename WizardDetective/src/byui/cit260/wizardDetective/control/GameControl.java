@@ -5,10 +5,16 @@
  */
 package byui.cit260.wizardDetective.control;
 
+import byui.cit260.wizardDetective.model.Player;
+
 /**
  *
  * @author carathomson
  */
 public class GameControl {
+
+    public static void createNewGame(Player player) {
+        System.out.println("\n*** createNewGame stub function called ***");
+    }
     
 }

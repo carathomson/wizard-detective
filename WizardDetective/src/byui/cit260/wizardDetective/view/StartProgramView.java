@@ -5,6 +5,8 @@
  */
 package byui.cit260.wizardDetective.view;
 
+import java.util.Scanner;
+
 /**
  *
  * @author carathomson
@@ -15,6 +17,7 @@ public class StartProgramView {
         
         this.displayBanner();
         //prompt player to enter name and retrieve name
+        String playersName = this.getPlayersName();
         
         
 /*
@@ -57,6 +60,31 @@ public class StartProgramView {
         
         System.out.println("**************************************");
     }
+
+    public String getPlayersName() {
+       boolean valid = false; // indicates if the name has been retrieved
+       String playersName = null;
+       Scanner keyboard = new Scanner(System.in); // keyboard input stream
+       
+       while(!valid) { //while a valid name has not been retrieved
+           
+           //prompt for the players name
+           System.out.println("Enter the player's name below:");
+           
+           //get the name from the keyboard and trim off the blanks
+           playersName = keyboard.nextLine();
+           playersName = playersName.trim();
+           
+           // if the name is invalid (less than two characters in length))
+           if (playersName.length() < 2){
+               System.out.println("Invalid name - the name must not be blank");
+               continue; //repeat again
+               }
+           break; //out of the (exit) the repitition
+       }
+       
+       return playersName; // return the name
     
     
+}
 }

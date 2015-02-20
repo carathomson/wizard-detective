@@ -5,32 +5,29 @@
  */
 package byui.cit260.wizardDetective.view;
 
-import byui.cit260.wizardDetective.control.GameControl;
 import java.util.Scanner;
-import wizarddetective.WizardDetective;
 
 /**
  *
  * @author Lynn
  */
-public class MainMenuView {
-
-        private final String MENU = "\n"
+public class HelpMenuView {
+    
+    private final String HELP = "\n"
                 +"\n-----------------------------------------------------------"
-                +"\n| Main Menu                                               |"
+                +"\n| Help                                               |"
                 +"\n-----------------------------------------------------------"
-                +"\nP - Play"
-                +"\nS - Save Game"
-                +"\nL - Load Game"
-                +"\nH - Help"
+                +"\nM - How to Move"
+                +"\nC - Controls"
+                +"\nI - How to Investigate or Interrogate"
                 +"\nE - Exit"
                 +"\n-----------------------------------------------------------"
                 ;
                 
-    public void displayMenu() {
+    public void displayHelpMenu() {
         char selection = ' ';
         do {
-           System.out.println(MENU); //display the main menu
+           System.out.println(HELP); //display the main menu
            
            String input = this.getInput();//get the user selection
            selection = input.charAt(0);//get first character of a string
@@ -39,7 +36,6 @@ public class MainMenuView {
            
         }while (selection != 'E');//a selection is not "Exit"
         }
-
     public String getInput() {
         boolean valid = false; // indicates if the name has been retrieved
        String getInput = null;
@@ -48,7 +44,7 @@ public class MainMenuView {
        while(!valid) { //while a valid iput has not been retrieved
            
            //prompt for the players name
-           System.out.println("Enter the letter for the Menu Selection");
+           System.out.println("Enter the letter for the Help Selection");
            
            //get the name from the keyboard and trim off the blanks
            getInput = keyboard.nextLine();
@@ -64,53 +60,35 @@ public class MainMenuView {
        
        return getInput; // return the input
     }
-
-    private void doAction(char choice) {
+     private void doAction(char choice) {
        
         switch (choice) {
-            case 'P': // create and start new game
-                    this.startNewGame();
+            case 'M': // loads the move instructions
+                    this.helpMove();
                     break;
-            case 'S':// Saves Game
-                this.saveGame();
+            case 'C':// loads the control map
+                this.helpControls();
                 break;
-            case 'L':// Loads previously saved game
-                this.loadGame();
+            case 'I':// loads the investigate and interrogate instructions
+                this.helpInterrogate();
                 break;
-            case 'H': //pulls up help screen
-                this.displayHelpMenu();
+            case 'E': // exit to the Main Menu
                 break;
-            case 'E': // exit the program
-                return;
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;
         }
     }
 
-    private void startNewGame() {
-       // create new game
-        GameControl.createNewGame(WizardDetective.getPlayer());
-        
-        //display the game menu
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
+    private void helpMove() {
+        System.out.println("*** Help move page selected ***");
     }
 
-    private void saveGame() {
-        System.out.println("*** startSaveGame function called ***");
+    private void helpControls() {
+        System.out.println("*** Help Control map page selected ***");
     }
 
-    private void loadGame() {
-        System.out.println("*** loadGame function called ***");
-
-    
+    private void helpInterrogate() {
+        System.out.println("*** Help interrogate and investigate page selected ***");
     }
-
-    private void displayHelpMenu() {
-        HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayHelpMenu();
-    }
-    }
-    
-
+}

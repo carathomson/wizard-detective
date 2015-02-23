@@ -92,7 +92,7 @@ public class MainMenuView {
        // create new game
         GameControl.createNewGame(WizardDetective.getPlayer());
         
-        //display the game menu
+        //display the game menucar
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.displayMenu();
     }

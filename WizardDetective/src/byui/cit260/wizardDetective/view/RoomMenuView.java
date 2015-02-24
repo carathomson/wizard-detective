@@ -24,7 +24,7 @@ public class RoomMenuView {
                 +"\n-----------------------------------------------------------"
                 ;
                 
-    public void displayHelpMenu() {
+    public void displayRoomMenu() {
         char selection = ' ';
         do {
            System.out.println(ROOM); //display the main menu
@@ -92,7 +92,7 @@ public class RoomMenuView {
         System.out.println("You close your eyes, focusing on your Sight.");
     }
 
-    void displayRoomMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    
     }
-}
+    
+

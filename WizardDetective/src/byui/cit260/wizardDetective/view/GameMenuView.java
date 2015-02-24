@@ -69,7 +69,7 @@ public class GameMenuView {
                     this.seeInventory();
                     break;
             case 'N':// move Locations
-                this.displayRoomMenuView;
+                this.displayRoomMenuView();
                 break;
             case 'H': //pulls up help screen
                 this.displayHelpMenu();
@@ -87,13 +87,13 @@ public class GameMenuView {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private void DisplayRoomMenuView() {
-        RoomMenuView roomMenu = new RoomMenuView();
-        roomMenu.displayRoomMenu();
-    }
-
     private void displayHelpMenu() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void displayRoomMenuView() {
+        RoomMenuView roomMenu = new RoomMenuView();
+        roomMenu.displayRoomMenu();
     }
     
 }

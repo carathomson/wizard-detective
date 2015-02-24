@@ -91,4 +91,8 @@ public class RoomMenuView {
     private void useSight() {
         System.out.println("You close your eyes, focusing on your Sight.");
     }
+
+    void displayRoomMenu() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

@@ -53,7 +53,7 @@ public class GameMenuView {
            
            // if the selection is invalid
            if (getGameMenuInput.length() > 1 || getGameMenuInput.length() < 1){
-               System.out.println("Invalid entry must have selection");
+               System.out.println("Invalid entry must match selection");
                continue; //repeat again
                }
            break; //out of the (exit) the repitition
@@ -84,11 +84,11 @@ public class GameMenuView {
         
 
     private void seeInventory() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("*** seeInventory function called ***");
     }
 
     private void displayHelpMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("*** displayHelpMenu function called ***");
     }
 
     private void displayRoomMenuView() {

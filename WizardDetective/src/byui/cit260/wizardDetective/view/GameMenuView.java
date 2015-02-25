@@ -92,8 +92,9 @@ public class GameMenuView {
     }
 
     private void displayRoomMenuView() {
-        RoomMenuView roomMenu = new RoomMenuView();
-        roomMenu.displayRoomMenu();
+        PunchCodeView punchCode = new PunchCodeView();
+        punchCode.displayPunchCode();
+        
     }
     
 }

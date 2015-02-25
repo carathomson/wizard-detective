@@ -7,10 +7,10 @@ package byui.cit260.wizardDetective.control;
 
 /**
  *
- * @author carathomson
+ * @author Lynn
  */
 public class PunchCodeControl {
-    public double calcPunchCodeHack (double input1, double input2, double input3, double input4){
+    public static double calcPunchCodeHack (double input1, double input2, double input3, double input4){
     if (input1 < 0 || input2 <0 || input3 < 0 || input4 < 0){
         return -1;
     }
@@ -29,9 +29,14 @@ public class PunchCodeControl {
     }
    //equation for the punch code
     double password =  input1 + input2 + input3 + input4;
+    if (password != 29) {
+        return -3;
+    }
+    if (password == 29){
     return password;
     
     }
+return -4;
 }
-    
+}    
 

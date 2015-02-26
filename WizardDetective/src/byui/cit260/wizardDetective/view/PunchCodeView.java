@@ -45,13 +45,13 @@ public class PunchCodeView {
            
            double answer = PunchCodeControl.calcPunchCodeHack(value1, value2, value3, value4);
            if (answer == 29){
-               // print success message
+               System.out.println("Success!!!");// print success message
                RoomMenuView roomMenu = new RoomMenuView();
                 roomMenu.displayRoomMenu();
                return;
            }
            else {
-               // print error message
+               System.out.println("Password was incorrect, try again.");// print error message
                continue;
            }
            
@@ -72,7 +72,7 @@ public class PunchCodeView {
            getInput = getInput.trim();
            
            // if the name is invalid (less than two characters in length))
-           if (getInput.length() > 1 || getInput.length() < 1){
+           if (getInput.length() > 2 || getInput.length() < 1){
                System.out.println("Invalid entry must have selection");
                continue; //repeat again
                }

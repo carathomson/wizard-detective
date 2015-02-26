@@ -27,17 +27,6 @@ public class StartProgramView {
         //Display the main view
         MainMenuView mainMenu = new MainMenuView();
         mainMenu.displayMenu();
-        
-        
-/*
-* BEGIN
-* Display the banner screen
-* Get the players name
-* Create a new player
-* DISPLAY a customized welcome message
-* DISPLAY the main menu
-* END 
-*/
             
 
     }

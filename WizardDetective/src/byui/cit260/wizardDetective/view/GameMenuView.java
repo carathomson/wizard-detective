@@ -37,7 +37,7 @@ public class GameMenuView {
         }while (selection != 'E');//a selection is not "Exit"
         }
     
-        public String getGameMenuInput() {
+    public String getGameMenuInput() {
         boolean valid = false; // indicates if the input has been retrieved
        String getGameMenuInput = null;
        Scanner keyboard = new Scanner(System.in); // keyboard input stream
@@ -84,7 +84,8 @@ public class GameMenuView {
         
 
     private void seeInventory() {
-        System.out.println("*** seeInventory function called ***");
+        CreateBackpackView createBackpack = new CreateBackpackView();
+        createBackpack.display();
     }
 
     private void displayHelpMenu() {

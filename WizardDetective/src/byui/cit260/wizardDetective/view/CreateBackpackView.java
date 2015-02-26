@@ -33,46 +33,46 @@ public class CreateBackpackView {
                            + "\n*************************************************");
         
             System.out.println("\nHow high should your backpack be?");
-           String value = this.getInput();
-           double height = Double.parseDouble(value);
+            String value = this.getInput();
+            double height = Double.parseDouble(value);
            
-           System.out.println("\nHow wide?");
-           value = this.getInput();
-           double width = Double.parseDouble(value);
+            System.out.println("\nHow wide?");
+            value = this.getInput();
+            double width = Double.parseDouble(value);
            
-           System.out.println("\nHow deep?");
-           value = this.getInput();
-           double depth = Double.parseDouble(value);
+            System.out.println("\nHow deep?");
+            value = this.getInput();
+            double depth = Double.parseDouble(value);
            
 
-           valid = this.doAction(height, width, depth);//do action based on selection
+            valid = this.doAction(height, width, depth);//do action based on selection
            
         }while (!valid);//a selection is not "Exit"
     }
 
     public String getInput() {
         boolean valid = false; // indicates if the input has been retrieved
-       String input = null;
-       Scanner keyboard = new Scanner(System.in); // keyboard input stream
+        String input = null;
+        Scanner keyboard = new Scanner(System.in); // keyboard input stream
        
-       while(!valid) { //while a valid input has not been retrieved
+        while(!valid) { //while a valid input has not been retrieved
            
-           //prompt for menu selection
-           System.out.println("Enter value below");
+            //prompt for selection
+            System.out.println("Enter value below");
            
-           //get the selection from the keyboard and trim off the blanks
-           input = keyboard.nextLine();
-           input = input.trim();
+            //get the selection from the keyboard and trim off the blanks
+            input = keyboard.nextLine();
+            input = input.trim();
            
-           // if the selection is invalid
-           if (input.length() < 1){
+            // if the selection is invalid
+            if (input.length() < 1){
                System.out.println("Must enter a value that is not blank");
                continue; //repeat again
                }
-           break; //out of the (exit) the repitition
+            break; //out of the (exit) the repitition
        }
        
-       return input; // return the input
+        return input; // return the input
     }
 
     private boolean doAction(double height, double width, double depth) {

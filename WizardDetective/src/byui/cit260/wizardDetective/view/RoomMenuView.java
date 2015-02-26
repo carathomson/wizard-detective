@@ -17,9 +17,9 @@ public class RoomMenuView {
                 +"\n-----------------------------------------------------------"
                 +"\n| Room                                             |"
                 +"\n-----------------------------------------------------------"
-                +"\nA - How to Move"
-                +"\nB - Controls"
-                +"\nC - How to Investigate or Interrogate"
+                +"\nA - Investigate room"
+                +"\nB - Interrogate Suspect"
+                +"\nC - Use Wizards Sight"
                 +"\nE - Exit"
                 +"\n-----------------------------------------------------------"
                 ;

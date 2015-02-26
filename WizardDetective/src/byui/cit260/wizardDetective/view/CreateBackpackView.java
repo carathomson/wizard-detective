@@ -80,23 +80,17 @@ public class CreateBackpackView {
         double volume = BackpackConstructionControl.calcBackpackSize(height, width, depth);
         if (volume == -1) {
             System.out.println(
-                    "\n\n------------------"
-                       +"| Invalid height |"
-                       +"------------------");
+                    "\n\n-----------------| Invalid height |-----------------");
             return false;
         }
         else if (volume == -2) {
             System.out.println(
-                    "\n\n-----------------"
-                       +"| Invalid width |"
-                       +"-----------------");
+                    "\n\n-----------------| Invalid width |-----------------");
             return false;
         }
         else if (volume == -3) {
             System.out.println(
-                    "\n\n-----------------"
-                       +"| Invalid depth |"
-                       +"-----------------");
+                    "\n\n-----------------| Invalid depth |-----------------");
             return false;
         }
         else {

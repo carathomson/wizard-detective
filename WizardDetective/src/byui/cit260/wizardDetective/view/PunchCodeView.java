@@ -20,7 +20,7 @@ public class PunchCodeView {
                 +"\n - You reach the door to the room and find it locked."
                 +"\n - There is a keypad on the doorhandle, with instructions:"
                 +"\n - Password is four numbers who are greater than zero"
-                +"\n - and add up to 29."
+                +"\n - that don't repeat, and add up to 29."
                 +"\n-----------------------------------------------------------"
                 ;
                 

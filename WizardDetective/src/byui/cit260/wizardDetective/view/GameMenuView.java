@@ -39,10 +39,10 @@ public class GameMenuView {
     
     public String getGameMenuInput() {
         boolean valid = false; // indicates if the input has been retrieved
-       String getGameMenuInput = null;
-       Scanner keyboard = new Scanner(System.in); // keyboard input stream
+        String getGameMenuInput = null;
+        Scanner keyboard = new Scanner(System.in); // keyboard input stream
        
-       while(!valid) { //while a valid input has not been retrieved
+        while(!valid) { //while a valid input has not been retrieved
            
            //prompt for menu selection
            System.out.println("Enter the letter for the Menu Selection");

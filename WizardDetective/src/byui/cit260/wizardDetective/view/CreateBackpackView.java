@@ -47,7 +47,7 @@ public class CreateBackpackView {
 
             valid = this.doAction(height, width, depth);//do action based on selection
            
-        }while (!valid);//a selection is not "Exit"
+        }while (!valid); //a selection is not "Exit"
     }
 
     public String getInput() {

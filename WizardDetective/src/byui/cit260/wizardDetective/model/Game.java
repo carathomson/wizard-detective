@@ -20,6 +20,7 @@ private String winner;
 private double saveGame;
 private double loadGame;
 
+//DEFALT CONSTRUCTOR
     public Game() {
     }
 

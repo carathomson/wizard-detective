@@ -11,9 +11,10 @@ import java.util.Scanner;
  *
  * @author Lynn
  */
-public class GameMenuView {
+public class GameMenuView extends View{
+    public GameMenuView() {
     
-        private final String MENU = "\n"
+        super("\n"
                 +"\n-----------------------------------------------------------"
                 +"\n| Game Menu                                               |"
                 +"\n-----------------------------------------------------------"
@@ -21,49 +22,16 @@ public class GameMenuView {
                 +"\nN - Navigate"
                 +"\nH - Help"
                 +"\nE - Exit"
-                +"\n-----------------------------------------------------------"
+                +"\n-----------------------------------------------------------")
                 ;
-
-    void displayMenu() {
-       char selection = ' ';
-        do {
-           System.out.println(MENU); //display the game menu
-           
-           String input = this.getGameMenuInput();//get the user selection
-           selection = input.charAt(0);//get first character of a string
-           
-           this.doAction(selection);//do action based on selection
-           
-        }while (selection != 'E');//a selection is not "Exit"
-        }
-    
-    public String getGameMenuInput() {
-        boolean valid = false; // indicates if the input has been retrieved
-        String getGameMenuInput = null;
-        Scanner keyboard = new Scanner(System.in); // keyboard input stream
-       
-        while(!valid) { //while a valid input has not been retrieved
-           
-           //prompt for menu selection
-           System.out.println("Enter the letter for the Menu Selection");
-           
-           //get the selection from the keyboard and trim off the blanks
-           getGameMenuInput = keyboard.nextLine();
-           getGameMenuInput = getGameMenuInput.trim();
-           
-           // if the selection is invalid
-           if (getGameMenuInput.length() > 1 || getGameMenuInput.length() < 1){
-               System.out.println("Invalid entry must match selection");
-               continue; //repeat again
-               }
-           break; //out of the (exit) the repitition
-       }
-       
-       return getGameMenuInput; // return the input
     }
-
-         private void doAction(char choice) {
+    @Override
+    public boolean doAction(Object obj) {
        
+        String value = (String) obj;
+        
+        char choice = value.charAt(0);
+            
         switch (choice) {
             case 'I': // Look at inventory
                     this.seeInventory();
@@ -75,11 +43,12 @@ public class GameMenuView {
                 this.displayHelpMenu();
                 break;
             case 'E': // exit the program
-                return;
+                return true;
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;
         }
+        return true;
     }
         
 
@@ -96,6 +65,10 @@ public class GameMenuView {
         PunchCodeView punchCode = new PunchCodeView();
         punchCode.displayPunchCode();
         
+    }
+
+    void displayMenu() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

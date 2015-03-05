@@ -13,73 +13,89 @@ import java.util.Scanner;
  * @author Lynn
  */
 public class PunchCodeView {
-    private final String CODE = "\n"
-                +"\n-----------------------------------------------------------"
-                +"\n| Door Code                                             |"
-                +"\n-----------------------------------------------------------"
-                +"\n - You reach the door to the room and find it locked."
-                +"\n - There is a keypad on the doorhandle, with instructions:"
-                +"\n - Password is four numbers who are greater than zero"
-                +"\n - that don't repeat, and add up to 29."
-                +"\n-----------------------------------------------------------"
-                ;
-                
-    public void displayPunchCode() {
+
+    public PunchCodeView() {
+
+        System.out.println("\n"
+                + "\n-----------------------------------------------------------"
+                + "\n| Door Code                                             |"
+                + "\n-----------------------------------------------------------"
+                + "\n - You reach the door to the room and find it locked."
+                + "\n - There is a keypad on the doorhandle, with instructions:"
+                + "\n - Password is four numbers who are greater than zero"
+                + "\n - that don't repeat, and add up to 29."
+                + "\n-----------------------------------------------------------");
+    }
+
+    /**
+     * display code is different than abstract class
+     */
+    public void display() {
         char selection = ' ';
         do {
-           System.out.println(CODE); //display the main menu
-           
-           String input = this.getInput("Enter the first number: ");//get the user selection
-           double value1 = Double.parseDouble(input);
-           
-           input = this.getInput("Enter the second number: ");//get the user selection
-           double value2 = Double.parseDouble(input);
-           
-           input = this.getInput("Enter the third number: ");//get the user selection
-           double value3 = Double.parseDouble(input);
-           
-           input = this.getInput("Enter the fourth number: ");//get the user selection
-           double value4 = Double.parseDouble(input);
-           
-           //this.doAction(selection);//do action based on selection
-           
-           double answer = PunchCodeControl.calcPunchCodeHack(value1, value2, value3, value4);
-           if (answer == 29){
-               System.out.println("Success!!!");// print success message
-               RoomMenuView roomMenu = new RoomMenuView();
+            System.out.println(this.getPromptMessage()); //display the main menu
+
+            System.out.println("Enter the first number: ");
+
+            String input = this.getInput();//get the user selection
+            double value1 = Double.parseDouble(input);
+
+            input = this.getInput("Enter the second number: ");//get the user selection
+            double value2 = Double.parseDouble(input);
+
+            input = this.getInput("Enter the third number: ");//get the user selection
+            double value3 = Double.parseDouble(input);
+
+            input = this.getInput("Enter the fourth number: ");//get the user selection
+            double value4 = Double.parseDouble(input);
+
+            //this.doAction(selection);//do action based on selection
+            double answer = PunchCodeControl.calcPunchCodeHack(value1, value2, value3, value4);
+            if (answer == 29) {
+                System.out.println("Success!!!");// print success message
+                RoomMenuView roomMenu = new RoomMenuView();
                 roomMenu.displayRoomMenu();
-               return;
-           }
-           else {
-               System.out.println("Password was incorrect, try again.");// print error message
-               continue;
-           }
-           
-        }while (selection != 'E');//a selection is not "Exit"
-        }
-    public String getInput(String promptMsg) {
+                return;
+            } else {
+                System.out.println("Password was incorrect, try again.");// print error message
+                continue;
+            }
+
+        } while (selection != 'E');//a selection is not "Exit"
+    }
+
+    public String getInput() {
         boolean valid = false; // indicates if the name has been retrieved
-       String getInput = null;
-       Scanner keyboard = new Scanner(System.in); // keyboard input stream
-       
-       while(!valid) { //while a valid iput has not been retrieved
-           
-           //prompt for the players name
-           System.out.println(promptMsg);
-           
-           //get the name from the keyboard and trim off the blanks
-           getInput = keyboard.nextLine();
-           getInput = getInput.trim();
-           
-           // if the name is invalid (less than two characters in length))
-           if (getInput.length() > 2 || getInput.length() < 1){
-               System.out.println("Invalid entry must have selection");
-               continue; //repeat again
-               }
-           break; //out of the (exit) the repitition
-       }
-       
-       return getInput; // return the input
-}
-    
+        String getInput = null;
+        Scanner keyboard = new Scanner(System.in); // keyboard input stream
+
+        while (!valid) { //while a valid iput has not been retrieved
+
+            //get the name from the keyboard and trim off the blanks
+            getInput = keyboard.nextLine();
+            getInput = getInput.trim();
+
+            // if the name is invalid (less than two characters in length))
+            if (getInput.length() > 2 || getInput.length() < 1) {
+                System.out.println("Invalid entry must have selection");
+                continue; //repeat again
+            }
+            break; //out of the (exit) the repitition
+        }
+
+        return getInput; // return the input
+    }
+
+    void displayPunchCode() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private String getInput(String enter_the_second_number_) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private boolean getPromptMessage() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

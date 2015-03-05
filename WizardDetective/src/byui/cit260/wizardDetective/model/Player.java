@@ -49,7 +49,7 @@ public class Player implements Serializable{
     }
 
     @Override
-    public boolean equals(Object obj) {
+    public boolean equals(Player obj) {
         if (obj == null) {
             return false;
         }

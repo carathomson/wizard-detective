@@ -5,8 +5,6 @@
  */
 package byui.cit260.wizardDetective.view;
 
-import java.util.Scanner;
-
 /**
  *
  * @author Lynn

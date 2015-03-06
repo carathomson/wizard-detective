@@ -6,17 +6,8 @@
  */
 package wizarddetective;
 
-import byui.cit260.wizardDetective.model.Actor;
-import byui.cit260.wizardDetective.model.Backpack;
-import byui.cit260.wizardDetective.model.Clue;
 import byui.cit260.wizardDetective.model.Game;
-import byui.cit260.wizardDetective.model.Inventory;
-import byui.cit260.wizardDetective.model.Location;
-import byui.cit260.wizardDetective.model.Map;
-import byui.cit260.wizardDetective.model.Notebook;
 import byui.cit260.wizardDetective.model.Player;
-import byui.cit260.wizardDetective.model.Scene;
-import byui.cit260.wizardDetective.model.Tool;
 import byui.cit260.wizardDetective.view.StartProgramView;
 
 /**

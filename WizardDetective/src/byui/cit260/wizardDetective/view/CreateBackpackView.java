@@ -12,7 +12,7 @@ import java.util.Scanner;
  *
  * @author carathomson
  */
-public class CreateBackpackView {
+public class CreateBackpackView{
 
     public CreateBackpackView() {
     }

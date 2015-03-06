@@ -35,7 +35,7 @@ public class Player implements Serializable{
         this.inventory = inventory;
     }
 
-     @Override
+    @Override
     public String toString() {
         return "Player{" + "name=" + name + ", inventory=" + inventory + '}';
     }

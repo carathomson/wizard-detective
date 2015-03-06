@@ -39,17 +39,17 @@ public class Player implements Serializable{
     public String toString() {
         return "Player{" + "name=" + name + ", inventory=" + inventory + '}';
     }
-    
+
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 97 * hash + Objects.hashCode(this.name);
-        hash = 97 * hash + (int) (Double.doubleToLongBits(this.inventory) ^ (Double.doubleToLongBits(this.inventory) >>> 32));
+        hash = 29 * hash + Objects.hashCode(this.name);
+        hash = 29 * hash + (int) (Double.doubleToLongBits(this.inventory) ^ (Double.doubleToLongBits(this.inventory) >>> 32));
         return hash;
     }
 
     @Override
-    public boolean equals(Player obj) {
+    public boolean equals(Object obj) {
         if (obj == null) {
             return false;
         }
@@ -65,6 +65,8 @@ public class Player implements Serializable{
         }
         return true;
     }
+    
+    
     
     
 }

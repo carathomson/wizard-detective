@@ -63,7 +63,4 @@ public class HelpMenuView extends View {
         System.out.println("*** Help interrogate and investigate page selected ***");
     }
 
-    void displayHelpMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

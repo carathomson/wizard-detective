@@ -12,11 +12,11 @@ import java.util.Scanner;
  *
  * @author Lynn
  */
-public class PunchCodeView {
+public class PunchCodeView extends View{
 
     public PunchCodeView() {
 
-        System.out.println("\n"
+        super("\n"
                 + "\n-----------------------------------------------------------"
                 + "\n| Door Code                                             |"
                 + "\n-----------------------------------------------------------"
@@ -30,23 +30,26 @@ public class PunchCodeView {
     /**
      * display code is different than abstract class
      */
+    @Override
     public void display() {
         char selection = ' ';
         do {
             System.out.println(this.getPromptMessage()); //display the main menu
 
             System.out.println("Enter the first number: ");
-
             String input = this.getInput();//get the user selection
             double value1 = Double.parseDouble(input);
-
-            input = this.getInput("Enter the second number: ");//get the user selection
+            
+            System.out.println("Enter the second number: ");
+            input = this.getInput();//get the user selection
             double value2 = Double.parseDouble(input);
 
-            input = this.getInput("Enter the third number: ");//get the user selection
+            System.out.println("Enter the third number: ");
+            input = this.getInput();//get the user selection
             double value3 = Double.parseDouble(input);
 
-            input = this.getInput("Enter the fourth number: ");//get the user selection
+            System.out.println("Enter the fourth number: ");
+            input = this.getInput();//get the user selection
             double value4 = Double.parseDouble(input);
 
             //this.doAction(selection);//do action based on selection
@@ -54,7 +57,7 @@ public class PunchCodeView {
             if (answer == 29) {
                 System.out.println("Success!!!");// print success message
                 RoomMenuView roomMenu = new RoomMenuView();
-                roomMenu.displayRoomMenu();
+                roomMenu.display();
                 return;
             } else {
                 System.out.println("Password was incorrect, try again.");// print error message
@@ -64,6 +67,7 @@ public class PunchCodeView {
         } while (selection != 'E');//a selection is not "Exit"
     }
 
+    @Override
     public String getInput() {
         boolean valid = false; // indicates if the name has been retrieved
         String getInput = null;
@@ -86,15 +90,10 @@ public class PunchCodeView {
         return getInput; // return the input
     }
 
-    void displayPunchCode() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
-    private String getInput(String enter_the_second_number_) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
-    private boolean getPromptMessage() {
+    @Override
+    public boolean doAction(Object obj) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

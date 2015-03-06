@@ -29,16 +29,16 @@ public abstract class View implements ViewInterface {
 
     @Override
     public void display() {
-        char selection = ' ';
+         String input;
         do {
             System.out.println(this.promptMessage);//display message
 
-            String input = this.getInput();//get the user selection
-            selection = input.charAt(0);//get first character of a string
+               input = this.getInput();//get the user selection
+//            selection = input.charAt(0);//get first character of a string
 
-            this.doAction(selection);//do action based on selection
+            this.doAction(input);//do action based on selection
 
-        } while (selection != 'E');//a selection is not "Exit"
+        } while (!input.equals("E"));//a selection is not "Exit"
     }
 
     @Override
@@ -49,16 +49,13 @@ public abstract class View implements ViewInterface {
 
         while (!valid) { //while a valid input has not been retrieved
 
-            //prompt for the players name
-            System.out.println("Enter the letter for the Menu Selection");
-
             //get the name from the keyboard and trim off the blanks
             getInput = keyboard.nextLine();
             getInput = getInput.trim();
 
             // if the name is invalid (less than two characters in length))
-            if (getInput.length() > 1 || getInput.length() < 1) {
-                System.out.println("Invalid entry must have selection");
+            if (getInput.length() < 1) {
+                System.out.println("Invalid: enter a value");
                 continue; //repeat again
             }
             break; //out of the (exit) the repitition

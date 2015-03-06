@@ -45,7 +45,7 @@ public class RoomMenuView extends View {
                 break;
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
-                break;
+                return false;
         }
         return true;
     }
@@ -62,8 +62,6 @@ public class RoomMenuView extends View {
         System.out.println("You close your eyes, focusing on your Sight.");
     }
 
-    void displayRoomMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+
 
 }

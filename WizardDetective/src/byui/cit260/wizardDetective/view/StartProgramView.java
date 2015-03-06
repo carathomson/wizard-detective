@@ -59,7 +59,4 @@ public class StartProgramView extends View {
         return true;
     }
 
-    public void startProgram() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

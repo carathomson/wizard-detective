@@ -58,17 +58,17 @@ public class GameMenuView extends View{
     }
 
     private void displayHelpMenu() {
-        System.out.println("*** displayHelpMenu function called ***");
+        HelpMenuView helpMenu = new HelpMenuView();
+        helpMenu.display();
+    
     }
 
     private void displayRoomMenuView() {
         PunchCodeView punchCode = new PunchCodeView();
-        punchCode.displayPunchCode();
+        punchCode.display();
         
     }
 
-    void displayMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+
     
 }

@@ -18,10 +18,6 @@ public class CreateBackpackView extends View {
         super("");
     }
 
-    
-
-    
-
    
 
     @Override
@@ -50,6 +46,7 @@ public class CreateBackpackView extends View {
             System.out.println("\nHow deep?");
             value = this.getInput();
             double depth = Double.parseDouble(value);
+            
             double[] values = new double[3];
             values[0] = height;
             values[1] = width;

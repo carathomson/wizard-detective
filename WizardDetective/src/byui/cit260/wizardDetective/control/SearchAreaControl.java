@@ -11,13 +11,13 @@ package byui.cit260.wizardDetective.control;
  */
 public class SearchAreaControl {
     
-    public double calcSearchArea(double time, double speed){
-        
-        if (time < 3 || time > 10) {
+    public static double calcSearchArea(double speed, double time){
+
+        if (speed < 25 || speed > 100) {
             return -1;
         }
         
-        if (speed < 25 || speed > 100) {
+        if (time < 3 || time > 10) {
             return -2;
         }
             

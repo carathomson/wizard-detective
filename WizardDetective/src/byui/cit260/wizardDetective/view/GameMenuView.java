@@ -20,6 +20,7 @@ public class GameMenuView extends View{
                 +"\n-----------------------------------------------------------"
                 +"\nI - Inventory"
                 +"\nN - Navigate"
+                +"\nC - Chase Man"
                 +"\nH - Help"
                 +"\nE - Exit"
                 +"\n-----------------------------------------------------------")
@@ -39,6 +40,9 @@ public class GameMenuView extends View{
             case 'N':// move Locations
                 this.displayRoomMenuView();
                 break;
+            case 'C': // chase man
+                    this.chaseMan();
+                    break;
             case 'H': //pulls up help screen
                 this.displayHelpMenu();
                 break;
@@ -57,6 +61,11 @@ public class GameMenuView extends View{
         createBackpack.display();
     }
 
+    private void chaseMan() {
+        SearchAreaView searchArea = new SearchAreaView();
+        searchArea.display();
+    }
+    
     private void displayHelpMenu() {
         HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.display();

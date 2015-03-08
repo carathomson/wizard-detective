@@ -31,7 +31,7 @@ public class PunchCodeControlTest {
         /**
          * Test Case 1
          */
-        System.out.println("/tTest Case #1");
+        System.out.println("\tTest Case #1");
         //input values
         double input1 = 9.0;
         double input2 = 8.0;
@@ -50,7 +50,7 @@ public class PunchCodeControlTest {
          /**
          * Test Case 2
          */
-        System.out.println("/tTest Case #2");
+        System.out.println("\tTest Case #2");
         //input values
          input1 = -1.0;
          input2 = 8.0;
@@ -69,7 +69,7 @@ public class PunchCodeControlTest {
      /**
          * Test Case 3
          */
-        System.out.println("/tTest Case #3");
+        System.out.println("\tTest Case #3");
         //input values
          input1 = 9.0;
          input2 = -1.0;
@@ -87,7 +87,7 @@ public class PunchCodeControlTest {
      /**
          * Test Case 4
          */
-        System.out.println("/tTest Case #4");
+        System.out.println("\tTest Case #4");
         //input values
          input1 = 1.0;
          input2 = 8.0;
@@ -105,7 +105,7 @@ public class PunchCodeControlTest {
         /**
          * Test Case 5
          */
-        System.out.println("/tTest Case #5");
+        System.out.println("\tTest Case #5");
         //input values
          input1 = 10.0;
          input2 = 8.0;
@@ -122,7 +122,7 @@ public class PunchCodeControlTest {
        /**
          * Test Case 6
          */
-        System.out.println("/tTest Case #6");
+        System.out.println("\tTest Case #6");
         //input values
          input1 = 10.0;
          input2 = 10.0;
@@ -139,7 +139,7 @@ public class PunchCodeControlTest {
         /**
          * Test Case 7
          */
-        System.out.println("/tTest Case #7");
+        System.out.println("\tTest Case #7");
         //input values
          input1 = 10.0;
          input2 = 8.0;
@@ -156,7 +156,7 @@ public class PunchCodeControlTest {
        /**
          * Test Case 8
          */
-        System.out.println("/tTest Case #8");
+        System.out.println("\tTest Case #8");
         //input values
          input1 = 10.0;
          input2 = 8.0;
@@ -173,7 +173,7 @@ public class PunchCodeControlTest {
        /**
          * Test Case 9
          */
-        System.out.println("/tTest Case #9");
+        System.out.println("\tTest Case #9");
         //input values
          input1 = 8.0;
          input2 = 8.0;
@@ -190,7 +190,7 @@ public class PunchCodeControlTest {
        /**
          * Test Case 10
          */
-        System.out.println("/tTest Case #10");
+        System.out.println("\tTest Case #10");
         //input values
          input1 = 3.0;
          input2 = 8.0;
@@ -207,7 +207,7 @@ public class PunchCodeControlTest {
        /**
          * Test Case 11
          */
-        System.out.println("/tTest Case #11");
+        System.out.println("\tTest Case #11");
         //input values
          input1 = 5.0;
          input2 = 8.0;
@@ -224,7 +224,7 @@ public class PunchCodeControlTest {
        /**
          * Test Case 12
          */
-        System.out.println("/tTest Case #12");
+        System.out.println("\tTest Case #12");
         //input values
          input1 = 10.0;
          input2 = 8.0;
@@ -241,7 +241,7 @@ public class PunchCodeControlTest {
        /**
          * Test Case 13
          */
-        System.out.println("/tTest Case #13");
+        System.out.println("\tTest Case #13");
         //input values
          input1 = 8.0;
          input2 = 10.0;
@@ -258,7 +258,7 @@ public class PunchCodeControlTest {
        /**
          * Test Case 14
          */
-        System.out.println("/tTest Case #14");
+        System.out.println("\tTest Case #14");
         //input values
          input1 = 4.0;
          input2 = 8.0;
@@ -275,7 +275,7 @@ public class PunchCodeControlTest {
        /**
          * Test Case 15
          */
-        System.out.println("/tTest Case #15");
+        System.out.println("\tTest Case #15");
         //input values
          input1 = 4.0;
          input2 = 8.0;
@@ -292,7 +292,7 @@ public class PunchCodeControlTest {
         /**
          * Test Case 16
          */
-        System.out.println("/tTest Case #16");
+        System.out.println("\tTest Case #16");
         //input values
          input1 = 5.0;
          input2 = 4.0;
@@ -309,7 +309,7 @@ public class PunchCodeControlTest {
         /**
          * Test Case 17
          */
-        System.out.println("/tTest Case #17");
+        System.out.println("\tTest Case #17");
         //input values
          input1 = 5.0;
          input2 = 8.0;

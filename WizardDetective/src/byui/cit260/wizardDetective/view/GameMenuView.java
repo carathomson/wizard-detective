@@ -38,7 +38,7 @@ public class GameMenuView extends View{
                     this.seeInventory();
                     break;
             case 'N':// move Locations
-                this.displayRoomMenuView();
+                this.displayNavigationView();
                 break;
             case 'C': // chase man
                     this.chaseMan();
@@ -72,9 +72,9 @@ public class GameMenuView extends View{
     
     }
 
-    private void displayRoomMenuView() {
-        PunchCodeView punchCode = new PunchCodeView();
-        punchCode.display();
+    private void displayNavigationView() {
+        NavigationView navigation = new NavigationView();
+        navigation.display();
         
     }
 

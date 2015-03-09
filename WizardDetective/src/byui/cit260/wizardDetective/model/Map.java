@@ -12,15 +12,14 @@ import java.io.Serializable;
  * @author Lynn Mecham
  */
 public class Map implements Serializable {
- //class instance variables
+
+    //class instance variables
     private int size;
     private int coordinate;
     private int location;
 
     public Map() {
     }
-    
-    
 
     public int getSize() {
         return size;
@@ -59,7 +58,6 @@ public class Map implements Serializable {
     public String toString() {
         return "Map{" + "size=" + size + ", coordinate=" + coordinate + ", location=" + location + '}';
     }
-    
 
     @Override
     public boolean equals(Object obj) {
@@ -81,7 +79,5 @@ public class Map implements Serializable {
         }
         return true;
     }
-    
-    
-    
+
 }

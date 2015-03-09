@@ -11,13 +11,12 @@ import byui.cit260.wizardDetective.control.SearchAreaControl;
  *
  * @author carathomson
  */
-public class SearchAreaView extends View{
+public class SearchAreaView extends View {
 
     public SearchAreaView() {
         super("");
     }
-    
-    
+
     @Override
     public void display() {
         boolean valid = false;
@@ -31,30 +30,28 @@ public class SearchAreaView extends View{
                     + "\n have to do now is set up a search area, block"
                     + "\n roads and send the police off to find the man."
                     + "\n-------------------------------------------------");
-            
-            
+
             System.out.println("\n\n When you used your sight, what did you"
                     + "\n see as the car's top speed in the present traffic?");
             String value = this.getInput();
             double speed = Double.parseDouble(value);
-            
+
             System.out.println("\n\n From experienc you know how long the police"
                     + "\n will take to get organized and into place."
                     + "\n Please enter that time here:");
             value = this.getInput();
             double time = Double.parseDouble(value);
-            
+
             double[] values = new double[2];
-            values [0] = speed;
-            values [1] = time;
+            values[0] = speed;
+            values[1] = time;
             valid = this.doAction(values);
-            
+
         } while (!valid);
     }
-    
-    
+
     @Override
-    public boolean doAction(Object obj){
+    public boolean doAction(Object obj) {
         double[] inputValues = (double[]) obj;
         double distance = SearchAreaControl.calcSearchArea(inputValues[0], inputValues[1]);
         if (distance == -1) {
@@ -75,5 +72,5 @@ public class SearchAreaView extends View{
         }
         return true;
     }
-    
+
 }

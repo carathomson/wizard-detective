@@ -12,8 +12,8 @@ import java.util.Objects;
  *
  * @author carathomson
  */
-public class Clue implements Serializable{
-    
+public class Clue implements Serializable {
+
     private String clueType;
     private String name;
     private String discription;
@@ -79,9 +79,5 @@ public class Clue implements Serializable{
     public String toString() {
         return "Clue{" + "clueType=" + clueType + ", name=" + name + ", discription=" + discription + '}';
     }
-    
-    
-    
-    
-    
+
 }

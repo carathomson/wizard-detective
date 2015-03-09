@@ -29,11 +29,11 @@ public abstract class View implements ViewInterface {
 
     @Override
     public void display() {
-         String input;
+        String input;
         do {
             System.out.println(this.promptMessage);//display message
 
-               input = this.getInput();//get the user selection
+            input = this.getInput();//get the user selection
 //            selection = input.charAt(0);//get first character of a string
 
             this.doAction(input);//do action based on selection

@@ -12,14 +12,13 @@ import java.util.Objects;
  *
  * @author carathomson
  */
-public class Notebook implements Serializable{
+public class Notebook implements Serializable {
+
     private String clue;
     private double requiredAmount;
 
     public Notebook() {
     }
-    
-    
 
     public String getClue() {
         return clue;
@@ -67,7 +66,5 @@ public class Notebook implements Serializable{
     public String toString() {
         return "Notebook{" + "clue=" + clue + ", requiredAmount=" + requiredAmount + '}';
     }
-    
-    
-    
+
 }

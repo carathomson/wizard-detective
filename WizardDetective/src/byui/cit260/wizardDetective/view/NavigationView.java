@@ -9,9 +9,10 @@ package byui.cit260.wizardDetective.view;
  *
  * @author Mechams
  */
-public class NavigationView extends View{
-    public NavigationView(){
-    super("\n"
+public class NavigationView extends View {
+
+    public NavigationView() {
+        super("\n"
                 + "\n-----------------------------------------------------------"
                 + "\n| Navigation                                               |"
                 + "\n-----------------------------------------------------------"
@@ -22,38 +23,40 @@ public class NavigationView extends View{
                 + "\nH - Cellar"
                 + "\nB - Gymnasium"
                 + "\nE - Exit"
-                + "\n-----------------------------------------------------------");}
-     @Override
+                + "\n-----------------------------------------------------------");
+    }
+
+    @Override
     public boolean doAction(Object obj) {
-       
+
         String value = (String) obj;
-        
+
         char choice = value.charAt(0);
-            
+
         switch (choice) {
             case 'P': // Look at inventory
                 this.displayParlor();
                 break;
-                
+
             case 'C': // Look at inventory
                 this.displayCrimeSceneView();
                 break;
-                
+
             case 'K':// move Locations
                 this.displayRoomMenuView();
                 break;
-                
+
             case 'G': // chase man
                 this.displayGuestRoom();
                 break;
-                
+
             case 'H': //pulls up help screen
                 this.displayCellar();
                 break;
-                
+
             case 'B': //pulls up help screen
                 this.displayGym();
-                break;    
+                break;
             case 'E': // return to previous Menu
                 return true;
             default:
@@ -70,11 +73,11 @@ public class NavigationView extends View{
     private void displayCrimeSceneView() {
         CrimeSceneView crimeScene = new CrimeSceneView();
         crimeScene.display();
-        
+
     }
 
     private void displayRoomMenuView() {
-       PunchCodeView punchCode = new PunchCodeView();
+        PunchCodeView punchCode = new PunchCodeView();
         punchCode.display();
     }
 
@@ -82,7 +85,6 @@ public class NavigationView extends View{
         System.out.println("*** Guest Room View Selected ***");
     }
 
-    
     private void displayGym() {
         System.out.println("*** Gymnasium Display Selected ***");
     }

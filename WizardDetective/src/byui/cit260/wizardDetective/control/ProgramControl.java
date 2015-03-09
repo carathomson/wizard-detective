@@ -20,10 +20,10 @@ public class ProgramControl {
         }
         Player player = new Player();
         player.setName(name);
-        
+
         WizardDetective.setPlayer(player); // to save the player
-        
+
         return player;
     }
-    
+
 }

@@ -16,8 +16,8 @@ import byui.cit260.wizardDetective.view.StartProgramView;
  */
 public class WizardDetective {
 
-       private static Game currentGame = null;
-       private static Player player = null;
+    private static Game currentGame = null;
+    private static Player player = null;
 
     public static Game getCurrentGame() {
         return currentGame;
@@ -34,19 +34,14 @@ public class WizardDetective {
     public static void setPlayer(Player player) {
         WizardDetective.player = player;
     }
-       /**
+
+    /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.display();
-        
-        
+
     }
 
-    
-    }
-        
- 
-    
-
+}

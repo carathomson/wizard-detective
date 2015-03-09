@@ -12,7 +12,7 @@ import java.util.Scanner;
  *
  * @author Lynn
  */
-public class PunchCodeView extends View{
+public class PunchCodeView extends View {
 
     public PunchCodeView() {
 
@@ -39,7 +39,7 @@ public class PunchCodeView extends View{
             System.out.println("Enter the first number: ");
             String input = this.getInput();//get the user selection
             double value1 = Double.parseDouble(input);
-            
+
             System.out.println("Enter the second number: ");
             input = this.getInput();//get the user selection
             double value2 = Double.parseDouble(input);
@@ -89,8 +89,6 @@ public class PunchCodeView extends View{
 
         return getInput; // return the input
     }
-
-
 
     @Override
     public boolean doAction(Object obj) {

@@ -12,7 +12,8 @@ import java.util.Objects;
  *
  * @author Lynn
  */
-public class  Scene implements Serializable{
+public class Scene implements Serializable {
+
     //class instance variables
     private String description;
     private int clues;
@@ -21,8 +22,6 @@ public class  Scene implements Serializable{
 
     public Scene() {
     }
-    
-    
 
     public String getDescription() {
         return description;
@@ -70,7 +69,6 @@ public class  Scene implements Serializable{
     public String toString() {
         return "Scene{" + "description=" + description + ", clues=" + clues + ", tools=" + tools + ", actors=" + actors + '}';
     }
-    
 
     @Override
     public boolean equals(Object obj) {
@@ -95,7 +93,5 @@ public class  Scene implements Serializable{
         }
         return true;
     }
-    
-    
-    
+
 }

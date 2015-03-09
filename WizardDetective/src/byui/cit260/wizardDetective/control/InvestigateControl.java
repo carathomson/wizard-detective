@@ -10,5 +10,5 @@ package byui.cit260.wizardDetective.control;
  * @author carathomson
  */
 public class InvestigateControl {
-    
+
 }

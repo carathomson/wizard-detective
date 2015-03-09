@@ -11,38 +11,39 @@ import java.util.Scanner;
  *
  * @author Lynn
  */
-public class GameMenuView extends View{
+public class GameMenuView extends View {
+
     public GameMenuView() {
-    
+
         super("\n"
-                +"\n-----------------------------------------------------------"
-                +"\n| Game Menu                                               |"
-                +"\n-----------------------------------------------------------"
-                +"\nI - Inventory"
-                +"\nN - Navigate"
-                +"\nC - Chase Man"
-                +"\nH - Help"
-                +"\nE - Exit"
-                +"\n-----------------------------------------------------------")
-                ;
+                + "\n-----------------------------------------------------------"
+                + "\n| Game Menu                                               |"
+                + "\n-----------------------------------------------------------"
+                + "\nI - Inventory"
+                + "\nN - Navigate"
+                + "\nC - Chase Man"
+                + "\nH - Help"
+                + "\nE - Exit"
+                + "\n-----------------------------------------------------------");
     }
+
     @Override
     public boolean doAction(Object obj) {
-       
+
         String value = (String) obj;
-        
+
         char choice = value.charAt(0);
-            
+
         switch (choice) {
             case 'I': // Look at inventory
-                    this.seeInventory();
-                    break;
+                this.seeInventory();
+                break;
             case 'N':// move Locations
                 this.displayNavigationView();
                 break;
             case 'C': // chase man
-                    this.chaseMan();
-                    break;
+                this.chaseMan();
+                break;
             case 'H': //pulls up help screen
                 this.displayHelpMenu();
                 break;
@@ -54,7 +55,6 @@ public class GameMenuView extends View{
         }
         return true;
     }
-        
 
     private void seeInventory() {
         CreateBackpackView createBackpack = new CreateBackpackView();
@@ -65,19 +65,17 @@ public class GameMenuView extends View{
         SearchAreaView searchArea = new SearchAreaView();
         searchArea.display();
     }
-    
+
     private void displayHelpMenu() {
         HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.display();
-    
+
     }
 
     private void displayNavigationView() {
         NavigationView navigation = new NavigationView();
         navigation.display();
-        
+
     }
 
-
-    
 }

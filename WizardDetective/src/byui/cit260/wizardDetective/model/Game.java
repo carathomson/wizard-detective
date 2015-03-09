@@ -8,22 +8,21 @@ package byui.cit260.wizardDetective.model;
 import java.io.Serializable;
 import java.util.Objects;
 
-
 /**
  *
  * @author Lynn
  */
-public class Game implements Serializable{
- //class instance variables
-private double time;
-private String winner;
-private double saveGame;
-private double loadGame;
+public class Game implements Serializable {
+    //class instance variables
+
+    private double time;
+    private String winner;
+    private double saveGame;
+    private double loadGame;
 
 //DEFALT CONSTRUCTOR
     public Game() {
     }
-
 
     public double getTime() {
         return time;
@@ -72,7 +71,6 @@ private double loadGame;
         return "Game{" + "time=" + time + ", winner=" + winner + ", saveGame=" + saveGame + ", loadGame=" + loadGame + '}';
     }
 
-    
     @Override
     public boolean equals(Object obj) {
         if (obj == null) {
@@ -97,11 +95,4 @@ private double loadGame;
         return true;
     }
 
-    
-
-
-} 
-    
-   
-  
-
+}

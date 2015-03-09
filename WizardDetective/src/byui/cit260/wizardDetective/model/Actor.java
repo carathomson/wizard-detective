@@ -13,6 +13,7 @@ import java.util.Objects;
  * @author Lynn
  */
 public class Actor implements Serializable {
+
     //class instances
     private String location;
     private String conversation;
@@ -22,8 +23,6 @@ public class Actor implements Serializable {
 
     public Actor() {
     }
-    
-    
 
     public String getLocation() {
         return location;
@@ -80,7 +79,6 @@ public class Actor implements Serializable {
     public String toString() {
         return "Actor{" + "location=" + location + ", conversation=" + conversation + ", name=" + name + ", description=" + description + ", clues=" + clues + '}';
     }
-    
 
     @Override
     public boolean equals(Object obj) {
@@ -108,7 +106,5 @@ public class Actor implements Serializable {
         }
         return true;
     }
-    
-    
-    
+
 }

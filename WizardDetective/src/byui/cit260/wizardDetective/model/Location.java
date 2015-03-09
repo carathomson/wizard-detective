@@ -12,8 +12,8 @@ import java.util.Objects;
  *
  * @author Mechams
  */
-public class Location implements Serializable{
-    
+public class Location implements Serializable {
+
     //class Instance variables
     private int coordinate;
     private String name;
@@ -22,8 +22,6 @@ public class Location implements Serializable{
 
     public Location() {
     }
-    
-    
 
     public int getCoordinate() {
         return coordinate;
@@ -71,7 +69,6 @@ public class Location implements Serializable{
     public String toString() {
         return "Location{" + "coordinate=" + coordinate + ", name=" + name + ", visited=" + visited + ", scene=" + scene + '}';
     }
-    
 
     @Override
     public boolean equals(Object obj) {
@@ -96,8 +93,5 @@ public class Location implements Serializable{
         }
         return true;
     }
-    
-    
-    
-    
+
 }

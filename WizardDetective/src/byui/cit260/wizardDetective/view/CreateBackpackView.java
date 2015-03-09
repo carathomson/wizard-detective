@@ -18,8 +18,6 @@ public class CreateBackpackView extends View {
         super("");
     }
 
-   
-
     @Override
     public void display() {
         boolean valid = false;
@@ -46,7 +44,7 @@ public class CreateBackpackView extends View {
             System.out.println("\nHow deep?");
             value = this.getInput();
             double depth = Double.parseDouble(value);
-            
+
             double[] values = new double[3];
             values[0] = height;
             values[1] = width;
@@ -56,10 +54,8 @@ public class CreateBackpackView extends View {
         } while (!valid); //a selection is not "Exit"
     }
 
-   
-
     @Override
-    public boolean doAction(Object obj){
+    public boolean doAction(Object obj) {
         double[] inputValues = (double[]) obj;
         double volume = BackpackConstructionControl.calcBackpackSize(inputValues[0], inputValues[1], inputValues[2]);
         if (volume == -1) {
@@ -83,7 +79,5 @@ public class CreateBackpackView extends View {
         }
         return true;
     }
-
-    
 
 }

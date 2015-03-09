@@ -12,7 +12,8 @@ import java.util.Objects;
  *
  * @author carathomson
  */
-public class Player implements Serializable{
+public class Player implements Serializable {
+
     private String name;
     private double inventory;
 
@@ -65,8 +66,5 @@ public class Player implements Serializable{
         }
         return true;
     }
-    
-    
-    
-    
+
 }

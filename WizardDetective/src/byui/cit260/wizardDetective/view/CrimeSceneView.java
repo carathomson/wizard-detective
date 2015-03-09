@@ -10,23 +10,25 @@ package byui.cit260.wizardDetective.view;
  * @author Mechams
  */
 public class CrimeSceneView extends View {
-     public CrimeSceneView(){
-     super("\n"
-             + "\n-----------------------------------------------------------"
-             + "\n| Crime Scene                                             |"
-             + "\n You enter the room, the smell of blood is thick upon the  "
-             + "\n air. You see in the middle of the floor a tall man, blonde"
-             + "\n hair, lying face down on the ground a pool of blood "
-             + "\nreflecting light around him. Forensics crews are busy gathering"
-             + "\n evidence."
-             + "\n The chief is standing next to the body looking gruff as always."
-             + "\n-----------------------------------------------------------"
-             + "\nA - Investigate Crime Scene"
-             + "\nB - Talk to the Chief"
-             + "\nC - Use Wizards Sight"
-             + "\nE - Exit"
-             + "\n-----------------------------------------------------------");
-     }
+
+    public CrimeSceneView() {
+        super("\n"
+                + "\n-----------------------------------------------------------"
+                + "\n| Crime Scene                                             |"
+                + "\n You enter the room, the smell of blood is thick upon the  "
+                + "\n air. You see in the middle of the floor a tall man, blonde"
+                + "\n hair, lying face down on the ground a pool of blood "
+                + "\nreflecting light around him. Forensics crews are busy gathering"
+                + "\n evidence."
+                + "\n The chief is standing next to the body looking gruff as always."
+                + "\n-----------------------------------------------------------"
+                + "\nA - Investigate Crime Scene"
+                + "\nB - Talk to the Chief"
+                + "\nC - Use Wizards Sight"
+                + "\nE - Exit"
+                + "\n-----------------------------------------------------------");
+    }
+
     @Override
     public boolean doAction(Object obj) {
 

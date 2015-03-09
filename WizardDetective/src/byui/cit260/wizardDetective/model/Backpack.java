@@ -12,13 +12,13 @@ import java.util.Objects;
  *
  * @author carathomson
  */
-public class Backpack implements Serializable{
+public class Backpack implements Serializable {
+
     private String toolName;
 
     public Backpack() {
     }
-    
-    
+
     public String getToolName() {
         return toolName;
     }
@@ -48,8 +48,6 @@ public class Backpack implements Serializable{
         }
         return true;
     }
-    
-    
 
     @Override
     public String toString() {
@@ -60,8 +58,4 @@ public class Backpack implements Serializable{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    
-    
-    
-    
 }

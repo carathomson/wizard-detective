@@ -12,8 +12,8 @@ import java.util.Objects;
  *
  * @author carathomson
  */
-public class Tool implements Serializable{
-    
+public class Tool implements Serializable {
+
     private String toolName;
     private String toolAction;
     private String toolType;
@@ -80,8 +80,4 @@ public class Tool implements Serializable{
         return "Tool{" + "toolName=" + toolName + ", toolAction=" + toolAction + ", toolType=" + toolType + '}';
     }
 
-    
-    
-    
-    
 }

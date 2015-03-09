@@ -12,13 +12,14 @@ import java.util.Objects;
  *
  * @author carathomson
  */
-public class Inventory implements Serializable{
+public class Inventory implements Serializable {
+
     private String inventoryType;
     private double quantity;
 
     public Inventory() {
     }
-    
+
     public String getInventoryType() {
         return inventoryType;
     }
@@ -65,8 +66,5 @@ public class Inventory implements Serializable{
     public String toString() {
         return "Inventory{" + "inventoryType=" + inventoryType + ", quantity=" + quantity + '}';
     }
-    
-    
-    
-    
+
 }

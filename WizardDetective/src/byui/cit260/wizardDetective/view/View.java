@@ -55,7 +55,7 @@ public abstract class View implements ViewInterface {
 
             // if the name is invalid (less than two characters in length))
             if (getInput.length() < 1) {
-                System.out.println("Invalid: enter a value");
+                System.out.println("Invalid: must enter a value");
                 continue; //repeat again
             }
             break; //out of the (exit) the repitition

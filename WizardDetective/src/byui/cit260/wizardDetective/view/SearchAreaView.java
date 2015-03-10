@@ -14,25 +14,25 @@ import byui.cit260.wizardDetective.control.SearchAreaControl;
 public class SearchAreaView extends View {
 
     public SearchAreaView() {
-        super("");
+        super("\n\n-------------------------------------------------"
+                + "\n The suspect has fled the hotel!"
+                + "\n Through the front doors and into the parking"
+                + "\n lot. Luckly you were able to use your powers"
+                + "\n and you now know what car he is in and how"
+                + "\n fast he can go in the traffic outside. All you"
+                + "\n have to do now is set up a search area, block"
+                + "\n roads and send the police off to find the man."
+                + "\n-------------------------------------------------"
+                + "\n\n When you used your sight, what did you"
+                + "\n see as the car's top speed in the present traffic?");
     }
 
     @Override
     public void display() {
         boolean valid = false;
         do {
-            System.out.println("\n\n-------------------------------------------------"
-                    + "\n The suspect has fled the hotel!"
-                    + "\n Through the front doors and into the parking"
-                    + "\n lot. Luckly you were able to use your powers"
-                    + "\n and you now know what car he is in and how"
-                    + "\n fast he can go in the traffic outside. All you"
-                    + "\n have to do now is set up a search area, block"
-                    + "\n roads and send the police off to find the man."
-                    + "\n-------------------------------------------------");
+            System.out.println(getPromptMessage());
 
-            System.out.println("\n\n When you used your sight, what did you"
-                    + "\n see as the car's top speed in the present traffic?");
             String value = this.getInput();
             double speed = Double.parseDouble(value);
 
@@ -71,6 +71,7 @@ public class SearchAreaView extends View {
                     + "\n========================================================");
         }
         return true;
+
     }
 
 }

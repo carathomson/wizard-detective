@@ -30,7 +30,7 @@ public class HelpMenuView extends View {
 
         String value = (String) obj;
 
-        char choice = value.charAt(0);
+        char choice = value.toUpperCase().charAt(0);
 
         switch (choice) {
             case 'M': // loads the move instructions

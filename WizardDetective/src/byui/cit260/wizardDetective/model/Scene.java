@@ -29,7 +29,8 @@ public enum Scene implements Serializable {
     BoilerRoom("Hot noisy room with a lot of pipes."),
     Cellar("Big storage room full of food."),
     WineRoom("Cold room with wine on shelves."),
-    SafeRoom("Hidden room behind one of the shelves in the wine room.");
+    SafeRoom("Hidden room behind one of the shelves in the wine room."),
+    Janitor("Where the cleaning supplies and the Janitorys office is");
 
     //class instance variables
     private final String description;

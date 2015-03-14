@@ -6,6 +6,7 @@
 package byui.cit260.wizardDetective.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -13,9 +14,10 @@ import java.util.Objects;
  * @author carathomson
  */
 public class Backpack implements Serializable {
-
+    
     private String toolName;
-
+    private ArrayList <Tool> tools = new ArrayList();
+    
     public Backpack() {
     }
 
@@ -27,6 +29,16 @@ public class Backpack implements Serializable {
         this.toolName = toolName;
     }
 
+    public ArrayList<Tool> getTools() {
+        return tools;
+    }
+
+    public void setTools(ArrayList<Tool> tools) {
+        this.tools = tools;
+    }
+
+    
+    
     @Override
     public int hashCode() {
         int hash = 7;
@@ -54,8 +66,5 @@ public class Backpack implements Serializable {
         return "Backpack{" + "toolName=" + toolName + '}';
     }
 
-    public void setTool(String gun) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
 }

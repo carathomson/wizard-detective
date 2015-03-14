@@ -12,86 +12,87 @@ import java.util.Objects;
  *
  * @author Lynn
  */
-public class Scene implements Serializable {
+public enum Scene implements Serializable {
+    Bathroom("Presidential suite bathroom. Lavish furnishings."),
+    LivingRoom("Presidential suite room."),
+    CrimeScene("Steve's bedroom. He is laying on his bed dead."),
+    PresKitchen("Very nice kitchen."),
+    Balcony("Overlooks the city."),
+    GuestRoom("Generic hotel room."),
+    Parlor("Main entrance of the hotel."),
+    FrontDesk("This is where you check in."),
+    Office("This is where the Matrede organizes everything."),
+    Kitchen("The main kitchen for the hotel."),
+    Gym("Big room with lots of exercize equipment."),
+    Laundry("Lots of noisy machines and clothes in bins."),
+    Garage("Your basic parking lot full of expensive cars."),
+    BoilerRoom("Hot noisy room with a lot of pipes."),
+    Cellar("Big storage room full of food."),
+    WineRoom("Cold room with wine on shelves."),
+    SafeRoom("Hidden room behind one of the shelves in the wine room.");
 
     //class instance variables
-    private String description;
-    private int clues;
-    private int tools;
-    private int actors;
+    private final String description;
+    private final Clue[] clues;
+    private final Tool[] tools;
+    private final Actor[] actors;
+    
+    private Location[] location;
+    private Actor[] actor;
+    private Inventory[] inventory;
 
-    public Scene() {
+    Scene(String description) {
+        this.description = description;
+        this.clues = new Clue[6];
+        this.actors = new Actor[11];
+        this.tools = new Tool[6];
     }
+
+    public Location[] getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location[] location) {
+        this.location = location;
+    }
+
+    public Actor[] getActor() {
+        return actor;
+    }
+
+    public void setActor(Actor[] actor) {
+        this.actor = actor;
+    }
+
+    public Inventory[] getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(Inventory[] inventory) {
+        this.inventory = inventory;
+    }
+    
+    
 
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public int getClues() {
+    public Clue[] getClues() {
         return clues;
     }
 
-    public void setClues(int clues) {
-        this.clues = clues;
-    }
-
-    public int getTools() {
+    public Tool[] getTools() {
         return tools;
-    }
-
-    public void setTools(int tools) {
-        this.tools = tools;
-    }
-
-    public int getActors() {
+}
+    
+    public Actor[] getActors() {
         return actors;
-    }
-
-    public void setActors(int actors) {
-        this.actors = actors;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 23 * hash + Objects.hashCode(this.description);
-        hash = 23 * hash + this.clues;
-        hash = 23 * hash + this.tools;
-        hash = 23 * hash + this.actors;
-        return hash;
     }
 
     @Override
     public String toString() {
         return "Scene{" + "description=" + description + ", clues=" + clues + ", tools=" + tools + ", actors=" + actors + '}';
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Scene other = (Scene) obj;
-        if (!Objects.equals(this.description, other.description)) {
-            return false;
-        }
-        if (this.clues != other.clues) {
-            return false;
-        }
-        if (this.tools != other.tools) {
-            return false;
-        }
-        if (this.actors != other.actors) {
-            return false;
-        }
-        return true;
     }
 
 }

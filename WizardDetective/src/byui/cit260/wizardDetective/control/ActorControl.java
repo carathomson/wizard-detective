@@ -5,10 +5,16 @@
  */
 package byui.cit260.wizardDetective.control;
 
+import byui.cit260.wizardDetective.model.Actor;
+
 /**
  *
  * @author carathomson
  */
 public class ActorControl {
+
+    static Actor[] createActor() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 }

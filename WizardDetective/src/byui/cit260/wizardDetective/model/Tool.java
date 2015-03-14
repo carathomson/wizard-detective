@@ -12,72 +12,33 @@ import java.util.Objects;
  *
  * @author carathomson
  */
-public class Tool implements Serializable {
+public enum Tool implements Serializable {
+    
+    //description
+    Flashlight("allows exploration of celler and wine room"),
+    Keys("unlocks doors"),
+    Gun("shoots stuff"),
+    Rope("has many different functions - tie, fast desent, etc..."),
+    Cuffs("restrains criminals"),
+    Radio("communicate with Chief and Tim");
 
-    private String toolName;
-    private String toolAction;
-    private String toolType;
+    //class instance variables
+    private final String toolAction;
 
-    public Tool() {
-    }
-
-    public String getToolName() {
-        return toolName;
-    }
-
-    public void setToolName(String toolName) {
-        this.toolName = toolName;
+    Tool(String toolAction) {
+        this.toolAction = toolAction;
     }
 
     public String getToolAction() {
         return toolAction;
     }
 
-    public void setToolAction(String toolAction) {
-        this.toolAction = toolAction;
-    }
-
-    public String getToolType() {
-        return toolType;
-    }
-
-    public void setToolType(String toolType) {
-        this.toolType = toolType;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 53 * hash + Objects.hashCode(this.toolName);
-        hash = 53 * hash + Objects.hashCode(this.toolAction);
-        hash = 53 * hash + Objects.hashCode(this.toolType);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Tool other = (Tool) obj;
-        if (!Objects.equals(this.toolName, other.toolName)) {
-            return false;
-        }
-        if (!Objects.equals(this.toolAction, other.toolAction)) {
-            return false;
-        }
-        if (!Objects.equals(this.toolType, other.toolType)) {
-            return false;
-        }
-        return true;
-    }
-
     @Override
     public String toString() {
-        return "Tool{" + "toolName=" + toolName + ", toolAction=" + toolAction + ", toolType=" + toolType + '}';
+        return "Tool{" + "toolAction=" + toolAction + '}';
     }
+
+
+
 
 }

@@ -6,6 +6,7 @@
 package byui.cit260.wizardDetective.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -14,18 +15,10 @@ import java.util.Objects;
  */
 public class Notebook implements Serializable {
 
-    private String clue;
     private double requiredAmount;
+    private ArrayList <Clue> clues = new ArrayList();
 
     public Notebook() {
-    }
-
-    public String getClue() {
-        return clue;
-    }
-
-    public void setClue(String clue) {
-        this.clue = clue;
     }
 
     public double getRequiredAmount() {
@@ -36,11 +29,18 @@ public class Notebook implements Serializable {
         this.requiredAmount = requiredAmount;
     }
 
+    public ArrayList<Clue> getClues() {
+        return clues;
+    }
+
+    public void setClues(ArrayList<Clue> clues) {
+        this.clues = clues;
+    }
+
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 83 * hash + Objects.hashCode(this.clue);
-        hash = 83 * hash + (int) (Double.doubleToLongBits(this.requiredAmount) ^ (Double.doubleToLongBits(this.requiredAmount) >>> 32));
+        hash = 37 * hash + (int) (Double.doubleToLongBits(this.requiredAmount) ^ (Double.doubleToLongBits(this.requiredAmount) >>> 32));
         return hash;
     }
 
@@ -53,9 +53,6 @@ public class Notebook implements Serializable {
             return false;
         }
         final Notebook other = (Notebook) obj;
-        if (!Objects.equals(this.clue, other.clue)) {
-            return false;
-        }
         if (Double.doubleToLongBits(this.requiredAmount) != Double.doubleToLongBits(other.requiredAmount)) {
             return false;
         }
@@ -64,7 +61,10 @@ public class Notebook implements Serializable {
 
     @Override
     public String toString() {
-        return "Notebook{" + "clue=" + clue + ", requiredAmount=" + requiredAmount + '}';
+        return "Notebook{" + "requiredAmount=" + requiredAmount + ", clues=" + clues + '}';
     }
+
+    
+
 
 }

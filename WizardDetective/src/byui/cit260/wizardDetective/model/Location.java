@@ -18,7 +18,10 @@ public class Location implements Serializable {
     private int coordinate;
     private String name;
     private int visited;
-    private int scene;
+    private Scene scene;
+    
+    private Inventory[] inventory;
+    
 
     public Location() {
     }
@@ -47,51 +50,28 @@ public class Location implements Serializable {
         this.visited = visited;
     }
 
-    public int getScene() {
+    public Scene getScene() {
         return scene;
     }
 
-    public void setScene(int scene) {
+    public void setScene(Scene scene) {
         this.scene = scene;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 23 * hash + this.coordinate;
-        hash = 23 * hash + Objects.hashCode(this.name);
-        hash = 23 * hash + this.visited;
-        hash = 23 * hash + this.scene;
-        return hash;
+    public Inventory[] getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(Inventory[] inventory) {
+        this.inventory = inventory;
     }
 
     @Override
     public String toString() {
-        return "Location{" + "coordinate=" + coordinate + ", name=" + name + ", visited=" + visited + ", scene=" + scene + '}';
+        return "Location{" + "coordinate=" + coordinate + ", name=" + name + ", visited=" + visited + ", scene=" + scene + ", inventory=" + inventory + '}';
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Location other = (Location) obj;
-        if (this.coordinate != other.coordinate) {
-            return false;
-        }
-        if (!Objects.equals(this.name, other.name)) {
-            return false;
-        }
-        if (this.visited != other.visited) {
-            return false;
-        }
-        if (this.scene != other.scene) {
-            return false;
-        }
-        return true;
-    }
+
+
 
 }

@@ -16,10 +16,58 @@ public class Inventory implements Serializable {
 
     private String inventoryType;
     private double quantity;
+    
+    private Player player;
+    private Location location;
+    private Scene scene;
+    private Actor[] actor;
+    private Game game;
 
     public Inventory() {
     }
 
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+
+    public Scene getScene() {
+        return scene;
+    }
+
+    public void setScene(Scene scene) {
+        this.scene = scene;
+    }
+
+    public Actor[] getActor() {
+        return actor;
+    }
+
+    public void setActor(Actor[] actor) {
+        this.actor = actor;
+    }
+
+    public Game getGame() {
+        return game;
+    }
+
+    public void setGame(Game game) {
+        this.game = game;
+    }
+
+    
+    
     public String getInventoryType() {
         return inventoryType;
     }

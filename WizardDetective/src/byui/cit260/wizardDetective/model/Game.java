@@ -19,10 +19,58 @@ public class Game implements Serializable {
     private String winner;
     private double saveGame;
     private double loadGame;
+    
+    private Player player;
+    private Backpack backpack;
+    private Notebook notebook;
+    private Actor[] actor;
+    private Map map;
 
 //DEFALT CONSTRUCTOR
     public Game() {
     }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
+    public Backpack getBackpack() {
+        return backpack;
+    }
+
+    public void setBackpack(Backpack backpack) {
+        this.backpack = backpack;
+    }
+
+    public Notebook getNotebook() {
+        return notebook;
+    }
+
+    public void setNotebook(Notebook notebook) {
+        this.notebook = notebook;
+    }
+
+    public Actor[] getActor() {
+        return actor;
+    }
+
+    public void setActor(Actor[] actor) {
+        this.actor = actor;
+    }
+
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
+    }
+    
+    
 
     public double getTime() {
         return time;
@@ -93,6 +141,10 @@ public class Game implements Serializable {
             return false;
         }
         return true;
+    }
+
+    public void setTool(Tool[] toolList) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

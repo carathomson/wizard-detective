@@ -5,6 +5,10 @@
  */
 package byui.cit260.wizardDetective.control;
 
+import byui.cit260.wizardDetective.model.Backpack;
+import byui.cit260.wizardDetective.model.Tool;
+import java.util.ArrayList;
+
 /**
  *
  * @author carathomson
@@ -29,5 +33,15 @@ public class BackpackConstructionControl {
 
         return volume;
 
+    }
+    
+    public static Backpack createBackpack() {
+        Backpack backpack = new Backpack();
+         
+        ArrayList <Tool> tools = backpack.getTools();
+            tools.add(Tool.Radio);
+            tools.add(Tool.Gun);
+            tools.add(Tool.Cuffs);
+        return backpack;        
     }
 }

@@ -5,6 +5,7 @@
  */
 package byui.cit260.wizardDetective.model;
 
+import java.awt.Point;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -12,99 +13,74 @@ import java.util.Objects;
  *
  * @author Lynn
  */
-public class Actor implements Serializable {
+public enum Actor implements Serializable {
+    
+    //descriptions
+    Chief("chief of police. Head of investigation"),
+    Witness("maid who dicovered the body."),
+    Janitor("older gentleman who knows everything about the building."),
+    Matrede("head of staff who organizes everything."),
+    Bellboy("young kid who helps with the bags and does the odd jobs."),
+    Tim("other detective on the case."),
+    Bob("hotel owner"),
+    Cook("Robust wooman in kitchen"),
+    Coach("Fit man who teaches in the gym"),
+    Maid("lady who has worked here for a few weeks cleaning rooms."),
+    Steve("victim");
 
     //class instances
-    private String location;
-    private String conversation;
-    private String name;
-    private String description;
-    private int clues;
+    private final Point location;
+    private final String[] conversation;
+    private final String description;
+    private final Clue[] clues;
+    
+    private Game game;
+    private Scene[] scene;
+    private Inventory inventory;
 
-    public Actor() {
+    Actor(String description) {
+        this.description = description;
+        location = new Point(1,1);
+        this.conversation = new String[4];
+        this.clues = new Clue[6];
+        
     }
 
-    public String getLocation() {
+    public Game getGame() {
+        return game;
+    }
+
+    public Scene[] getScene() {
+        return scene;
+    }
+
+    public Inventory getInventory() {
+        return inventory;
+    }
+
+    public Point getLocation() {
         return location;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
-    public String getConversation() {
+    public String[] getConversation() {
         return conversation;
     }
 
-    public void setConversation(String conversation) {
-        this.conversation = conversation;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public int getClues() {
+    public Clue[] getClues() {
         return clues;
     }
 
-    public void setClues(int clues) {
-        this.clues = clues;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 71 * hash + Objects.hashCode(this.location);
-        hash = 71 * hash + Objects.hashCode(this.conversation);
-        hash = 71 * hash + Objects.hashCode(this.name);
-        hash = 71 * hash + Objects.hashCode(this.description);
-        hash = 71 * hash + this.clues;
-        return hash;
-    }
+  
 
     @Override
     public String toString() {
-        return "Actor{" + "location=" + location + ", conversation=" + conversation + ", name=" + name + ", description=" + description + ", clues=" + clues + '}';
+        return "Actor{" + "location=" + location + ", conversation=" + conversation + ", description=" + description + ", clues=" + clues + '}';
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Actor other = (Actor) obj;
-        if (!Objects.equals(this.location, other.location)) {
-            return false;
-        }
-        if (!Objects.equals(this.conversation, other.conversation)) {
-            return false;
-        }
-        if (!Objects.equals(this.name, other.name)) {
-            return false;
-        }
-        if (!Objects.equals(this.description, other.description)) {
-            return false;
-        }
-        if (this.clues != other.clues) {
-            return false;
-        }
-        return true;
-    }
 
 }

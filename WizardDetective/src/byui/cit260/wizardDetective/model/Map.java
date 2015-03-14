@@ -14,70 +14,51 @@ import java.io.Serializable;
 public class Map implements Serializable {
 
     //class instance variables
-    private int size;
-    private int coordinate;
-    private int location;
+    private int rows;
+    private int columns;
+    
+    private Game game;
+    private Location[] [] locations = new Location[5] [5];
 
     public Map() {
     }
 
-    public int getSize() {
-        return size;
+    public Game getGame() {
+        return game;
     }
 
-    public void setSize(int size) {
-        this.size = size;
+    public void setGame(Game game) {
+        this.game = game;
     }
 
-    public int getCoordinate() {
-        return coordinate;
+    public int getRows() {
+        return rows;
     }
 
-    public void setCoordinate(int coordinate) {
-        this.coordinate = coordinate;
+    public void setRows(int rows) {
+        this.rows = rows;
     }
 
-    public int getLocation() {
-        return location;
+    public int getColumns() {
+        return columns;
     }
 
-    public void setLocation(int location) {
-        this.location = location;
+    public void setColumns(int columns) {
+        this.columns = columns;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 83 * hash + this.size;
-        hash = 83 * hash + this.coordinate;
-        hash = 83 * hash + this.location;
-        return hash;
+    public Location[][] getLocations() {
+        return locations;
+    }
+
+    public void setLocations(Location[][] locations) {
+        this.locations = locations;
     }
 
     @Override
     public String toString() {
-        return "Map{" + "size=" + size + ", coordinate=" + coordinate + ", location=" + location + '}';
+        return "Map{" + "rows=" + rows + ", columns=" + columns + ", game=" + game + ", locations=" + locations + '}';
     }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Map other = (Map) obj;
-        if (this.size != other.size) {
-            return false;
-        }
-        if (this.coordinate != other.coordinate) {
-            return false;
-        }
-        if (this.location != other.location) {
-            return false;
-        }
-        return true;
-    }
+    
 
 }

@@ -5,7 +5,15 @@
  */
 package byui.cit260.wizardDetective.control;
 
+import byui.cit260.wizardDetective.model.Actor;
+import byui.cit260.wizardDetective.model.Backpack;
+import byui.cit260.wizardDetective.model.Game;
+import byui.cit260.wizardDetective.model.Inventory;
+import byui.cit260.wizardDetective.model.Map;
+import byui.cit260.wizardDetective.model.Notebook;
 import byui.cit260.wizardDetective.model.Player;
+import byui.cit260.wizardDetective.model.Tool;
+import wizarddetective.WizardDetective;
 
 /**
  *
@@ -14,7 +22,29 @@ import byui.cit260.wizardDetective.model.Player;
 public class GameControl {
 
     public static void createNewGame(Player player) {
-        System.out.println("\n*** createNewGame stub function called ***");
+        Game game = new Game(); //create new game
+        WizardDetective.setCurrentGame(game); //save in wizard Detective
+        
+        game.setPlayer(player); //save player in game
+        
+        //create the inventory list and save in the game
+        Backpack backpack = BackpackConstructionControl.createBackpack();
+        game.setBackpack(backpack);
+        
+        Notebook notebook = new Notebook();
+        notebook.setRequiredAmount(6);
+        game.setNotebook(notebook);
+        
+        Map map = MapControl.createMap(); //create and initialize new map
+        game.setMap(map); 
+        
+        //move actors to starting position in the map
+        MapControl.moveActorsToStartingLocation(map);
+        
+        Actor[] actor = ActorControl.createActor();
+        game.setActor(actor);
     }
+
+
 
 }

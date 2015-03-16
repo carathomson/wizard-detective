@@ -18,9 +18,19 @@ public class Map implements Serializable {
     private int columns;
     
     private Game game;
-    private Location[] [] locations = new Location[5] [5];
+    private Location[][] locations = new Location[5][5];
 
     public Map() {
+        //for every row in the locations
+        
+            //for every column
+                //assign a new location to current position
+        
+        for (int i = 0; i < locations.length; i++) {
+            for (int j = 0; j < locations[i].length; j++) {
+                locations[i][j] = new Location();
+            }
+        }
     }
 
     public Game getGame() {

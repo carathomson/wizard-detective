@@ -27,7 +27,7 @@ public class MapControl {
     }
 
     static void moveActorsToStartingLocation(Map map) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("moveActorsToStartingLocation() called");
     }
 
     private static void assignSceneToLocations(Map map) {
@@ -81,31 +81,31 @@ public class MapControl {
         //assign to the location row3, column 0 the Kitchen scene
         Location nextLocation15 = locations [3] [0];
         nextLocation.setScene(Scene.Parlor);
-        //assign to the location row1, column 0 the Kitchen scene
+        //assign to the location row3, column 1 the Kitchen scene
         Location nextLocation16 = locations [3] [1];
         nextLocation.setScene(Scene.FrontDesk);
-        //assign to the location row1, column 0 the Kitchen scene
+        //assign to the location row3, column 2 the Kitchen scene
         Location nextLocation17 = locations [3] [2];
         nextLocation.setScene(Scene.Office);
-        //assign to the location row1, column 0 the Kitchen scene
+        //assign to the location row3, column 3 the Kitchen scene
         Location nextLocation18 = locations [3] [3];
         nextLocation.setScene(Scene.Kitchen);
-        //assign to the location row1, column 0 the Kitchen scene
+        //assign to the location row3, column 4 the Kitchen scene
         Location nextLocation19 = locations [3] [4];
         nextLocation.setScene(Scene.Gym);
-        //assign to the location row1, column 0 the Kitchen scene
+        //assign to the location row4, column 0 the Kitchen scene
         Location nextLocation20 = locations [4] [0];
         nextLocation.setScene(Scene.Laundry);
-        //assign to the location row1, column 0 the Kitchen scene
+        //assign to the location row4, column 1 the Kitchen scene
         Location nextLocation21 = locations [4] [1];
         nextLocation.setScene(Scene.Garage);
-        //assign to the location row1, column 0 the Kitchen scene
+        //assign to the location row4, column 2 the Kitchen scene
         Location nextLocation22 = locations [4] [2];
         nextLocation.setScene(Scene.BoilerRoom);
-        //assign to the location row1, column 0 the Kitchen scene
+        //assign to the location row4, column 3 the Kitchen scene
         Location nextLocation23 = locations [4] [3];
         nextLocation.setScene(Scene.SafeRoom);
-        //assign to the location row1, column 0 the Kitchen scene
+        //assign to the location row4, column 4 the Kitchen scene
         Location nextLocation24 = locations [4] [4];
         nextLocation.setScene(Scene.WineRoom);
         

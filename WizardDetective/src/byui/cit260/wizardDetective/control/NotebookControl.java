@@ -39,4 +39,10 @@ public class NotebookControl {
             System.err.print(b[i] + ' ');
         }
     }
+
+    public void display() {
+        System.out.println("Once I figure out how to code it just right,"
+                + "\n the list of clues will show here."
+                + "\n Please be patient. Thank you.");
+    }
 }

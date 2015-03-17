@@ -22,12 +22,10 @@ public class Map implements Serializable {
 
     public Map() {
         //for every row in the locations
-        
-            //for every column
-                //assign a new location to current position
-        
         for (int i = 0; i < locations.length; i++) {
+            //for every column
             for (int j = 0; j < locations[i].length; j++) {
+                //assign a new location to current position
                 locations[i][j] = new Location();
             }
         }

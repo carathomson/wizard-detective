@@ -5,6 +5,7 @@
  */
 package byui.cit260.wizardDetective.view;
 
+import byui.cit260.wizardDetective.control.NotebookControl;
 import java.util.Scanner;
 
 /**
@@ -20,6 +21,7 @@ public class GameMenuView extends View {
                 + "\n| Game Menu                                               |"
                 + "\n-----------------------------------------------------------"
                 + "\nI - Inventory"
+                + "\nB - Make Backpack"
                 + "\nN - Navigate"
                 + "\nC - Chase Man"
                 + "\nH - Help"
@@ -35,12 +37,14 @@ public class GameMenuView extends View {
         char choice = value.charAt(0);
 
         switch (choice) {
-            case 'I': // Look at inventory
+            case 'I': // Look at list of clues
                 this.seeInventory();
                 break;
             case 'N':// move Locations
                 this.displayNavigationView();
                 break;
+            case 'B'://make your backpack
+                this.makeBackpack();
             case 'C': // chase man
                 this.chaseMan();
                 break;
@@ -57,8 +61,8 @@ public class GameMenuView extends View {
     }
 
     private void seeInventory() {
-        CreateBackpackView createBackpack = new CreateBackpackView();
-        createBackpack.display();
+        NotebookControl notebookList = new NotebookControl();
+        notebookList.display();
     }
 
     private void chaseMan() {
@@ -76,6 +80,11 @@ public class GameMenuView extends View {
         NavigationView navigation = new NavigationView();
         navigation.display();
 
+    }
+
+    private void makeBackpack() {
+        CreateBackpackView createBackpack = new CreateBackpackView();
+        createBackpack.display();
     }
 
 }

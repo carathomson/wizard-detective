@@ -7,6 +7,7 @@ package byui.cit260.wizardDetective.control;
 
 import byui.cit260.wizardDetective.model.Actor;
 import byui.cit260.wizardDetective.model.Backpack;
+import byui.cit260.wizardDetective.model.Clue;
 import byui.cit260.wizardDetective.model.Game;
 import byui.cit260.wizardDetective.model.Inventory;
 import byui.cit260.wizardDetective.model.Map;
@@ -26,6 +27,7 @@ public class GameControl {
         WizardDetective.setCurrentGame(game); //save in wizard Detective
         
         game.setPlayer(player); //save player in game
+        //game.setClue(createClueList());
         
         //create the inventory list and save in the game
         Backpack backpack = BackpackConstructionControl.createBackpack();
@@ -43,6 +45,12 @@ public class GameControl {
         
         Actor[] actor = ActorControl.createActor();
         game.setActor(actor);
+    }
+    
+    private Clue[] createClueList(){
+        Clue[] clueList = new Clue[6];
+        
+        return clueList;
     }
 
 

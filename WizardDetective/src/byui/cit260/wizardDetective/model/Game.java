@@ -24,6 +24,7 @@ public class Game implements Serializable {
     private Backpack backpack;
     private Notebook notebook;
     private Actor[] actor;
+    private Clue[] clue;
     private Map map;
 
 //DEFALT CONSTRUCTOR
@@ -70,6 +71,12 @@ public class Game implements Serializable {
         this.map = map;
     }
     
+    public void setClue(Clue[] list){
+        this.clue = list;
+    }
+    public Clue[] getClue(){
+        return this.clue;
+    }
     
 
     public double getTime() {

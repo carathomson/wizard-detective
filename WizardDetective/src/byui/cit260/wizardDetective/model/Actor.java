@@ -20,7 +20,7 @@ public enum Actor implements Serializable {
     Witness("maid who dicovered the body."),
     Janitor("older gentleman who knows everything about the building."),
     Matrede("head of staff who organizes everything."),
-    Bellboy("young kid who helps with the bags and does the odd jobs."),
+    Bellboy("young kid who helps with the bags and does odd jobs."),
     Tim("other detective on the case."),
     Bob("hotel owner"),
     Cook("Robust wooman in kitchen"),

@@ -5,22 +5,24 @@
  */
 package byui.cit260.wizardDetective.control;
 
+import byui.cit260.wizardDetective.model.Clue;
+
 /**
  *
  * @author carathomson
  */
 public class NotebookControl {
 
-    public static String[] arraySort(String[] array) {
+    public static Clue[] arraySort(Clue[] array) {
         int i = 0; 
-        for (String s: array) {
+        for (Clue c: array) {
             int smallestIndex = i;
             for (int j = i + 1; j < array.length; j++) {
-                if (array[j].compareTo(array[smallestIndex]) < 0) {
+                if (array[j].getDescription().compareTo(array[smallestIndex].getDescription()) < 0) {
                     smallestIndex = j;
                 }
             }
-            String temp = array[i];
+            Clue temp = array[i];
             array[i] = array[smallestIndex];
             array[smallestIndex] = temp;
             i++;
@@ -28,20 +30,11 @@ public class NotebookControl {
         return array;
     }
 
-    public static void main(String[] a) {
-        String[] b = {"z", "r", "b", "a"};
-        for (int i = 0; i < b.length; i++) {
-            System.out.print(b[i] + ' ');
-        }
-        System.out.println();
-        b = arraySort(b);
-        for (int i = 0; i < b.length; i++) {
-            System.err.print(b[i] + ' ');
-        }
-    }
+   
 
     public void display() {
-        System.out.println("Once I figure out how to code it just right,"
+        System.out.println(
+                + "\n Once I figure out how to code it just right,"
                 + "\n the list of clues will show here."
                 + "\n Please be patient. Thank you.");
     }

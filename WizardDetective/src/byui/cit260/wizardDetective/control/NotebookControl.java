@@ -6,6 +6,7 @@
 package byui.cit260.wizardDetective.control;
 
 import byui.cit260.wizardDetective.model.Clue;
+import wizarddetective.WizardDetective;
 
 /**
  *
@@ -14,6 +15,10 @@ import byui.cit260.wizardDetective.model.Clue;
 public class NotebookControl {
 
     public static Clue[] arraySort(Clue[] array) {
+        
+        Clue[] originalClueList = WizardDetective.getCurrentGame().getClue();
+        Clue[] clueList = originalClueList.clone();
+        
         int i = 0; 
         for (Clue c: array) {
             int smallestIndex = i;
@@ -33,9 +38,10 @@ public class NotebookControl {
    
 
     public void display() {
-        System.out.println(
-                + "\n Once I figure out how to code it just right,"
-                + "\n the list of clues will show here."
-                + "\n Please be patient. Thank you.");
+        for (Clue[] x : arraySort) {
+            for (Clue y : x) {
+            System.out.println(y);
+            }
+        }
     }
 }

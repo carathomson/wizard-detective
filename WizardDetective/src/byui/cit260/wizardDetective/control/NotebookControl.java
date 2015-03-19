@@ -5,6 +5,7 @@
  */
 package byui.cit260.wizardDetective.control;
 
+import static byui.cit260.wizardDetective.control.NotebookControl.arraySort;
 import byui.cit260.wizardDetective.model.Clue;
 import wizarddetective.WizardDetective;
 

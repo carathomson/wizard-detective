@@ -89,7 +89,7 @@ public class GameMenuView extends View {
         createBackpack.display();
     }
 
-    private void displayMap() {
+    private void displayMap(Map map) {
          Location[] [] locations = map.getLocations();
          System.out.println("The Ritz Marriot Hotel");
          System.out.println('1'+ '2'+'3'+'4'+'5');
@@ -102,6 +102,10 @@ public class GameMenuView extends View {
                     
                 }
             }
+    }
+
+    private void displayMap() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

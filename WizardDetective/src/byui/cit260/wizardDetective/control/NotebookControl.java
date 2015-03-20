@@ -39,10 +39,10 @@ public class NotebookControl {
    
 
     public void display() {
-        for (Clue[] x : arraySort) {
-            for (Clue y : x) {
-            System.out.println(y);
+//        for (Clue[] x : arraySort) {
+ //           for (Clue y : x) {
+  //          System.out.println(y);
             }
         }
-    }
-}
+  
+

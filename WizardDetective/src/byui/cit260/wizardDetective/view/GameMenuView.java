@@ -6,6 +6,8 @@
 package byui.cit260.wizardDetective.view;
 
 import byui.cit260.wizardDetective.control.NotebookControl;
+import byui.cit260.wizardDetective.model.Location;
+import byui.cit260.wizardDetective.model.Map;
 import java.util.Scanner;
 
 /**
@@ -41,7 +43,7 @@ public class GameMenuView extends View {
                 this.seeInventory();
                 break;
             case 'N':// move Locations
-                this.displayNavigationView();
+                this.displayMap();
                 break;
             case 'B'://make your backpack
                 this.makeBackpack();
@@ -85,6 +87,21 @@ public class GameMenuView extends View {
     private void makeBackpack() {
         CreateBackpackView createBackpack = new CreateBackpackView();
         createBackpack.display();
+    }
+
+    private void displayMap() {
+         Location[] [] locations = map.getLocations();
+         System.out.println("The Ritz Marriot Hotel");
+         System.out.println('1'+ '2'+'3'+'4'+'5');
+            for(int i = 0; i < locations.length; i++) {
+                System.out.println("-----------------------");
+                System.out.println(i);
+                for(int j = 0; j < locations[i].length; j++){
+                    System.out.println("|");
+                    Location room = locations [i][j];
+                    
+                }
+            }
     }
 
 }

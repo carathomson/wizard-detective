@@ -5,6 +5,7 @@
  */
 package byui.cit260.wizardDetective.control;
 
+import byui.cit260.wizardDetective.model.Actor;
 import byui.cit260.wizardDetective.model.Location;
 import byui.cit260.wizardDetective.model.Map;
 import byui.cit260.wizardDetective.model.Scene;
@@ -26,8 +27,8 @@ public class MapControl {
         return map;
     }
 
-    static void moveActorsToStartingLocation(Map map) {
-        System.out.println("moveActorsToStartingLocation() called");
+     static void moveActorsToStartingLocation(Map map) {
+        System.out.println("moveActortoStartingLocaitonCalled");
     }
 
     private static void assignSceneToLocations(Map map) {
@@ -110,4 +111,5 @@ public class MapControl {
         nextLocation.setScene(Scene.WineRoom);
         
     }
+   
 }

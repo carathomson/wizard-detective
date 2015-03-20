@@ -17,8 +17,10 @@ public class Location implements Serializable {
     //class Instance variables
     private int coordinate;
     private String name;
-    private int visited;
+    private boolean visited;
     private Scene scene;
+    private int row;
+    private int column;
     
     private Inventory[] inventory;
     
@@ -42,11 +44,11 @@ public class Location implements Serializable {
         this.name = name;
     }
 
-    public int getVisited() {
+    public boolean isVisited() {
         return visited;
     }
 
-    public void setVisited(int visited) {
+    public void setVisited(boolean visited) {
         this.visited = visited;
     }
 
@@ -58,6 +60,22 @@ public class Location implements Serializable {
         this.scene = scene;
     }
 
+    public int getRow() {
+        return row;
+    }
+
+    public void setRow(int row) {
+        this.row = row;
+    }
+
+    public int getColumn() {
+        return column;
+    }
+
+    public void setColumn(int column) {
+        this.column = column;
+    }
+
     public Inventory[] getInventory() {
         return inventory;
     }
@@ -65,6 +83,8 @@ public class Location implements Serializable {
     public void setInventory(Inventory[] inventory) {
         this.inventory = inventory;
     }
+
+   
 
     @Override
     public String toString() {

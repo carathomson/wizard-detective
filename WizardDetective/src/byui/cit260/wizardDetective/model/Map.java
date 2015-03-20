@@ -14,8 +14,10 @@ import java.io.Serializable;
 public class Map implements Serializable {
 
     //class instance variables
-    private int rows;
-    private int columns;
+    private int noOfRows;
+    private int noOfColumns;
+    
+    
     
     private Game game;
     private Location[][] locations = new Location[5][5];
@@ -30,6 +32,47 @@ public class Map implements Serializable {
             }
         }
     }
+    public Map(int noOfRows, int noOfColumns){
+        if(noOfRows < 1 || noOfColumns < 1){
+            System.out.println("the number of rows and columns must be greater than zero");
+            return;
+        }
+        this.noOfRows = noOfRows;
+        this.noOfColumns = noOfColumns;
+        
+        // create 2D array for Location objects
+        this.locations = new Location[noOfRows][noOfColumns];
+        
+        for(int row = 0; row < noOfRows; row++){
+            for(int column = 0; column < noOfColumns; column++){
+                //create and initialize new location object instance
+                Location location = new Location();
+                location.setColumn (column);
+                location.setRow(row);
+                location.setVisited(false);
+                
+                //assign the location object to the current position in the array
+                locations[row][column] = location;
+            }
+        }
+        
+    }
+
+    public int getNoOfRows() {
+        return noOfRows;
+    }
+
+    public void setNoOfRows(int noOfRows) {
+        this.noOfRows = noOfRows;
+    }
+
+    public int getNoOfColumns() {
+        return noOfColumns;
+    }
+
+    public void setNoOfColumns(int noOfColumns) {
+        this.noOfColumns = noOfColumns;
+    }
 
     public Game getGame() {
         return game;
@@ -37,22 +80,6 @@ public class Map implements Serializable {
 
     public void setGame(Game game) {
         this.game = game;
-    }
-
-    public int getRows() {
-        return rows;
-    }
-
-    public void setRows(int rows) {
-        this.rows = rows;
-    }
-
-    public int getColumns() {
-        return columns;
-    }
-
-    public void setColumns(int columns) {
-        this.columns = columns;
     }
 
     public Location[][] getLocations() {
@@ -65,8 +92,11 @@ public class Map implements Serializable {
 
     @Override
     public String toString() {
-        return "Map{" + "rows=" + rows + ", columns=" + columns + ", game=" + game + ", locations=" + locations + '}';
+        return "Map{" + "noOfRows=" + noOfRows + ", noOfColumns=" + noOfColumns + ", game=" + game + ", locations=" + locations + '}';
     }
+
+   
+
     
 
 }

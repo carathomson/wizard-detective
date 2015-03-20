@@ -17,14 +17,12 @@ public class NotebookControl {
 
     public static Clue[] arraySort(Clue[] array) {
         
-        Clue[] originalClueList = WizardDetective.getCurrentGame().getClue();
-        Clue[] clueList = originalClueList.clone();
         
         int i = 0; 
         for (Clue c: array) {
             int smallestIndex = i;
             for (int j = i + 1; j < array.length; j++) {
-                if (array[j].getDescription().compareTo(array[smallestIndex].getDescription()) < 0) {
+                if (array[j].getDescription().compareToIgnoreCase(array[smallestIndex].getDescription()) < 0) {
                     smallestIndex = j;
                 }
             }
@@ -39,10 +37,11 @@ public class NotebookControl {
    
 
     public void display() {
-        for (Clue[] x : arraySort) {
-            for (Clue y : x) {
-            System.out.println(y);
-            }
+        
+        Clue[] originalClueList = WizardDetective.getCurrentGame().getClue();
+        Clue[] clueList = NotebookControl.arraySort(originalClueList);
+        for (Clue x : clueList) {
+            System.out.println(x.getDescription());
         }
     }
 }

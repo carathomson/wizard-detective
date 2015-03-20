@@ -29,6 +29,7 @@ public class Game implements Serializable {
 
 //DEFALT CONSTRUCTOR
     public Game() {
+        clue = Clue.values();
     }
 
     public Player getPlayer() {

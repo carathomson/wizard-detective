@@ -17,7 +17,7 @@ public class Location implements Serializable {
     //class Instance variables
     private int coordinate;
     private String name;
-    private boolean visited;
+    public boolean visited;
     private Scene scene;
     private int row;
     private int column;

@@ -5,6 +5,7 @@
  */
 package byui.cit260.wizardDetective.control;
 
+import byui.cit260.wizardDetective.exceptions.MapControlException;
 import byui.cit260.wizardDetective.model.Actor;
 import byui.cit260.wizardDetective.model.Backpack;
 import byui.cit260.wizardDetective.model.Clue;
@@ -22,7 +23,8 @@ import wizarddetective.WizardDetective;
  */
 public class GameControl {
 
-    public static void createNewGame(Player player) {
+    public static void createNewGame(Player player) 
+            throws MapControlException {
         Game game = new Game(); //create new game
         WizardDetective.setCurrentGame(game); //save in wizard Detective
         

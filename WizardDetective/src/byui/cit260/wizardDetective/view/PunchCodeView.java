@@ -38,20 +38,42 @@ public class PunchCodeView extends View {
 
             System.out.println("Enter the first number: ");
             String input = this.getInput();//get the user selection
-            double value1 = Double.parseDouble(input);
-
+           double value1 = 0;
+            try {
+             value1 = Double.parseDouble(input);
+            
+           } catch (NumberFormatException nf){
+               System.out.println("\nYou must enter a valid number."
+                                    +"Try again or enter E to quit.");
+           }
+        
             System.out.println("Enter the second number: ");
             input = this.getInput();//get the user selection
-            double value2 = Double.parseDouble(input);
-
+           double value2 = 0;
+            try {
+             value2 = Double.parseDouble(input);
+               } catch (NumberFormatException nf){
+               System.out.println("\nYou must enter a valid number."
+                                    +"Try again or enter E to quit.");
+           }
             System.out.println("Enter the third number: ");
             input = this.getInput();//get the user selection
-            double value3 = Double.parseDouble(input);
-
+            double value3 = 0;
+            try {
+            value3 = Double.parseDouble(input);
+            } catch (NumberFormatException nf){
+               System.out.println("\nYou must enter a valid number."
+                                    +"Try again or enter E to quit.");
+           }
             System.out.println("Enter the fourth number: ");
             input = this.getInput();//get the user selection
-            double value4 = Double.parseDouble(input);
-
+            double value4 = 0;
+            try {
+            value4 = Double.parseDouble(input);
+            } catch (NumberFormatException nf){
+               System.out.println("\nYou must enter a valid number."
+                                    +"Try again or enter E to quit.");
+           }
             //this.doAction(selection);//do action based on selection
             double answer = PunchCodeControl.calcPunchCodeHack(value1, value2, value3, value4);
             if (answer == 29) {

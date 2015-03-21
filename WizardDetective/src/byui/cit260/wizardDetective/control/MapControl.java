@@ -5,10 +5,13 @@
  */
 package byui.cit260.wizardDetective.control;
 
+import byui.cit260.wizardDetective.exceptions.MapControlException;
 import byui.cit260.wizardDetective.model.Actor;
 import byui.cit260.wizardDetective.model.Location;
 import byui.cit260.wizardDetective.model.Map;
 import byui.cit260.wizardDetective.model.Scene;
+import java.awt.Point;
+import wizarddetective.WizardDetective;
 
 /**
  *
@@ -26,10 +29,34 @@ public class MapControl {
         
         return map;
     }
-
-     static void moveActorsToStartingLocation(Map map) {
-        System.out.println("moveActortoStartingLocaitonCalled");
+    static void moveActorsToStartingLocation(Map map) 
+            throws MapControlException {
+        // for every actor
+        Actor[] actors = Actor.values();
+        
+        for (Actor actor : actors) {
+            Point coordinates = actor.getLocation();
+            MapControl.moveActorToLocation(actor, coordinates);
+            
+        }
+        
     }
+     public static int moveActorToLocation(Actor actor, Point coordinates)
+                                            throws MapControlException{
+         Map map = WizardDetective.getCurrentGame().getMap();
+         int newRow = coordinates.x-1;
+         int newColumn = coordinates.y-1;
+         
+         if(newRow < 0 || newRow >= map.getNoOfRows() ||
+            newColumn < 0 || newColumn >= map.getNoOfColumns()) {
+            throw new MapControlException("Cannot move Actor to location "
+                                            + coordinates.x + ", " + coordinates.y
+                                            +" because that locatin is outside "
+                                            +" the bounds of the map.");
+         }
+         return 0;
+     }
+     
 
     private static void assignSceneToLocations(Map map) {
         //get the locations 2d array in the map

@@ -90,18 +90,30 @@ public class GameMenuView extends View {
     }
 
     private void displayMap(Map map) {
-         Location[] [] locations = map.getLocations();
-         System.out.println("The Ritz Marriot Hotel");
-         System.out.println('1'+ '2'+'3'+'4'+'5');
-            for(int i = 0; i < locations.length; i++) {
-                System.out.println("-----------------------");
-                System.out.println(i);
-                for(int j = 0; j < locations[i].length; j++){
-                    System.out.println("|");
-                    Location room = locations [i][j];
-                    
-                }
+        //get map locations
+        Location[][] locations = map.getLocations();
+        //display map title
+        System.out.println("The Ritz Marriot Hotel");
+        //display column numbers
+        System.out.println('1' + '2' + '3' + '4' + '5');
+        //for every row in the map do:
+        for (int i = 0; i < locations.length; i++) {
+            //row divider
+            System.out.println("----------------------------------------");
+            //row number
+            System.out.println(i);
+            //for every column in the row do:
+            for (int j = 0; j < locations[i].length; j++) {
+                //column divider
+                System.out.println("|");
+                //assign scene to spacific coordinate
+                Location room = locations[i][j];
+                //if the location has been visited
+                    //display scene name
+                //else show "???"
+                
             }
+        }
     }
 
     private void displayMap() {

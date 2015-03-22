@@ -112,6 +112,7 @@ public class GameMenuView extends View {
                 }
                System.out.println("-------------------------");
             }
+        }
     }
 
     private void displayMap() {

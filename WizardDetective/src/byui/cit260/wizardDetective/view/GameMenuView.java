@@ -89,34 +89,27 @@ public class GameMenuView extends View {
         createBackpack.display();
     }
 
-    private void displayMap(Map map, boolean visited) {
-         Location[] [] locations = map.getLocations();
-         System.out.println("The Ritz Marriot Hotel");
-         System.out.println('1'+ '2'+'3'+'4'+'5');
-            for(int i = 0; i < locations.length; i++) {
-                System.out.println("-----------------------");
-                System.out.println(i);
-                for(int j = 0; j < locations[i].length; j++){
-                    System.out.println("|");
-                    Location room = locations [i][j];
-                    //if location is visited
-                        if (visited = room){
-                            System.out.println(room);
-                            return;
-                        }else { System.out.println("??");
-                            return;
-                            
-                           }
-                    System.out.println("|");
-                    return;
-                }
-               System.out.println("-------------------------");
-            }
-        }
-    }
+    private void displayMap(Map map,String symbol) {
+        Location[][] locations = map.getLocations();
+        System.out.println("The Ritz Marriot Hotel");
+        System.out.println('1' + '2' + '3' + '4' + '5');
+        for (int i = 0; i < locations.length; i++) {
+            System.out.println("-----------------------");
+            System.out.println(i);
+            for (int j = 0; j < locations[i].length; j++) {
+                System.out.println("|");
+                Location room = locations[i][j];
+                //if location is visited
+                if (room.isVisited()) {
+                    System.out.println(scene.getSymbol);
+                } else {
+                    System.out.println("??");
 
-    private void displayMap() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                }
+                System.out.println("|");
+            }
+            System.out.println("-------------------------");
+        }
     }
 
 }

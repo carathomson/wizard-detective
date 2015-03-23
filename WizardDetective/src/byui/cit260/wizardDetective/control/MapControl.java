@@ -35,23 +35,23 @@ public class MapControl {
         Actor[] actors = Actor.values();
         
         for (Actor actor : actors) {
-            Point coordinates = actor.getLocation();
-            MapControl.moveActorToLocation(actor, coordinates);
+            Point location = actor.getLocation();
+            MapControl.moveActorToLocation(actor, location);
             
         }
         
     }
-     public static int moveActorToLocation(Actor actor, Point coordinates)
+     public static int moveActorToLocation(Actor actor, Point location)
                                             throws MapControlException{
          Map map = WizardDetective.getCurrentGame().getMap();
-         int newRow = coordinates.x-1;
-         int newColumn = coordinates.y-1;
+         int newRow = location.x-1;
+         int newColumn = location.y-1;
          
          if(newRow < 0 || newRow >= map.getNoOfRows() ||
             newColumn < 0 || newColumn >= map.getNoOfColumns()) {
             throw new MapControlException("Cannot move Actor to location "
-                                            + coordinates.x + ", " + coordinates.y
-                                            +" because that locatin is outside "
+                                            + location.x + ", " + location.y
+                                            +" because that locatiOn is outside"
                                             +" the bounds of the map.");
          }
          return 0;

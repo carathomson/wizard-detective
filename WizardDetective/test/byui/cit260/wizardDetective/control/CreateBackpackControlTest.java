@@ -12,13 +12,13 @@ import static org.junit.Assert.*;
  *
  * @author carathomson
  */
-public class BackpackConstructionControlTest {
+public class CreateBackpackControlTest {
 
-    public BackpackConstructionControlTest() {
+    public CreateBackpackControlTest() {
     }
 
     /**
-     * Test of calcBackpackSize method, of class BackpackConstructionControl.
+     * Test of calcBackpackSize method, of class CreateBackpackControl.
      */
     @Test
 
@@ -28,7 +28,7 @@ public class BackpackConstructionControlTest {
         double height = 24.0;
         double width = 18.0;
         double depth = 6.0;
-        BackpackConstructionControl instance = new BackpackConstructionControl();
+        CreateBackpackControl instance = new CreateBackpackControl();
         double expResult = 2592.0;
 
         double result = instance.calcBackpackSize(height, width, depth);

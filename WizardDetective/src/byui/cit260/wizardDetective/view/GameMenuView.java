@@ -5,10 +5,13 @@
  */
 package byui.cit260.wizardDetective.view;
 
+import byui.cit260.wizardDetective.control.GameControl;
 import byui.cit260.wizardDetective.control.NotebookControl;
 import byui.cit260.wizardDetective.model.Location;
 import byui.cit260.wizardDetective.model.Map;
+import byui.cit260.wizardDetective.model.Scene;
 import java.util.Scanner;
+import wizarddetective.WizardDetective;
 
 /**
  *
@@ -43,7 +46,7 @@ public class GameMenuView extends View {
                 this.seeInventory();
                 break;
             case 'N':// move Locations
-                this.displayMap();
+                this.displayMap(WizardDetective.getCurrentGame().getMap());
                 break;
             case 'B'://make your backpack
                 this.makeBackpack();
@@ -89,7 +92,7 @@ public class GameMenuView extends View {
         createBackpack.display();
     }
 
-    private void displayMap(Map map,String symbol) {
+    private void displayMap(Map map) {
         Location[][] locations = map.getLocations();
         System.out.println("The Ritz Marriot Hotel");
         System.out.println('1' + '2' + '3' + '4' + '5');
@@ -101,7 +104,7 @@ public class GameMenuView extends View {
                 Location room = locations[i][j];
                 //if location is visited
                 if (room.isVisited()) {
-                    System.out.println(scene.getSymbol);
+                    System.out.println(room.getScene().getSymbol());
                 } else {
                     System.out.println("??");
 

@@ -22,6 +22,7 @@ import wizarddetective.WizardDetective;
  * @author carathomson
  */
 public class GameControl {
+//    private static Game game;
 
     public static void createNewGame(Player player) 
             throws MapControlException {
@@ -32,7 +33,7 @@ public class GameControl {
         //game.setClue(createClueList());
         
         //create the inventory list and save in the game
-        Backpack backpack = BackpackConstructionControl.createBackpack();
+        Backpack backpack = CreateBackpackControl.createBackpack();
         game.setBackpack(backpack);
         
         Notebook notebook = new Notebook();
@@ -47,6 +48,7 @@ public class GameControl {
         
         Actor[] actor = ActorControl.createActor();
         game.setActor(actor);
+//        GameControl.game = game;
     }
     
     private Clue[] createClueList(){
@@ -54,6 +56,8 @@ public class GameControl {
         
         return clueList;
     }
+    
+
 
 
 

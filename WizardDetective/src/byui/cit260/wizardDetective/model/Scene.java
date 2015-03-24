@@ -19,18 +19,18 @@ public enum Scene implements Serializable {
     PresKitchen("Very nice kitchen.", "PK"),
     Balcony("Overlooks the city.", "BA"),
     GuestRoom("Generic hotel room.", "GR"),
-    Parlor("Main entrance of the hotel.", "P"),
+    Parlor("Main entrance of the hotel.", "PL"),
     FrontDesk("This is where you check in.", "FD"),
     Office("This is where the Matrede organizes everything.", "OF"),
-    Kitchen("The main kitchen for the hotel.", "K"),
-    Gym("Big room with lots of exercize equipment.", "G"),
-    Laundry("Lots of noisy machines and clothes in bins.", "L"),
+    Kitchen("The main kitchen for the hotel.", "KT"),
+    Gym("Big room with lots of exercize equipment.", "GY"),
+    Laundry("Lots of noisy machines and clothes in bins.", "LY"),
     Garage("Your basic parking lot full of expensive cars.", "GA"),
     BoilerRoom("Hot noisy room with a lot of pipes.", "BO"),
     Cellar("Big storage room full of food.", "CL"),
     WineRoom("Cold room with wine on shelves.", "WI"),
     SafeRoom("Hidden room behind one of the shelves in the wine room.", "SA"),
-    Janitor("Where the cleaning supplies and the Janitorys office is", "J");
+    Janitor("Where the cleaning supplies and the Janitorys office is", "JR");
 
     //class instance variables
     private final String description;

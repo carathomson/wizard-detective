@@ -5,7 +5,8 @@
  */
 package byui.cit260.wizardDetective.view;
 
-import byui.cit260.wizardDetective.control.BackpackConstructionControl;
+import byui.cit260.wizardDetective.control.CreateBackpackControl;
+import byui.cit260.wizardDetective.exceptions.CreateBackpackControlException;
 import java.util.Scanner;
 
 /**
@@ -57,26 +58,17 @@ public class CreateBackpackView extends View {
     @Override
     public boolean doAction(Object obj) {
         double[] inputValues = (double[]) obj;
-        double volume = BackpackConstructionControl.calcBackpackSize(inputValues[0], inputValues[1], inputValues[2]);
-        if (volume == -1) {
-            System.out.println(
-                    "\n\n-----------------| Invalid height |-----------------");
-            return false;
-        } else if (volume == -2) {
-            System.out.println(
-                    "\n\n-----------------| Invalid width |-----------------");
-            return false;
-        } else if (volume == -3) {
-            System.out.println(
-                    "\n\n-----------------| Invalid depth |-----------------");
-            return false;
-        } else {
+        try {
+            double volume = CreateBackpackControl.calcBackpackSize(inputValues[0], inputValues[1], inputValues[2]);
             System.out.println(
                     "\n\n========================================================"
                     + "\nCongradulations! Your backpack can hold " + volume + " cubic inches."
                     + "\nNow you are ready to start your investigation."
                     + "\n========================================================");
+        } catch (CreateBackpackControlException e) {
+            System.out.println(e.getMessage());
         }
+
         return true;
     }
 

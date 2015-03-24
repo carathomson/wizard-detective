@@ -6,6 +6,7 @@
 package byui.cit260.wizardDetective.view;
 
 import byui.cit260.wizardDetective.control.SearchAreaControl;
+import byui.cit260.wizardDetective.exceptions.SearchAreaControlException;
 
 /**
  *
@@ -53,22 +54,16 @@ public class SearchAreaView extends View {
     @Override
     public boolean doAction(Object obj) {
         double[] inputValues = (double[]) obj;
-        double distance = SearchAreaControl.calcSearchArea(inputValues[0], inputValues[1]);
-        if (distance == -1) {
-            System.out.println(
-                    "\n\n----| speed has to be between 25 and 100 m/h |-----");
-            return false;
-        } else if (distance == -2) {
-            System.out.println(
-                    "\n\n----| time has to be between 3 and 10 minutes |----");
-            return false;
-        } else {
+        try{
+            double distance = SearchAreaControl.calcSearchArea(inputValues[0], inputValues[1]);
             System.out.println(
                     "\n\n========================================================"
                     + "\n You radio your men and they cover a " + distance + " mile"
                     + "\n radius around the hotel. After a few tense minutes the "
                     + "\n team on 3rd and 4th report they have the man detained."
                     + "\n========================================================");
+        } catch (SearchAreaControlException s) {
+                System.out.println(s.getMessage());
         }
         return true;
 

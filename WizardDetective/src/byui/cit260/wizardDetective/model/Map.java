@@ -31,6 +31,8 @@ public class Map implements Serializable {
                 locations[i][j] = new Location();
             }
         }
+        noOfRows = locations.length;
+        noOfColumns = locations[0].length;
     }
     public Map(int noOfRows, int noOfColumns){
         if(noOfRows < 1 || noOfColumns < 1){

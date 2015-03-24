@@ -26,6 +26,7 @@ public class GameControl {
 
     public static void createNewGame(Player player) 
             throws MapControlException {
+        
         Game game = new Game(); //create new game
         WizardDetective.setCurrentGame(game); //save in wizard Detective
         

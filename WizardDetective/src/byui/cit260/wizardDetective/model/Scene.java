@@ -13,24 +13,24 @@ import java.util.Objects;
  * @author Lynn
  */
 public enum Scene implements Serializable {
-    Bathroom("Presidential suite bathroom. Lavish furnishings.", "BR"),
-    LivingRoom("Presidential suite room.", "LR"),
-    CrimeScene("Steve's bedroom. He is laying on his bed dead.", "CS"),
-    PresKitchen("Very nice kitchen.", "PK"),
-    Balcony("Overlooks the city.", "BA"),
-    GuestRoom("Generic hotel room.", "GR"),
-    Parlor("Main entrance of the hotel.", "PL"),
-    FrontDesk("This is where you check in.", "FD"),
-    Office("This is where the Matrede organizes everything.", "OF"),
-    Kitchen("The main kitchen for the hotel.", "KT"),
-    Gym("Big room with lots of exercize equipment.", "GY"),
-    Laundry("Lots of noisy machines and clothes in bins.", "LY"),
-    Garage("Your basic parking lot full of expensive cars.", "GA"),
-    BoilerRoom("Hot noisy room with a lot of pipes.", "BO"),
-    Cellar("Big storage room full of food.", "CL"),
-    WineRoom("Cold room with wine on shelves.", "WI"),
-    SafeRoom("Hidden room behind one of the shelves in the wine room.", "SA"),
-    Janitor("Where the cleaning supplies and the Janitorys office is", "JR");
+    Bathroom("Presidential suite bathroom. Lavish furnishings.", "BTH"),
+    LivingRoom("Presidential suite room.", "LVR"),
+    CrimeScene("Steve's bedroom. He is laying on his bed dead.", "CRI"),
+    PresKitchen("Very nice kitchen.", "PKT"),
+    Balcony("Overlooks the city.", "BAL"),
+    GuestRoom("Generic hotel room.", "GST"),
+    Parlor("Main entrance of the hotel.", "PAR"),
+    FrontDesk("This is where you check in.", "FRD"),
+    Office("This is where the Matrede organizes everything.", "OFF"),
+    Kitchen("The main kitchen for the hotel.", "KTN"),
+    Gym("Big room with lots of exercize equipment.", "GYM"),
+    Laundry("Lots of noisy machines and clothes in bins.", "LDY"),
+    Garage("Your basic parking lot full of expensive cars.", "GAR"),
+    BoilerRoom("Hot noisy room with a lot of pipes.", "BOL"),
+    Cellar("Big storage room full of food.", "CLR"),
+    WineRoom("Cold room with wine on shelves.", "WIN"),
+    SafeRoom("Hidden room behind one of the shelves in the wine room.", "SAF"),
+    Janitor("Where the cleaning supplies and the Janitorys office is", "JNR");
 
     //class instance variables
     private final String description;

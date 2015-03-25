@@ -6,6 +6,7 @@
 package byui.cit260.wizardDetective.view;
 
 import byui.cit260.wizardDetective.control.GameControl;
+import byui.cit260.wizardDetective.exceptions.MainMenuViewExcetion;
 import byui.cit260.wizardDetective.exceptions.MapControlException;
 import java.util.Scanner;
 import java.util.logging.Level;
@@ -39,15 +40,10 @@ public class MainMenuView extends View {
         char choice = value.charAt(0);
 
         switch (choice) {
-            case 'P': {
-            try {
-                // create and start new game
+            case 'P':
                 this.startNewGame();
-            } catch (MapControlException me) {
-                System.out.println(me.getMessage());
-            }
-        }
                 break;
+
             case 'S':// Saves Game
                 this.saveGame();
                 break;
@@ -67,10 +63,14 @@ public class MainMenuView extends View {
         return true;
     }
 
-    private void startNewGame() 
-            throws MapControlException {
+    private void startNewGame() {
         // create new game
-        GameControl.createNewGame(WizardDetective.getPlayer());
+        try {
+            // create and start new game
+            GameControl.createNewGame(WizardDetective.getPlayer());
+        } catch (MapControlException me) {
+            System.out.println(me.getMessage());
+        }
 
         //display the game menucar
         GameMenuView gameMenu = new GameMenuView();

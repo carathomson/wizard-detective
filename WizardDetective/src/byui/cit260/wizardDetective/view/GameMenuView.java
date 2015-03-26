@@ -94,25 +94,26 @@ public class GameMenuView extends View {
 
     private void displayMap(Map map) {
         Location[][] locations = map.getLocations();
-        System.out.println("The Ritz Marriot Hotel");
-        //System.out.println('1' + '2' + '3' + '4' + '5');
+        System.out.println("\nThe Ritz Marriot Hotel");
+        System.out.println("1" + "2" + "3" + "4" + "5");
         for (int i = 0; i < locations.length; i++) {
+//            System.out.println();
             System.out.println("-----------------------");
-            System.out.println(i);
+            System.out.print(i + 1);
             for (int j = 0; j < locations[i].length; j++) {
-                System.out.println("|");
+                System.out.print("|");
                 Location room = locations[i][j];
                 //if location is visited
                 if (room.isVisited()) {
-                    System.out.println(room.getScene().getSymbol());
+                    System.out.print(room.getScene().getSymbol());
                 } else {
-                    System.out.println("??");
+                    System.out.print("??");
 
                 }
-                System.out.println("|");
             }
-            System.out.println("-------------------------");
+            System.out.println("|");
         }
+        System.out.println("-------------------------");
     }
 
 }

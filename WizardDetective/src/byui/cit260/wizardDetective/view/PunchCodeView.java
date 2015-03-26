@@ -6,7 +6,10 @@
 package byui.cit260.wizardDetective.view;
 
 import byui.cit260.wizardDetective.control.PunchCodeControl;
+import java.io.IOException;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -93,12 +96,16 @@ public class PunchCodeView extends View {
     public String getInput() {
         boolean valid = false; // indicates if the name has been retrieved
         String getInput = null;
-        Scanner keyboard = new Scanner(System.in); // keyboard input stream
+        
 
-        while (!valid) { //while a valid iput has not been retrieved
-
+        while (!valid) { try {
+            //while a valid iput has not been retrieved
+            
             //get the name from the keyboard and trim off the blanks
-            getInput = keyboard.nextLine();
+            getInput = this.keyboard.readLine();
+            } catch (IOException ex) {
+                Logger.getLogger(PunchCodeView.class.getName()).log(Level.SEVERE, null, ex);
+            }
             getInput = getInput.trim();
 
             // if the name is invalid (less than two characters in length))

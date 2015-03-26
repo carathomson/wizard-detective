@@ -5,7 +5,13 @@
  */
 package byui.cit260.wizardDetective.view;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import wizarddetective.WizardDetective;
 
 /**
  *
@@ -14,6 +20,9 @@ import java.util.Scanner;
 public abstract class View implements ViewInterface {
 
     private String promptMessage;
+
+    protected final BufferedReader keyboard = WizardDetective.getInFile();
+    protected final PrintWriter console = WizardDetective.getOutFile();
 
     public View() {
         promptMessage = "";
@@ -35,10 +44,10 @@ public abstract class View implements ViewInterface {
     public void display() {
         String input;
         do {
-            System.out.println(this.promptMessage);//display message
+            this.console.println(this.promptMessage);//display message
 
             input = this.getInput();//get the user selection
-//            selection = input.charAt(0);//get first character of a string
+            //           selection = input.charAt(0);//get first character of a string
 
             this.doAction(input);//do action based on selection
 
@@ -49,20 +58,29 @@ public abstract class View implements ViewInterface {
     public String getInput() {
         boolean valid = false; // indicates if the name has been retrieved
         String getInput = null;
-        Scanner keyboard = new Scanner(System.in); // keyboard input stream
 
-        while (!valid) { //while a valid input has not been retrieved
+        while (!valid) {
+            try {
+            //while a valid input has not been retrieved
 
-            //get the name from the keyboard and trim off the blanks
-            getInput = keyboard.nextLine();
+                //get the name from the keyboard and trim off the blanks
+                getInput = this.keyboard.readLine();
+            } catch (IOException ex) {
+                Logger.getLogger(View.class.getName()).log(Level.SEVERE, null, ex);
+            }
             getInput = getInput.trim();
 
+            try{
             // if the name is invalid (less than two characters in length))
             if (getInput.length() < 1) {
-                System.out.println("Invalid: must enter a value");
                 continue; //repeat again
             }
             break; //out of the (exit) the repitition
+            }catch (Exception e){
+                ErrorView.display(this.getClass().getName(),
+                        "Error Reading Input" + e.getMessage());
+                return null;
+            }
         }
 
         return getInput; // return the input    

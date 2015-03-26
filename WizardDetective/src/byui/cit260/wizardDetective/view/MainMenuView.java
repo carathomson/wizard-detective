@@ -78,11 +78,34 @@ public class MainMenuView extends View {
     }
 
     private void saveGame() {
-        System.out.println("*** startSaveGame function called ***");
+        System.out.println("\n\nEnter the file path for the file where the game"
+                + "is to be saved.");
+        String filePath = this.getInput();
+        try {
+            //save game to the specified file
+            GameControl.saveGame(WizardDetective.getCurrentGame(), filePath);
+
+        } catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
     }
 
     private void loadGame() {
-        System.out.println("*** loadGame function called ***");
+        System.out.println("\n\nEnter the file path for the file where the game"
+                + "is to be saved.");
+        String filePath = this.getInput();
+        
+        try{
+            //start a saved game
+            GameControl.getLoadGame(filePath);
+            
+        }catch(Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
+        
+        //display the game menu
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
     }
 
     private void displayHelpMenu() {

@@ -44,22 +44,22 @@ public class RoomMenuView extends View {
             case 'E': // exit to previous screen
                 break;
             default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
+                this.console.println("\n*** Invalid Selection *** Try Again");
                 return false;
         }
         return true;
     }
 
     private void investigate() {
-        System.out.println("You investigate the room");
+        this.console.println("You investigate the room");
     }
 
     private void interrogate() {
-        System.out.println("You approach the suspect, questions in mind.");
+        this.console.println("You approach the suspect, questions in mind.");
     }
 
     private void useSight() {
-        System.out.println("You close your eyes, focusing on your Sight.");
+        this.console.println("You close your eyes, focusing on your Sight.");
     }
 
 }

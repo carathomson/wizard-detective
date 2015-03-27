@@ -50,6 +50,7 @@ public class GameMenuView extends View {
                 break;
             case 'B'://make your backpack
                 this.makeBackpack();
+                break;
             case 'C': // chase man
                 this.chaseMan();
                 break;
@@ -59,7 +60,7 @@ public class GameMenuView extends View {
             case 'E': // exit the program
                 return true;
             default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
+                this.console.println("\n*** Invalid Selection *** Try Again");
                 break;
         }
         return true;
@@ -94,26 +95,25 @@ public class GameMenuView extends View {
 
     private void displayMap(Map map) {
         Location[][] locations = map.getLocations();
-        System.out.println("\nThe Ritz Marriot Hotel");
-        System.out.println("1" + "2" + "3" + "4" + "5");
+        this.console.println("\n   The Ritz Marriot Hotel");
+        this.console.println("\n     1" + "   2" + "   3" + "   4" + "   5");
         for (int i = 0; i < locations.length; i++) {
-//            System.out.println();
-            System.out.println("-----------------------");
-            System.out.print(i + 1);
+            this.console.println("    -------------------");
+            this.console.print(i + 1 + "  ");
             for (int j = 0; j < locations[i].length; j++) {
-                System.out.print("|");
+                this.console.print("|");
                 Location room = locations[i][j];
                 //if location is visited
                 if (room.isVisited()) {
-                    System.out.print(room.getScene().getSymbol());
+                    this.console.print(room.getScene().getSymbol());
                 } else {
-                    System.out.print("??");
+                    this.console.print("???");
 
                 }
             }
-            System.out.println("|");
+            this.console.println("|");
         }
-        System.out.println("-------------------------");
+        this.console.println("    -------------------");
     }
 
 }

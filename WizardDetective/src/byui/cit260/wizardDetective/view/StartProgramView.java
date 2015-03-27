@@ -40,10 +40,10 @@ public class StartProgramView extends View {
     }
 
     public void display(Player player) {
-        System.out.println("\n\n===========================================");
-        System.out.println("\tWelcome to the game " + player.getName());
-        System.out.println("\tWe hope you have a lot of fun!");
-        System.out.println("===============================================");
+        this.console.println("\n\n===========================================");
+        this.console.println("\tWelcome to the game " + player.getName());
+        this.console.println("\tWe hope you have a lot of fun!");
+        this.console.println("===============================================");
     }
 
     @Override

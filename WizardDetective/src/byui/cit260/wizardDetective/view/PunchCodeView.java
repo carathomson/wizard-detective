@@ -37,55 +37,55 @@ public class PunchCodeView extends View {
     public void display() {
         char selection = ' ';
         do {
-            System.out.println(this.getPromptMessage()); //display the main menu
+            this.console.println(this.getPromptMessage()); //display the main menu
 
-            System.out.println("Enter the first number: ");
+            this.console.println("Enter the first number: ");
             String input = this.getInput();//get the user selection
            double value1 = 0;
             try {
              value1 = Double.parseDouble(input);
             
            } catch (NumberFormatException nf){
-               System.out.println("\nYou must enter a valid number."
+               this.console.println("\nYou must enter a valid number."
                                     +"Try again or enter E to quit.");
            }
         
-            System.out.println("Enter the second number: ");
+            this.console.println("Enter the second number: ");
             input = this.getInput();//get the user selection
            double value2 = 0;
             try {
              value2 = Double.parseDouble(input);
                } catch (NumberFormatException nf){
-               System.out.println("\nYou must enter a valid number."
+               this.console.println("\nYou must enter a valid number."
                                     +"Try again or enter E to quit.");
            }
-            System.out.println("Enter the third number: ");
+            this.console.println("Enter the third number: ");
             input = this.getInput();//get the user selection
             double value3 = 0;
             try {
             value3 = Double.parseDouble(input);
             } catch (NumberFormatException nf){
-               System.out.println("\nYou must enter a valid number."
+               this.console.println("\nYou must enter a valid number."
                                     +"Try again or enter E to quit.");
            }
-            System.out.println("Enter the fourth number: ");
+            this.console.println("Enter the fourth number: ");
             input = this.getInput();//get the user selection
             double value4 = 0;
             try {
             value4 = Double.parseDouble(input);
             } catch (NumberFormatException nf){
-               System.out.println("\nYou must enter a valid number."
+               this.console.println("\nYou must enter a valid number."
                                     +"Try again or enter E to quit.");
            }
             //this.doAction(selection);//do action based on selection
             double answer = PunchCodeControl.calcPunchCodeHack(value1, value2, value3, value4);
             if (answer == 29) {
-                System.out.println("Success!!!");// print success message
+                this.console.println("Success!!!");// print success message
                 RoomMenuView roomMenu = new RoomMenuView();
                 roomMenu.display();
                 return;
             } else {
-                System.out.println("Password was incorrect, try again.");// print error message
+                this.console.println("Password was incorrect, try again.");// print error message
                 continue;
             }
 
@@ -110,7 +110,7 @@ public class PunchCodeView extends View {
 
             // if the name is invalid (less than two characters in length))
             if (getInput.length() > 2 || getInput.length() < 1) {
-                System.out.println("Invalid entry must have selection");
+                this.console.println("Invalid entry must have selection");
                 continue; //repeat again
             }
             break; //out of the (exit) the repitition

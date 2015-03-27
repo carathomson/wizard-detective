@@ -60,14 +60,14 @@ public class NavigationView extends View {
             case 'E': // return to previous Menu
                 return true;
             default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
+                this.console.println("\n*** Invalid Selection *** Try Again");
                 break;
         }
         return true;
     }
 
     private void displayParlor() {
-        System.out.println("*** Help move page selected ***");
+        this.console.println("*** Help move page selected ***");
     }
 
     private void displayCrimeSceneView() {
@@ -82,14 +82,14 @@ public class NavigationView extends View {
     }
 
     private void displayGuestRoom() {
-        System.out.println("*** Guest Room View Selected ***");
+        this.console.println("*** Guest Room View Selected ***");
     }
 
     private void displayGym() {
-        System.out.println("*** Gymnasium Display Selected ***");
+        this.console.println("*** Gymnasium Display Selected ***");
     }
 
     private void displayCellar() {
-        System.out.println("*** Cellar Selected ***");
+        this.console.println("*** Cellar Selected ***");
     }
 }

@@ -23,7 +23,7 @@ public class CreateBackpackView extends View {
     public void display() {
         boolean valid = false;
         do {
-            System.out.println("\n\n*************************************************"
+            this.console.println("\n\n*************************************************"
                     + "\nNo detective is compleat without a strong bag."
                     + "\nYou need to create a backpack big enough"
                     + "\nto carry your gear and any clues you"
@@ -34,15 +34,15 @@ public class CreateBackpackView extends View {
                     + "\nDepth  <= 12 inches"
                     + "\n*************************************************");
 
-            System.out.println("\nHow high should your backpack be?");
+            this.console.println("\nHow high should your backpack be?");
             String value = this.getInput();
             double height = Double.parseDouble(value);
 
-            System.out.println("\nHow wide?");
+            this.console.println("\nHow wide?");
             value = this.getInput();
             double width = Double.parseDouble(value);
 
-            System.out.println("\nHow deep?");
+            this.console.println("\nHow deep?");
             value = this.getInput();
             double depth = Double.parseDouble(value);
 
@@ -60,13 +60,14 @@ public class CreateBackpackView extends View {
         double[] inputValues = (double[]) obj;
         try {
             double volume = CreateBackpackControl.calcBackpackSize(inputValues[0], inputValues[1], inputValues[2]);
-            System.out.println(
+            this.console.println(
                     "\n\n========================================================"
                     + "\nCongradulations! Your backpack can hold " + volume + " cubic inches."
                     + "\nNow you are ready to start your investigation."
                     + "\n========================================================");
         } catch (CreateBackpackControlException e) {
-            System.out.println(e.getMessage());
+            this.console.println(e.getMessage());
+            return false;
         }
 
         return true;

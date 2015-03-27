@@ -45,22 +45,22 @@ public class HelpMenuView extends View {
             case 'E': // exit to the Main Menu
                 break;
             default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
+                this.console.println("\n*** Invalid Selection *** Try Again");
                 break;
         }
         return true;
     }
 
     private void helpMove() {
-        System.out.println("*** Help move page selected ***");
+        this.console.println("*** Help move page selected ***");
     }
 
     private void helpControls() {
-        System.out.println("*** Help Control map page selected ***");
+        this.console.println("*** Help Control map page selected ***");
     }
 
     private void helpInterrogate() {
-        System.out.println("*** Help interrogate and investigate page selected ***");
+        this.console.println("*** Help interrogate and investigate page selected ***");
     }
 
 }

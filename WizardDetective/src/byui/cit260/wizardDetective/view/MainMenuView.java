@@ -56,7 +56,7 @@ public class MainMenuView extends View {
             case 'E': // exit the program
                 return true;
             default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
+                this.console.println("\n*** Invalid Selection *** Try Again");
                 break;
 
         }
@@ -69,7 +69,7 @@ public class MainMenuView extends View {
             // create and start new game
             GameControl.createNewGame(WizardDetective.getPlayer());
         } catch (MapControlException me) {
-            System.out.println(me.getMessage());
+            this.console.println(me.getMessage());
         }
 
         //display the game menucar
@@ -78,7 +78,7 @@ public class MainMenuView extends View {
     }
 
     private void saveGame() {
-        System.out.println("\n\nEnter the file path for the file where the game"
+        this.console.println("\n\nEnter the file path for the file where the game"
                 + "is to be saved.");
         String filePath = this.getInput();
         try {
@@ -91,7 +91,7 @@ public class MainMenuView extends View {
     }
 
     private void loadGame() {
-        System.out.println("\n\nEnter the file path for the file where the game"
+        this.console.println("\n\nEnter the file path for the file where the game"
                 + "is to be saved.");
         String filePath = this.getInput();
         

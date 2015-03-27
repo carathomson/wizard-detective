@@ -49,21 +49,21 @@ public class CrimeSceneView extends View {
             case 'E': // exit to previous screen
                 break;
             default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
+                this.console.println("\n*** Invalid Selection *** Try Again");
                 return false;
         }
         return true;
     }
 
     private void investigate() {
-        System.out.println("You look around, finding nothing that looks out of place");
+        this.console.println("You look around, finding nothing that looks out of place");
     }
 
     private void interrogate() {
-        System.out.println("You approach the chief, he grunts when you get closer");
+        this.console.println("You approach the chief, he grunts when you get closer");
     }
 
     private void useSight() {
-        System.out.println("You close your eyes, focusing on your Sight. The room lights up with an eerie green light.");
+        this.console.println("You close your eyes, focusing on your Sight. The room lights up with an eerie green light.");
     }
 }

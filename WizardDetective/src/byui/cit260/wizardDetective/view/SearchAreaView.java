@@ -32,12 +32,12 @@ public class SearchAreaView extends View {
     public void display() {
         boolean valid = false;
         do {
-            System.out.println(getPromptMessage());
+            this.console.println(getPromptMessage());
 
             String value = this.getInput();
             double speed = Double.parseDouble(value);
 
-            System.out.println("\n\n From experienc you know how long the police"
+            this.console.println("\n\n From experienc you know how long the police"
                     + "\n will take to get organized and into place."
                     + "\n Please enter that time here:");
             value = this.getInput();
@@ -56,14 +56,14 @@ public class SearchAreaView extends View {
         double[] inputValues = (double[]) obj;
         try{
             double distance = SearchAreaControl.calcSearchArea(inputValues[0], inputValues[1]);
-            System.out.println(
+            this.console.println(
                     "\n\n========================================================"
                     + "\n You radio your men and they cover a " + distance + " mile"
                     + "\n radius around the hotel. After a few tense minutes the "
                     + "\n team on 3rd and 4th report they have the man detained."
                     + "\n========================================================");
         } catch (SearchAreaControlException s) {
-                System.out.println(s.getMessage());
+                this.console.println(s.getMessage());
         }
         return true;
 

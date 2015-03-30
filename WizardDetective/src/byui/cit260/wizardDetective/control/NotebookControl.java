@@ -7,13 +7,14 @@ package byui.cit260.wizardDetective.control;
 
 import static byui.cit260.wizardDetective.control.NotebookControl.arraySort;
 import byui.cit260.wizardDetective.model.Clue;
+import byui.cit260.wizardDetective.view.View;
 import wizarddetective.WizardDetective;
 
 /**
  *
  * @author carathomson
  */
-public class NotebookControl {
+public class NotebookControl extends View {
 
     public static Clue[] arraySort(Clue[] array) {
         
@@ -34,7 +35,17 @@ public class NotebookControl {
         return array;
     }
 
+    public static void printNotebook(String filePath) {
+       Clue[] clues = clue.getDescription;
+        this.console.println("");
+    }
+
     public void display() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean doAction(Object obj) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

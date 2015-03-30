@@ -29,6 +29,7 @@ public class GameMenuView extends View {
                 + "\nB - Make Backpack"
                 + "\nN - Navigate"
                 + "\nC - Chase Man"
+                + "\nP - Print Notebook"
                 + "\nH - Help"
                 + "\nE - Exit"
                 + "\n-----------------------------------------------------------");
@@ -54,6 +55,9 @@ public class GameMenuView extends View {
                 break;
             case 'C': // chase man
                 this.chaseMan();
+                break;
+            case 'P'://Print Notebook
+                this.printNotebook();
                 break;
             case 'H': //pulls up help screen
                 this.displayHelpMenu();
@@ -116,6 +120,19 @@ public class GameMenuView extends View {
             this.console.println("|");
         }
         this.console.println("    -------------------");
+    }
+
+    private void printNotebook() {
+        //prompt for and get the name of the file to print the notbook to
+        this.console.println("\n\nEnter the file path to where the Notebook "
+                                + "is to be printed to.");
+        String filePath = this.getInput();
+        
+        try{
+            NotebookControl.printNotebook(filePath);
+        }catch (Exception ex) {
+            ErrorView.display("GameMenuView", ex.getMessage());
+        }
     }
 
 }

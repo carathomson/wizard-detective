@@ -12,24 +12,25 @@ package byui.cit260.wizardDetective.view;
 public class NavigationView extends View {
 
     public NavigationView() {
-        super("\n"
-                + "\n-----------------------------------------------------------"
-                + "\n| Navigation                                               |"
-                + "\n-----------------------------------------------------------"
-                + "\nP - Parlor"
-                + "\nC - Crime Scene"
-                + "\nK - Kitchen"
-                + "\nG - Guest Room #33"
-                + "\nH - Cellar"
-                + "\nB - Gymnasium"
-                + "\nE - Exit"
-                + "\n-----------------------------------------------------------");
+        super("\nEnter the row and column number for the room you would like to visit.");
     }
 
     @Override
     public boolean doAction(Object obj) {
 
         String value = (String) obj;
+        String[] values = value.split(" ");
+
+        int row = Integer.parseInt(values[0]);
+        int column = Integer.parseInt(values[1]);
+
+        if (row < 0 || row > 5) {
+            return this.console.println("Row value out of bounds");
+        }
+
+        if (column < 0 || column > 5) {
+            return this.console.println("Column value out of bounds");
+        }
 
         char choice = value.charAt(0);
 

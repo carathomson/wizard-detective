@@ -47,7 +47,8 @@ public class GameMenuView extends View {
                 this.seeInventory();
                 break;
             case 'N':// move Locations
-                this.displayMap(WizardDetective.getCurrentGame().getMap());
+                
+                this.displayNavigationView();
                 break;
             case 'B'://make your backpack
                 this.makeBackpack();
@@ -87,6 +88,7 @@ public class GameMenuView extends View {
     }
 
     private void displayNavigationView() {
+        this.displayMap(WizardDetective.getCurrentGame().getMap());
         NavigationView navigation = new NavigationView();
         navigation.display();
 

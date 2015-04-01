@@ -106,10 +106,10 @@ public class GameMenuView extends View {
     private void displayMap(Map map) {
         Location[][] locations = map.getLocations();
         this.console.println("\n   The Ritz Marriot Hotel");
-        this.console.println("\n     1" + "   2" + "   3" + "   4" + "   5");
+        this.console.println("\n     0" + "   1" + "   2" + "   3" + "   4");
         for (int i = 0; i < locations.length; i++) {
             this.console.println("    -------------------");
-            this.console.print(i + 1 + "  ");
+            this.console.print(i + "  ");
             for (int j = 0; j < locations[i].length; j++) {
                 this.console.print("|");
                 Location room = locations[i][j];

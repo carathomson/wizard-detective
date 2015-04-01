@@ -35,8 +35,8 @@ public class NotebookControl extends View {
         return array;
     }
 
-    public static void printNotebook(String filePath) {
-       Clue[] clues = clue.getDescription;
+    public static void printNotebook(String filePath, Clue clues) {
+       Clue[] clues  = clue.getValues;
         this.console.println("");
     }
 

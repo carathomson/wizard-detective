@@ -5,6 +5,8 @@
  */
 package byui.cit260.wizardDetective.view;
 
+import java.awt.Point;
+
 /**
  *
  * @author Mechams
@@ -25,14 +27,18 @@ public class NavigationView extends View {
         int column = Integer.parseInt(values[1]);
 
         if (row < 0 || row > 5) {
-            return this.console.println("Row value out of bounds");
+            this.console.println("Row value out of bounds");
         }
 
         if (column < 0 || column > 5) {
-            return this.console.println("Column value out of bounds");
+            this.console.println("Column value out of bounds");
         }
+        
+        Point location = new Point(int row, int column);
+        
+        return
 
-        char choice = value.charAt(0);
+        /**char choice = value.charAt(0);
 
         switch (choice) {
             case 'P': // Look at inventory
@@ -64,7 +70,7 @@ public class NavigationView extends View {
                 this.console.println("\n*** Invalid Selection *** Try Again");
                 break;
         }
-        return true;
+        return true;**/
     }
 
     private void displayParlor() {

@@ -28,8 +28,9 @@ public class GameMenuView extends View {
                 + "\nI - Inventory"
                 + "\nB - Make Backpack"
                 + "\nN - Navigate"
-                + "\nC - Chase Man"
+                + "\nM - Chase Man"
                 + "\nP - Print Notebook"
+                + "\nC - Print Character List"
                 + "\nH - Help"
                 + "\nE - Exit"
                 + "\n-----------------------------------------------------------");
@@ -53,11 +54,14 @@ public class GameMenuView extends View {
             case 'B'://make your backpack
                 this.makeBackpack();
                 break;
-            case 'C': // chase man
+            case 'M': // chase man
                 this.chaseMan();
                 break;
             case 'P'://Print Notebook
                 this.printNotebook();
+                break;
+            case 'C'://Print character list
+                this.printCharacters();
                 break;
             case 'H': //pulls up help screen
                 this.displayHelpMenu();
@@ -134,5 +138,30 @@ public class GameMenuView extends View {
             ErrorView.display("GameMenuView", ex.getMessage());
         }
     }
+
+    private void printCharacters() {
+        // prompt for filepath to print to
+        this.console.println("================================================="
+                + "\nPlease enter the filepath where you would like"
+                + "\nthe list of characters to be printed."
+                + "\n=================================================");
+        // get the filepath
+        String filePath = this.getInput();
+        // call PrintCharactersView to print the report
+        try {
+            filePath = PrintCharactersView.
+            this.console.println(
+                    "\n\n--------------------------------------------------------"
+                    + "\nSUCCESS!"
+                    + "\nThe list of characters have been printed to your file."
+                    + "\n--------------------------------------------------------");
+        } catch (PrintCharactersViewException e) {
+            this.console.println(e.getMessage());
+        }
+
+        // catch errors
+        // display a success message
+    }
+    
 
 }

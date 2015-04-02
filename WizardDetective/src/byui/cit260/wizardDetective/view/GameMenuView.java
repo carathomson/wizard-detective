@@ -10,6 +10,8 @@ import byui.cit260.wizardDetective.control.NotebookControl;
 import byui.cit260.wizardDetective.model.Location;
 import byui.cit260.wizardDetective.model.Map;
 import byui.cit260.wizardDetective.model.Scene;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 import wizarddetective.WizardDetective;
 
@@ -30,7 +32,7 @@ public class GameMenuView extends View {
                 + "\nN - Navigate"
                 + "\nM - Chase Man"
                 + "\nP - Print Notebook"
-                + "\nC - Print Character List"
+                + "\nZ - Print Map"
                 + "\nH - Help"
                 + "\nE - Exit"
                 + "\n-----------------------------------------------------------");
@@ -51,6 +53,9 @@ public class GameMenuView extends View {
                 
                 this.displayNavigationView();
                 break;
+            case 'Z':// print Map
+                this.printNavigationView();
+                break;
             case 'B'://make your backpack
                 this.makeBackpack();
                 break;
@@ -60,9 +65,9 @@ public class GameMenuView extends View {
             case 'P'://Print Notebook
                 this.printNotebook();
                 break;
-            case 'C'://Print character list
-                this.printCharacters();
-                break;
+//            case 'C'://Print character list
+//                this.printCharacters();
+//                break;
             case 'H': //pulls up help screen
                 this.displayHelpMenu();
                 break;
@@ -98,32 +103,59 @@ public class GameMenuView extends View {
 
     }
 
+      private void printNavigationView() {
+          PrintWriter mapOut=null;
+          try{
+              this.console.println("enter file name for the saved map");
+              String file = getInput();
+              mapOut = new PrintWriter(file);
+              this.displayMap(WizardDetective.getCurrentGame().getMap(), mapOut);
+          }catch(IOException e){
+              ErrorView.display("GameMenuView", e.getMessage());
+          }finally{
+              mapOut.close();
+          }
+    }
+      
     private void makeBackpack() {
         CreateBackpackView createBackpack = new CreateBackpackView();
         createBackpack.display();
     }
+    public void displayMap(Map map){
+        this.console.println(buildMap(map));
+    }
+    public void displayMap(Map map, PrintWriter mapOut){
+        mapOut.println(buildMap(map));
+    }
 
-    private void displayMap(Map map) {
+    private String buildMap(Map map) {
+        StringBuilder sb = new StringBuilder();
         Location[][] locations = map.getLocations();
-        this.console.println("\n   The Ritz Marriot Hotel");
-        this.console.println("\n     0" + "   1" + "   2" + "   3" + "   4");
+        sb.append("\n   The Ritz Marriot Hotel");
+        sb.append("\n");
+        sb.append("\n     0" + "   1" + "   2" + "   3" + "   4");
+        sb.append("\n");
         for (int i = 0; i < locations.length; i++) {
-            this.console.println("    -------------------");
-            this.console.print(i + "  ");
+            sb.append("    -------------------");
+            sb.append("\n");
+            sb.append(i + "  ");
             for (int j = 0; j < locations[i].length; j++) {
-                this.console.print("|");
+                sb.append("|");
                 Location room = locations[i][j];
                 //if location is visited
                 if (room.isVisited()) {
-                    this.console.print(room.getScene().getSymbol());
+                    sb.append(room.getScene().getSymbol());
                 } else {
-                    this.console.print("???");
+                    sb.append("???");
 
                 }
             }
-            this.console.println("|");
+            sb.append("|");
+            sb.append("\n");
         }
-        this.console.println("    -------------------");
+        sb.append("    -------------------");
+        sb.append("\n");
+        return sb.toString();
     }
 
     private void printNotebook() {
@@ -139,29 +171,31 @@ public class GameMenuView extends View {
         }
     }
 
-    private void printCharacters() {
-        // prompt for filepath to print to
-        this.console.println("================================================="
-                + "\nPlease enter the filepath where you would like"
-                + "\nthe list of characters to be printed."
-                + "\n=================================================");
-        // get the filepath
-        String filePath = this.getInput();
-        // call PrintCharactersView to print the report
-        try {
-            filePath = PrintCharactersView.
-            this.console.println(
-                    "\n\n--------------------------------------------------------"
-                    + "\nSUCCESS!"
-                    + "\nThe list of characters have been printed to your file."
-                    + "\n--------------------------------------------------------");
-        } catch (PrintCharactersViewException e) {
-            this.console.println(e.getMessage());
-        }
-
-        // catch errors
-        // display a success message
-    }
+//    private void printCharacters() {
+//        // prompt for user to enter the filepath to print to
+//        this.console.println("================================================="
+//                + "\nPlease enter the filepath where you would like"
+//                + "\nthe list of characters to be printed."
+//                + "\n=================================================");
+//        // get the filepath
+//        String filePath = this.getInput();
+//        // call method to print the report
+//        try {
+//            filePath =
+//            // display a success message
+//            this.console.println(
+//                    "\n\n--------------------------------------------------------"
+//                    + "\nSUCCESS!"
+//                    + "\nThe list of characters have been printed to your file."
+//                    + "\n--------------------------------------------------------");
+//        // catch errors
+//        } catch (PrintCharactersViewException e) {
+//            this.console.println(e.getMessage());
+//        }
+//
+//
+//
+//    }
     
 
 }

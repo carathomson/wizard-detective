@@ -72,9 +72,8 @@ public class MainMenuView extends View {
             this.console.println(me.getMessage());
         }
 
-        //display the game menucar
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.display();
+        this.makeBackpack();
+
     }
 
     private void saveGame() {
@@ -111,5 +110,15 @@ public class MainMenuView extends View {
     private void displayHelpMenu() {
         HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.display();
+    }
+    private void makeBackpack() {
+        //if (CreateBackpackView.doAction.volume = 0){
+        CreateBackpackView createBackpack = new CreateBackpackView();
+        createBackpack.display();
+        //}else{
+        //display the game menu
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
+    //}
     }
 }

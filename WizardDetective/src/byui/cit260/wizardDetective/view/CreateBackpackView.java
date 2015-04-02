@@ -57,9 +57,10 @@ public class CreateBackpackView extends View {
 
     @Override
     public boolean doAction(Object obj) {
+        double volume = 0;
         double[] inputValues = (double[]) obj;
         try {
-            double volume = CreateBackpackControl.calcBackpackSize(inputValues[0], inputValues[1], inputValues[2]);
+            volume = CreateBackpackControl.calcBackpackSize(inputValues[0], inputValues[1], inputValues[2]);
             this.console.println(
                     "\n\n========================================================"
                     + "\nCongradulations! Your backpack can hold " + volume + " cubic inches."

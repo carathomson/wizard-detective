@@ -81,8 +81,11 @@ public class GameMenuView extends View {
     }
 
     private void seeInventory() {
-        NotebookControl notebookList = new NotebookControl();
-        notebookList.display();
+        InventoryView inventory = new InventoryView();
+        inventory.display();
+
+        //NotebookControl notebookList = new NotebookControl();
+        //notebookList.display();
     }
 
     private void chaseMan() {

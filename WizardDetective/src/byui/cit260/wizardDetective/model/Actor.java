@@ -26,7 +26,8 @@ public enum Actor implements Serializable {
     Cook("Robust wooman in kitchen"),
     Coach("Fit man who teaches in the gym"),
     Maid("lady who has worked here for a few weeks cleaning rooms."),
-    Steve("victim");
+    Steve("victim"),
+    Adam("you");
 
     //class instances
     private final Point location;

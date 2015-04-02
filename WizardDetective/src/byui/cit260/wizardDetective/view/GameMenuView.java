@@ -50,7 +50,7 @@ public class GameMenuView extends View {
                 this.seeInventory();
                 break;
             case 'N':// move Locations
-                
+
                 this.displayNavigationView();
                 break;
             case 'Z':// print Map
@@ -103,28 +103,30 @@ public class GameMenuView extends View {
 
     }
 
-      private void printNavigationView() {
-          PrintWriter mapOut=null;
-          try{
-              this.console.println("enter file name for the saved map");
-              String file = getInput();
-              mapOut = new PrintWriter(file);
-              this.displayMap(WizardDetective.getCurrentGame().getMap(), mapOut);
-          }catch(IOException e){
-              ErrorView.display("GameMenuView", e.getMessage());
-          }finally{
-              mapOut.close();
-          }
+    private void printNavigationView() {
+        PrintWriter mapOut = null;
+        try {
+            this.console.println("enter file name for the saved map");
+            String file = getInput();
+            mapOut = new PrintWriter(file);
+            this.displayMap(WizardDetective.getCurrentGame().getMap(), mapOut);
+        } catch (IOException e) {
+            ErrorView.display("GameMenuView", e.getMessage());
+        } finally {
+            mapOut.close();
+        }
     }
-      
+
     private void makeBackpack() {
         CreateBackpackView createBackpack = new CreateBackpackView();
         createBackpack.display();
     }
-    public void displayMap(Map map){
+
+    public void displayMap(Map map) {
         this.console.println(buildMap(map));
     }
-    public void displayMap(Map map, PrintWriter mapOut){
+
+    public void displayMap(Map map, PrintWriter mapOut) {
         mapOut.println(buildMap(map));
     }
 
@@ -161,12 +163,12 @@ public class GameMenuView extends View {
     private void printNotebook() {
         //prompt for and get the name of the file to print the notbook to
         this.console.println("\n\nEnter the file path to where the Notebook "
-                                + "is to be printed to.");
+                + "is to be printed to.");
         String filePath = this.getInput();
-        
-        try{
+
+        try {
             NotebookControl.printNotebook(filePath);
-        }catch (Exception ex) {
+        } catch (Exception ex) {
             ErrorView.display("GameMenuView", ex.getMessage());
         }
     }
@@ -196,6 +198,4 @@ public class GameMenuView extends View {
 //
 //
 //    }
-    
-
 }

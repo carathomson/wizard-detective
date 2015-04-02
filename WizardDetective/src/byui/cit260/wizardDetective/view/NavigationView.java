@@ -5,7 +5,11 @@
  */
 package byui.cit260.wizardDetective.view;
 
+import byui.cit260.wizardDetective.control.ActorControl;
+import byui.cit260.wizardDetective.model.Location;
+import byui.cit260.wizardDetective.model.Scene;
 import java.awt.Point;
+import wizarddetective.WizardDetective;
 
 /**
  *
@@ -34,43 +38,18 @@ public class NavigationView extends View {
             this.console.println("Column value out of bounds");
         }
         
-        Point location = new Point(int row, int column);
+        Point location = new Point(row, column);
+        ActorControl.moveActorToLocation(WizardDetective.getCurrentGame().getPlayer().getActor(), location);
         
-        return
-
-        /**char choice = value.charAt(0);
-
-        switch (choice) {
-            case 'P': // Look at inventory
-                this.displayParlor();
-                break;
-
-            case 'C': // Look at inventory
-                this.displayCrimeSceneView();
-                break;
-
-            case 'K':// move Locations
-                this.displayRoomMenuView();
-                break;
-
-            case 'G': // chase man
-                this.displayGuestRoom();
-                break;
-
-            case 'H': //pulls up help screen
-                this.displayCellar();
-                break;
-
-            case 'B': //pulls up help screen
-                this.displayGym();
-                break;
-            case 'E': // return to previous Menu
-                return true;
-            default:
-                this.console.println("\n*** Invalid Selection *** Try Again");
-                break;
-        }
-        return true;**/
+        Location[][] locations = WizardDetective.getCurrentGame().getMap().getLocations();
+        Location newLocation = locations[row][column];
+        Scene scene = newLocation.getScene();
+        this.console.println(scene.getDescription());
+        
+        return true;
+        
+       
+        
     }
 
     private void displayParlor() {

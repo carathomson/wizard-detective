@@ -16,12 +16,22 @@ public class Player implements Serializable {
 
     private String name;
     private double inventory;
+    private Actor actor;
     
     private Game[] game;
 
     public Player() {
     }
 
+    public Actor getActor() {
+        return actor;
+    }
+
+    public void setActor(Actor actor) {
+        this.actor = actor;
+    }
+
+    
     public Game[] getGame() {
         return game;
     }

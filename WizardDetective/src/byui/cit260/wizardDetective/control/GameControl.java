@@ -16,6 +16,7 @@ import byui.cit260.wizardDetective.model.Map;
 import byui.cit260.wizardDetective.model.Notebook;
 import byui.cit260.wizardDetective.model.Player;
 import byui.cit260.wizardDetective.model.Tool;
+import java.awt.Point;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -38,6 +39,7 @@ public class GameControl {
         WizardDetective.setCurrentGame(game); //save in wizard Detective
         
         game.setPlayer(player); //save player in game
+        player.setActor(Actor.Adam);
         //game.setClue(createClueList());
         
         //create the inventory list and save in the game
@@ -56,6 +58,8 @@ public class GameControl {
         
         Actor[] actor = ActorControl.createActor();
         game.setActor(actor);
+        
+        ActorControl.moveActorToLocation(player.getActor(), new Point(3,0));
 //        GameControl.game = game;
     }
     

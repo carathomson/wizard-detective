@@ -25,7 +25,14 @@ public enum Clue implements Serializable {
             + "\n to pay my bill. My parents have frozen all of my"
             + "\n credit cards. I hope you will understand."
             + "\n      Steve"),
-    Clue6("Rumor from the staff about Bob in wine room");
+    Clue6("Rumor from the staff about Bob in wine room"),
+    Clue7("Two drops of blood found in the corner of Bob's office"),
+    Clue8("Knife covered in blood found in the garage"),
+    Clue9("Tom had you look over some files of recent unsolved"
+            + "\nmurders and pointed out that they geographicly place"
+            + "\nthis hotel in the center of all the other crime scenes."),
+    Clue10("Maid said she was asked to clean Bob's favourite tie."
+            + "\nHe said he had cut himself and got some blood on it.");
 
     //class instance variables
     private final Clue[] clueType;

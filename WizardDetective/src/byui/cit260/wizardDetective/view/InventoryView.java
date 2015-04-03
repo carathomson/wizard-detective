@@ -13,7 +13,7 @@ public class InventoryView extends View {
 
     public InventoryView() {
         super("\n\n================================"
-                + "\nWhat do you want to look at?"
+                + "\nWhat would you like to look at?"
                 + "\n--------------------------------"
                 + "\n\nN - clues in your notebook"
                 + "\nB - tools in your backpack"

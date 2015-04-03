@@ -91,7 +91,7 @@ public class MapControl {
         nextLocation8.setLocation(Scene.GuestRoom);
         //assign to the location row1, column 0 the Kitchen scene
         Location nextLocation9 = locations[1][4];
-        nextLocation9.setLocation(Scene.Janitor);
+        nextLocation9.setLocation(Scene.Janitor, Clue.Clue3);
         //assign to the location row2, column 0 the Kitchen scene
         Location nextLocation10 = locations[2][0];
         nextLocation10.setLocation(Scene.GuestRoom, Actor.Maid, Clue.Clue10);
@@ -124,19 +124,20 @@ public class MapControl {
         nextLocation19.setLocation(Scene.Gym, Actor.Coach, Clue.Clue6);
         //assign to the location row4, column 0 the Kitchen scene
         Location nextLocation20 = locations[4][0];
-        nextLocation20.setLocation(Scene.Laundry, Actor.Tim);
+        nextLocation20.setLocation(Scene.Laundry, Actor.Tim, Clue.Clue9);
         //assign to the location row4, column 1 the Kitchen scene
         Location nextLocation21 = locations[4][1];
         nextLocation21.setLocation(Scene.Garage, Clue.Clue8);
         //assign to the location row4, column 2 the Kitchen scene
         Location nextLocation22 = locations[4][2];
         nextLocation22.setLocation(Scene.BoilerRoom, Clue.Clue4);
-        //assign to the location row4, column 3 the Kitchen scene
+        //assign to the location row4, column 4 the Kitchen scene
         Location nextLocation23 = locations[4][3];
-        nextLocation23.setLocation(Scene.SafeRoom, Actor.Bob);
+        nextLocation23.setLocation(Scene.WineRoom, Clue.Clue5);
         //assign to the location row4, column 4 the Kitchen scene
         Location nextLocation24 = locations[4][4];
-        nextLocation24.setLocation(Scene.WineRoom, Clue.Clue5);
+        nextLocation24.setLocation(Scene.SafeRoom, Actor.Bob);
+        
 
     }
 

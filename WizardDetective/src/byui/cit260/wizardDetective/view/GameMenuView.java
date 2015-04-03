@@ -28,7 +28,7 @@ public class GameMenuView extends View {
                 + "\n| Game Menu                                               |"
                 + "\n-----------------------------------------------------------"
                 + "\nI - Inventory"
-                + "\nB - Make Backpack"
+//                + "\nB - Make Backpack"
                 + "\nN - Navigate"
                 + "\nM - Chase Man"
                 + "\nP - Print Notebook"
@@ -56,9 +56,9 @@ public class GameMenuView extends View {
             case 'Z':// print Map
                 this.printNavigationView();
                 break;
-            case 'B'://make your backpack
-                this.makeBackpack();
-                break;
+//            case 'B'://make your backpack
+//                this.makeBackpack();
+//                break;
             case 'M': // chase man
                 this.chaseMan();
                 break;
@@ -83,9 +83,6 @@ public class GameMenuView extends View {
     private void seeInventory() {
         InventoryView inventory = new InventoryView();
         inventory.display();
-
-        //NotebookControl notebookList = new NotebookControl();
-        //notebookList.display();
     }
 
     private void chaseMan() {

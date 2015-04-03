@@ -13,24 +13,55 @@ import java.util.Objects;
  * @author Lynn
  */
 public enum Scene implements Serializable {
-    Bathroom("Presidential suite bathroom. Lavish furnishings.", "BTH"),
-    LivingRoom("Presidential suite room.", "LVR"),
-    CrimeScene("Steve's bedroom. He is laying on his bed dead.", "CRI"),
-    PresKitchen("Very nice kitchen.", "PKT"),
-    Balcony("Overlooks the city.", "BAL"),
-    GuestRoom("Generic hotel room.", "GST"),
-    Parlor("Main entrance of the hotel.", "PAR"),
-    FrontDesk("This is where you check in.", "FRD"),
-    Office("This is where the Matrede organizes everything.", "OFF"),
-    Kitchen("The main kitchen for the hotel.", "KTN"),
-    Gym("Big room with lots of exercize equipment.", "GYM"),
-    Laundry("Lots of noisy machines and clothes in bins.", "LDY"),
-    Garage("Your basic parking lot full of expensive cars.", "GAR"),
-    BoilerRoom("Hot noisy room with a lot of pipes.", "BOL"),
-    Cellar("Big storage room full of food.", "CLR"),
-    WineRoom("Cold room with wine on shelves.", "WIN"),
-    SafeRoom("Hidden room behind one of the shelves in the wine room.", "SAF"),
-    Janitor("Where the cleaning supplies and the Janitorys office is", "JNR");
+    Bathroom("\nYou walk into the Presidential suite bathroom and notice"
+            + "\nthe lavish furnishings. Nothing seems out of place.", "BTH"),
+    LivingRoom("\nIn entering the suite's living room you see a distraught woman"
+            + "\n sitting on the fancy couch. She must be the witness!", "LVR"),
+    CrimeScene("\nYou walk into the crime scene. Steve is lying on the bed dead"
+            + "\nand the Chief is standing next to him.", "CRI"),
+    PresKitchen("\nThe suite's kitchen doesn't seem to hold any clues", "PKT"),
+    Balcony("\nYou notice the large balcony and go to take a look. The view is"
+            + "\namazing but you don't see anything of interest.", "BAL"),
+    GuestRoom("\nYou enter a generic hotel room. You might or might not"
+            + "\nhave seen something or someone. Fix this discription!", "GST"),
+    Parlor("\nYou walk into the main entrance of the hotel and see the"
+            + "\nBell Boy by the door. You go up and talk to him.", "PAR"),
+    FrontDesk("\nYou approach the front desk and strike up a conversation"
+            + "\nwith the Matrade named Gaston.", "FRD"),
+    Office("\nUpon walking into the office you quickly notice this is where"
+            + "\nthe Matrede organizes everything for Bob the owner. You use"
+            + "\nyour sight and notice two drops of blood in the corner.", "OFF"),
+    Kitchen("\nYou enter the main kitchen for the hotel and the jolly plump"
+            + "\n lady who is the cook starts yacking away to you.", "KTN"),
+    Gym("\nYou find yourself in a big room with lots of exercize equipment."
+            + "\nA Schwarzenegger like man walks up to you. He let you know"
+            + "\nhe is the fitness instructor. You tell him who you are and"
+            + "\nthen you ask him some questions", "GYM"),
+    Laundry("\nYou find yourself in the laundry room. There are lots of"
+            + "\nnoisy machines and clothes in bins. You see your partner"
+            + "\nTim. He shows you a pile of past files.", "LDY"),
+    Garage("\nYou open the door to the garage and at first it looks pretty"
+            + "\nnormal but then something glimmers. You go over and find"
+            + "\na knife covered in blood. It is the murder wepon!", "GAR"),
+    BoilerRoom("\nYou go into a hot noisy room with a lot of pipes.Must be"
+            + "\nthe boiler room. You have no chance of finding anything"
+            + "\nhere so you use your sight and notice a pice of paper wadded"
+            + "\nup on the top of the trash.", "BOL"),
+    Cellar("\nEntering the big food storage room you realize you haven't eaten"
+            + "\nyet. Nothing looks out of the ordinary and your sight also "
+            + "\nreveals nothing so you move on.", "CLR"),
+    WineRoom("\nA chill goes down your spine as you enter the cold wine room."
+            + "\nSomething seems off and on looking around you see a discarded"
+            + "\nletter.Just to be safe you use your sight and you are suprised"
+            + "\nwhen you see a hidden doorway.", "WIN"),
+    SafeRoom("\nEntering the code, the secret door opens and you cautiously"
+            + "\ncreap into a dimly lit room. You have finally found the rumored"
+            + "\nBob! He heard the door open and nocks the gun out of your hand."
+            + "\nAfter struggling for a few minutes he knocks you down dazed and"
+            + "\nruns out the door. As you slowly limp after him you follow him"
+            + "\nwith your sight and see him pull out of the garage in his fancy"
+            + "\ncar. -this is where SearchAreaView is called-", "SAF"),
+    Janitor("\nWhere the cleaning supplies and the Janitorys office is", "JNR");
 
     //class instance variables
     private final String description;

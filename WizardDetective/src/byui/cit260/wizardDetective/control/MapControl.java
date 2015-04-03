@@ -7,6 +7,7 @@ package byui.cit260.wizardDetective.control;
 
 import byui.cit260.wizardDetective.exceptions.MapControlException;
 import byui.cit260.wizardDetective.model.Actor;
+import byui.cit260.wizardDetective.model.Clue;
 import byui.cit260.wizardDetective.model.Location;
 import byui.cit260.wizardDetective.model.Map;
 import byui.cit260.wizardDetective.model.Scene;
@@ -63,79 +64,80 @@ public class MapControl {
         Location[][] locations = map.getLocations();
         //assign to the location row0, column 0 the bathroom scene
         Location nextLocation = locations[0][0];
-        nextLocation.setScene(Scene.Bathroom);
+        nextLocation.setLocation(Scene.Bathroom);
         //assign to the location row0, column 1 the livingroom scene
         Location nextLocation1 = locations[0][1];
-        nextLocation.setScene(Scene.LivingRoom);
+        nextLocation1.setLocation(Scene.LivingRoom, Actor.Witness);
         //assign to the location row0, column 2 the Crime scene
         Location nextLocation2 = locations[0][2];
-        nextLocation.setScene(Scene.CrimeScene);
+        nextLocation2.setLocation(Scene.CrimeScene, Actor.Chief);
         //assign to the location row0, column 3 the Kitchen scene
         Location nextLocation3 = locations[0][3];
-        nextLocation.setScene(Scene.PresKitchen);
+        nextLocation3.setLocation(Scene.PresKitchen);
         //assign to the location row0, column 4 the Balcony scene
         Location nextLocation4 = locations[0][4];
-        nextLocation.setScene(Scene.Balcony);
+        nextLocation4.setLocation(Scene.Balcony);
         //assign to the location row1, column 0 the Kitchen scene
         Location nextLocation5 = locations[1][0];
-        nextLocation.setScene(Scene.GuestRoom);
+        nextLocation5.setLocation(Scene.GuestRoom, Clue.Clue2);
         //assign to the location row1, column 1 the Kitchen scene
         Location nextLocation6 = locations[1][1];
-        nextLocation.setScene(Scene.GuestRoom);
+        nextLocation6.setLocation(Scene.GuestRoom);
         //assign to the location row1, column 2 the Kitchen scene
         Location nextLocation7 = locations[1][2];
-        nextLocation.setScene(Scene.GuestRoom);
+        nextLocation7.setLocation(Scene.GuestRoom, Actor.Janitor, Clue.Clue6);
         //assign to the location row1, column 3 the Kitchen scene
         Location nextLocation8 = locations[1][3];
-        nextLocation.setScene(Scene.GuestRoom);
+        nextLocation8.setLocation(Scene.GuestRoom);
         //assign to the location row1, column 0 the Kitchen scene
         Location nextLocation9 = locations[1][4];
-        nextLocation.setScene(Scene.Janitor);
+        nextLocation9.setLocation(Scene.Janitor, Clue.Clue3);
         //assign to the location row2, column 0 the Kitchen scene
         Location nextLocation10 = locations[2][0];
-        nextLocation.setScene(Scene.GuestRoom);
+        nextLocation10.setLocation(Scene.GuestRoom, Actor.Maid, Clue.Clue10);
         //assign to the location row2, column 1 the Kitchen scene
         Location nextLocation11 = locations[2][1];
-        nextLocation.setScene(Scene.GuestRoom);
+        nextLocation11.setLocation(Scene.GuestRoom);
         //assign to the location row2, column 2 the Kitchen scene
         Location nextLocation12 = locations[2][2];
-        nextLocation.setScene(Scene.GuestRoom);
+        nextLocation12.setLocation(Scene.GuestRoom, Clue.Clue1);
         //assign to the location row2, column 3 the Kitchen scene
         Location nextLocation13 = locations[2][3];
-        nextLocation.setScene(Scene.GuestRoom);
+        nextLocation13.setLocation(Scene.GuestRoom);
         //assign to the location row2, column 4 the Kitchen scene
         Location nextLocation14 = locations[2][4];
-        nextLocation.setScene(Scene.GuestRoom);
+        nextLocation14.setLocation(Scene.GuestRoom);
         //assign to the location row3, column 0 the Kitchen scene
         Location nextLocation15 = locations[3][0];
-        nextLocation.setScene(Scene.Parlor);
+        nextLocation15.setLocation(Scene.Parlor, Actor.Bellboy, Clue.Clue6);
         //assign to the location row3, column 1 the Kitchen scene
         Location nextLocation16 = locations[3][1];
-        nextLocation.setScene(Scene.FrontDesk);
+        nextLocation16.setLocation(Scene.FrontDesk, Actor.Matrede);
         //assign to the location row3, column 2 the Kitchen scene
         Location nextLocation17 = locations[3][2];
-        nextLocation.setScene(Scene.Office);
+        nextLocation17.setLocation(Scene.Office, Clue.Clue7);
         //assign to the location row3, column 3 the Kitchen scene
         Location nextLocation18 = locations[3][3];
-        nextLocation.setScene(Scene.Kitchen);
+        nextLocation18.setLocation(Scene.Kitchen, Actor.Cook);
         //assign to the location row3, column 4 the Kitchen scene
         Location nextLocation19 = locations[3][4];
-        nextLocation.setScene(Scene.Gym);
+        nextLocation19.setLocation(Scene.Gym, Actor.Coach, Clue.Clue6);
         //assign to the location row4, column 0 the Kitchen scene
         Location nextLocation20 = locations[4][0];
-        nextLocation.setScene(Scene.Laundry);
+        nextLocation20.setLocation(Scene.Laundry, Actor.Tim, Clue.Clue9);
         //assign to the location row4, column 1 the Kitchen scene
         Location nextLocation21 = locations[4][1];
-        nextLocation.setScene(Scene.Garage);
+        nextLocation21.setLocation(Scene.Garage, Clue.Clue8);
         //assign to the location row4, column 2 the Kitchen scene
         Location nextLocation22 = locations[4][2];
-        nextLocation.setScene(Scene.BoilerRoom);
-        //assign to the location row4, column 3 the Kitchen scene
+        nextLocation22.setLocation(Scene.BoilerRoom, Clue.Clue4);
+        //assign to the location row4, column 4 the Kitchen scene
         Location nextLocation23 = locations[4][3];
-        nextLocation.setScene(Scene.SafeRoom);
+        nextLocation23.setLocation(Scene.WineRoom, Clue.Clue5);
         //assign to the location row4, column 4 the Kitchen scene
         Location nextLocation24 = locations[4][4];
-        nextLocation.setScene(Scene.WineRoom);
+        nextLocation24.setLocation(Scene.SafeRoom, Actor.Bob);
+        
 
     }
 

@@ -21,13 +21,31 @@ public class Location implements Serializable {
     private Scene scene;
     private int row;
     private int column;
+    private Actor actor;
+    private Clue clue;
     
     private Inventory[] inventory;
-    
 
     public Location() {
     }
 
+    public Clue getClue() {
+        return clue;
+    }
+
+    public void setClue(Clue clue) {
+        this.clue = clue;
+    }
+    
+
+    public Actor getActor() {
+        return actor;
+    }
+
+    public void setActor(Actor actor) {
+        this.actor = actor;
+    }
+    
     public int getCoordinate() {
         return coordinate;
     }
@@ -56,10 +74,26 @@ public class Location implements Serializable {
         return scene;
     }
 
-    public void setScene(Scene scene) {
+    public void setLocation(Scene scene) {
         this.scene = scene;
     }
+    
+    public void setLocation(Scene scene,Clue clue) {
+        this.scene = scene;
+        this.clue = clue;
+    }
 
+    public void setLocation(Scene scene,Actor actor) {
+        this.scene = scene;
+        this.actor = actor;
+    }
+
+    public void setLocation(Scene scene, Actor actor, Clue clue) {
+        this.scene = scene;
+        this.actor = actor;
+        this.clue = clue;
+    }
+    
     public int getRow() {
         return row;
     }
@@ -84,14 +118,9 @@ public class Location implements Serializable {
         this.inventory = inventory;
     }
 
-   
-
     @Override
     public String toString() {
         return "Location{" + "coordinate=" + coordinate + ", name=" + name + ", visited=" + visited + ", scene=" + scene + ", inventory=" + inventory + '}';
     }
-
-
-
 
 }

@@ -5,6 +5,12 @@
  */
 package byui.cit260.wizardDetective.view;
 
+import byui.cit260.wizardDetective.control.ActorControl;
+import byui.cit260.wizardDetective.model.Location;
+import byui.cit260.wizardDetective.model.Scene;
+import java.awt.Point;
+import wizarddetective.WizardDetective;
+
 /**
  *
  * @author Mechams
@@ -25,46 +31,25 @@ public class NavigationView extends View {
         int column = Integer.parseInt(values[1]);
 
         if (row < 0 || row > 5) {
-            return this.console.println("Row value out of bounds");
+            this.console.println("Row value out of bounds");
         }
 
         if (column < 0 || column > 5) {
-            return this.console.println("Column value out of bounds");
+            this.console.println("Column value out of bounds");
         }
-
-        char choice = value.charAt(0);
-
-        switch (choice) {
-            case 'P': // Look at inventory
-                this.displayParlor();
-                break;
-
-            case 'C': // Look at inventory
-                this.displayCrimeSceneView();
-                break;
-
-            case 'K':// move Locations
-                this.displayRoomMenuView();
-                break;
-
-            case 'G': // chase man
-                this.displayGuestRoom();
-                break;
-
-            case 'H': //pulls up help screen
-                this.displayCellar();
-                break;
-
-            case 'B': //pulls up help screen
-                this.displayGym();
-                break;
-            case 'E': // return to previous Menu
-                return true;
-            default:
-                this.console.println("\n*** Invalid Selection *** Try Again");
-                break;
-        }
-        return true;
+        
+        Point location = new Point(row, column);
+        ActorControl.moveActorToLocation(WizardDetective.getCurrentGame().getPlayer().getActor(), location);
+        
+        Location[][] locations = WizardDetective.getCurrentGame().getMap().getLocations();
+        Location newLocation = locations[row][column];
+        Scene scene = newLocation.getScene();
+        this.console.println(scene.getDescription());
+        
+        return false;
+        
+       
+        
     }
 
     private void displayParlor() {

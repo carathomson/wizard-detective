@@ -52,15 +52,18 @@ public class HelpMenuView extends View {
     }
 
     private void helpMove() {
-        this.console.println("*** Help move page selected ***");
+        this.console.println("To move select the navigate function and enter in the coordinates"
+                + "/n that you would like to travel to. Each number must have a apace between them"
+                + "/n for example: 1 1 is correct not 11 or 1-1.");
     }
 
     private void helpControls() {
-        this.console.println("*** Help Control map page selected ***");
+        this.console.println("To choose an option just type in the corresponding letter  to the"
+                + "/n menu option. The letter must be capitalized.");
     }
 
     private void helpInterrogate() {
-        this.console.println("*** Help interrogate and investigate page selected ***");
+        this.console.println("This happens automatically so don't worry too much about it. ");
     }
 
 }

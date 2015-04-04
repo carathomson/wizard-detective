@@ -17,9 +17,14 @@ public enum Scene implements Serializable {
             + "\nthe lavish furnishings. Nothing seems out of place.", "BTH"),
     LivingRoom("\nIn entering the suite's living room you see a distraught woman"
             + "\n sitting on the fancy couch. She must be the witness!", "LVR"),
-    CrimeScene("\nYou walk into the crime scene. Steve is lying on the bed dead"
-            + "\nand the Chief is standing next to him.", "CRI"),
-    PresKitchen("\nThe suite's kitchen doesn't seem to hold any clues", "PKT"),
+    CrimeScene("\nYou walk into the crime scene. Forensic Specialists are coming"
+            + "\nthrough the area checking for particulates and anything else that"
+            + "\nmay be of use in the investigation. There is a body lying face down"
+            + "\non the bed. A red pool of dried blood surrounding his body. His hair"
+            + "\nis blond. The cause of death is obvious, his throat was slashed.", "CRI"),
+    PresKitchen("\nThe Presidential suite's kitchen doesn't seem to hold any clues. "
+            + "\nEvery surface is covered in fingerprinting dust. The Forensics"
+            + "\nteam has already been through here.", "PKT"),
     Balcony("\nYou notice the large balcony and go to take a look. The view is"
             + "\namazing but you don't see anything of interest.", "BAL"),
     GuestRoom("\nYou enter a generic hotel room. You might or might not"
@@ -61,7 +66,7 @@ public enum Scene implements Serializable {
             + "\nruns out the door. As you slowly limp after him you follow him"
             + "\nwith your sight and see him pull out of the garage in his fancy"
             + "\ncar. -this is where SearchAreaView is called-", "SAF"),
-    Janitor("\nWhere the cleaning supplies and the Janitorys office is", "JNR");
+    Janitor("\nWhere the cleaning supplies and the Janitor's office is", "JNR");
 
     //class instance variables
     private final String description;

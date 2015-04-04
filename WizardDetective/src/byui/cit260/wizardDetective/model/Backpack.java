@@ -17,10 +17,21 @@ public class Backpack implements Serializable {
     
     private String toolName;
     private ArrayList <Tool> tools = new ArrayList();
+    private double volume = 0;
     
     public Backpack() {
     }
 
+    public double getVolume() {
+        return volume;
+    }
+
+    public void setVolume(double volume) {
+        this.volume = volume;
+    }
+
+    
+    
     public String getToolName() {
         return toolName;
     }

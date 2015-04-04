@@ -68,11 +68,16 @@ public class MainMenuView extends View {
         try {
             // create and start new game
             GameControl.createNewGame(WizardDetective.getPlayer());
-        } catch (MapControlException me) {
-            this.console.println(me.getMessage());
+            if (WizardDetective.getCurrentGame().getBackpack().getVolume() == 0){
+                this.makeBackpack();
+                GameMenuView gameMenu = new GameMenuView();
+                gameMenu.display();
+            }
+        } catch (Exception e) {
+            this.console.println(e.getMessage());
         }
-
-        this.makeBackpack();
+        
+        
 
     }
 
@@ -117,8 +122,7 @@ public class MainMenuView extends View {
         createBackpack.display();
         //}else{
         //display the game menu
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.display();
+        
     //}
     }
 }

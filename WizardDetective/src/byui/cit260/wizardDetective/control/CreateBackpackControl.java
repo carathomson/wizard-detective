@@ -9,6 +9,7 @@ import byui.cit260.wizardDetective.model.Backpack;
 import byui.cit260.wizardDetective.model.Tool;
 import java.util.ArrayList;
 import byui.cit260.wizardDetective.exceptions.CreateBackpackControlException;
+import wizarddetective.WizardDetective;
 
 /**
  *
@@ -35,7 +36,7 @@ public class CreateBackpackControl {
         }
 
         double volume = (height * width * depth);
-
+        WizardDetective.getCurrentGame().getBackpack().setVolume(volume);
         return volume;
 
     }

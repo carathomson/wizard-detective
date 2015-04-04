@@ -32,18 +32,28 @@ public class CreateBackpackView extends View {
                     + "\nHeight <= 25 inches"
                     + "\nWidth  <= 20 inches"
                     + "\nDepth  <= 12 inches"
+                    + "\nPress E to exit"
                     + "\n*************************************************");
-
+            
             this.console.println("\nHow high should your backpack be?");
             String value = this.getInput();
+            if (value.equals("E")){
+               return;
+            }
             double height = Double.parseDouble(value);
-
+            
             this.console.println("\nHow wide?");
             value = this.getInput();
+            if (value.equals("E")){
+               return;
+            }
             double width = Double.parseDouble(value);
 
             this.console.println("\nHow deep?");
             value = this.getInput();
+            if (value.equals("E")){
+               return;
+            }
             double depth = Double.parseDouble(value);
 
             double[] values = new double[3];
@@ -66,6 +76,10 @@ public class CreateBackpackView extends View {
                     + "\nCongradulations! Your backpack can hold " + volume + " cubic inches."
                     + "\nNow you are ready to start your investigation."
                     + "\n========================================================");
+            String value = (String) obj;
+            char choice = value.charAt(0);
+
+       
         } catch (CreateBackpackControlException e) {
             this.console.println(e.getMessage());
             return false;

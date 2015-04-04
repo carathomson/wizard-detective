@@ -62,9 +62,9 @@ public class GameMenuView extends View {
             case 'M': // chase man
                 this.chaseMan();
                 break;
-            case 'P'://Print Notebook
-                this.printNotebook();
-                break;
+           // case 'P'://Print Notebook
+             //   this.printNotebook();
+               // break;
 //            case 'C'://Print character list
 //                this.printCharacters();
 //                break;
@@ -160,7 +160,7 @@ public class GameMenuView extends View {
         return sb.toString();
     }
 
-    private void printNotebook() {
+    /**private void printNotebook() {
         //prompt for and get the name of the file to print the notbook to
         this.console.println("\n\nEnter the file path to where the Notebook "
                 + "is to be printed to.");
@@ -172,7 +172,7 @@ public class GameMenuView extends View {
             ErrorView.display("GameMenuView", ex.getMessage());
         }
     }
-
+**/
 //    private void printCharacters() {
 //        // prompt for user to enter the filepath to print to
 //        this.console.println("================================================="

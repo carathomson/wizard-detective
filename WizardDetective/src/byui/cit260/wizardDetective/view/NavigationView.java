@@ -46,7 +46,7 @@ public class NavigationView extends View {
         Scene scene = newLocation.getScene();
         this.console.println(scene.getDescription());
         
-        return false;
+        return true;
         
        
         

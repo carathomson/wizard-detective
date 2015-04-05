@@ -34,12 +34,6 @@ public class NotebookControl extends View {
         }
         return array;
     }
-
-    public static void printNotebook(String filePath) {
-       Clue[] clues = clue.getDescription;
-        this.console.println("");
-    }
-
     @Override
     public void display() {
         this.console.println("================================"

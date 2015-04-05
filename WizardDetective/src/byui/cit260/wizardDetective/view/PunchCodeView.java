@@ -40,39 +40,51 @@ public class PunchCodeView extends View {
             this.console.println(this.getPromptMessage()); //display the main menu
 
             this.console.println("Enter the first number: ");
-            String input = this.getInput();//get the user selection
+            String value = this.getInput();//get the user selection
            double value1 = 0;
             try {
-             value1 = Double.parseDouble(input);
+             value1 = Double.parseDouble(value);
             
            } catch (NumberFormatException nf){
                this.console.println("\nYou must enter a valid number."
                                     +"Try again or enter E to quit.");
-           }
+               
+            }
+               
+           
         
             this.console.println("Enter the second number: ");
-            input = this.getInput();//get the user selection
+            value = this.getInput();//get the user selection
            double value2 = 0;
             try {
-             value2 = Double.parseDouble(input);
+                if (value.equals("E")){
+               return;
+            }
+             value2 = Double.parseDouble(value);
                } catch (NumberFormatException nf){
                this.console.println("\nYou must enter a valid number."
                                     +"Try again or enter E to quit.");
            }
             this.console.println("Enter the third number: ");
-            input = this.getInput();//get the user selection
+            value = this.getInput();//get the user selection
             double value3 = 0;
             try {
-            value3 = Double.parseDouble(input);
+                if (value.equals("E")){
+               return;
+            }
+            value3 = Double.parseDouble(value);
             } catch (NumberFormatException nf){
                this.console.println("\nYou must enter a valid number."
                                     +"Try again or enter E to quit.");
            }
             this.console.println("Enter the fourth number: ");
-            input = this.getInput();//get the user selection
+            value = this.getInput();//get the user selection
             double value4 = 0;
             try {
-            value4 = Double.parseDouble(input);
+                if (value.equals("E")){
+               return;
+            }
+            value4 = Double.parseDouble(value);
             } catch (NumberFormatException nf){
                this.console.println("\nYou must enter a valid number."
                                     +"Try again or enter E to quit.");

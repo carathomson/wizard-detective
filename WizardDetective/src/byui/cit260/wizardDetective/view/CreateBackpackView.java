@@ -76,8 +76,6 @@ public class CreateBackpackView extends View {
                     + "\nCongradulations! Your backpack can hold " + volume + " cubic inches."
                     + "\nNow you are ready to start your investigation."
                     + "\n========================================================");
-            String value = (String) obj;
-            char choice = value.charAt(0);
 
        
         } catch (CreateBackpackControlException e) {

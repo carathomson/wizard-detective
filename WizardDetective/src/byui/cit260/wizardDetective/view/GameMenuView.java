@@ -27,7 +27,7 @@ public class GameMenuView extends View {
                 + "\n-----------------------------------------------------------"
                 + "\n| Game Menu                                               |"
                 + "\n-----------------------------------------------------------"
-                + "\nI - Inventory"
+                + "\nC - Notebook Clues"
 //                + "\nB - Make Backpack"
                 + "\nN - Navigate"
                 + "\nM - Chase Man"
@@ -46,8 +46,8 @@ public class GameMenuView extends View {
         char choice = value.charAt(0);
 
         switch (choice) {
-            case 'I': // Look at list of clues
-                this.seeInventory();
+            case 'C': // Look at list of clues
+                this.seeNotebook();
                 break;
             case 'N':// move Locations
 
@@ -80,9 +80,9 @@ public class GameMenuView extends View {
         return true;
     }
 
-    private void seeInventory() {
-        InventoryView inventory = new InventoryView();
-        inventory.display();
+    private void seeNotebook() {
+        NotebookView notebook = new NotebookView();
+        notebook.display();
     }
 
     private void chaseMan() {
@@ -159,6 +159,8 @@ public class GameMenuView extends View {
         sb.append("\n");
         return sb.toString();
     }
+    
+    
 
     /**private void printNotebook() {
         //prompt for and get the name of the file to print the notbook to

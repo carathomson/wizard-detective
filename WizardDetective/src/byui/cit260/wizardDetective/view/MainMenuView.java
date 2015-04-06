@@ -117,12 +117,7 @@ public class MainMenuView extends View {
         helpMenu.display();
     }
     private void makeBackpack() {
-        //if (CreateBackpackView.doAction.volume = 0){
         CreateBackpackView createBackpack = new CreateBackpackView();
         createBackpack.display();
-        //}else{
-        //display the game menu
-        
-    //}
     }
 }

@@ -45,6 +45,7 @@ public class NavigationView extends View {
         Location newLocation = locations[row][column];
         Scene scene = newLocation.getScene();
         this.console.println(scene.getDescription());
+//        displayMap(WizardDetective.getCurrentGame().getMap());
         
         return true;
         

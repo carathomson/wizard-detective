@@ -8,6 +8,7 @@ package byui.cit260.wizardDetective.model;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
+import wizarddetective.WizardDetective;
 
 /**
  *
@@ -17,6 +18,7 @@ public class Notebook implements Serializable {
 
     private double requiredAmount;
     private ArrayList <Clue> clues = new ArrayList();
+    
 
     public Notebook() {
     }
@@ -28,7 +30,7 @@ public class Notebook implements Serializable {
     public void setRequiredAmount(double requiredAmount) {
         this.requiredAmount = requiredAmount;
     }
-
+    
     public ArrayList<Clue> getClues() {
         return clues;
     }

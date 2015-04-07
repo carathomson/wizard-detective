@@ -5,16 +5,21 @@
  */
 package byui.cit260.wizardDetective.control;
 
+import byui.cit260.wizardDetective.exceptions.GameControlException;
 import static byui.cit260.wizardDetective.control.NotebookControl.arraySort;
+import byui.cit260.wizardDetective.model.Actor;
 import byui.cit260.wizardDetective.model.Clue;
+import byui.cit260.wizardDetective.model.Location;
+import byui.cit260.wizardDetective.model.Notebook;
 import byui.cit260.wizardDetective.view.View;
+import java.util.ArrayList;
 import wizarddetective.WizardDetective;
 
 /**
  *
  * @author carathomson
  */
-public class NotebookControl extends View {
+public class NotebookControl {
 
     public static Clue[] arraySort(Clue[] array) {
         
@@ -34,34 +39,22 @@ public class NotebookControl extends View {
         }
         return array;
     }
-    @Override
-    public void display() {
-        this.console.println("================================"
-                + "\nWhat do you want to look at?"
-                + "\n---------------------------"
-                + "\nN - clues in your notebook"
-                + "\nB - tools in your backpack"
-                + "\n================================");
-    }
-
-    @Override
-    public boolean doAction(Object obj) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    
+    public static void addClue(Clue clue, Notebook notebook) 
+            throws GameControlException{
+        //if clue is null then return
+        if (clue == null){
+            return;
+        }
+        //if notebook is null then throw game control exception
+        if (notebook == null) {
+            throw new GameControlException("notebook does not exist");
+        }
+        
+        
+        //get list of clues from notebook
+        ArrayList <Clue> clues = notebook.getClues();
+        //add ActorControl.clue to notebook
+        clues.add(clue);
     }
 }
-
-   
-/**
-    public void display() {
-       for (Clue[] x : arraySort) {
-           for (Clue y : x) {
-         System.out.println(y);
-            }
-        
-        Clue[] originalClueList = WizardDetective.getCurrentGame().getClue();
-        Clue[] clueList = NotebookControl.arraySort(originalClueList);
-        for (Clue x : clueList) {
-            System.out.println(x.getDescription());
-        }
-  
-**/

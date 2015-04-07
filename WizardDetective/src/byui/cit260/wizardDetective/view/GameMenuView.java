@@ -6,7 +6,6 @@
 package byui.cit260.wizardDetective.view;
 
 import byui.cit260.wizardDetective.control.GameControl;
-import byui.cit260.wizardDetective.control.NotebookControl;
 import byui.cit260.wizardDetective.model.Location;
 import byui.cit260.wizardDetective.model.Map;
 import byui.cit260.wizardDetective.model.Scene;
@@ -28,7 +27,6 @@ public class GameMenuView extends View {
                 + "\n| Game Menu                                               |"
                 + "\n-----------------------------------------------------------"
                 + "\nC - Notebook Clues"
-//                + "\nB - Make Backpack"
                 + "\nN - Navigate"
                 + "\nM - Chase Man"
                 + "\nP - Print Notebook"
@@ -45,37 +43,39 @@ public class GameMenuView extends View {
 
         char choice = value.charAt(0);
 
-        switch (choice) {
-            case 'C': // Look at list of clues
-                this.seeNotebook();
-                break;
-            case 'N':// move Locations
+        try {
+            switch (choice) {
+                case 'C': // Look at list of clues
+                    this.seeNotebook();
+                    break;
+                case 'N':// move Locations
 
-                this.displayNavigationView();
-                break;
-            case 'Z':// print Map
-                this.printNavigationView();
-                break;
-//            case 'B'://make your backpack
-//                this.makeBackpack();
-//                break;
-            case 'M': // chase man
-                this.chaseMan();
-                break;
-           // case 'P'://Print Notebook
-             //   this.printNotebook();
-               // break;
+                    this.displayNavigationView();
+                    break;
+                case 'Z':// print Map
+                    this.printNavigationView();
+                    break;
+                case 'M': // chase man
+                    this.chaseMan();
+                    break;
+                // case 'P'://Print Notebook
+                //   this.printNotebook();
+                // break;
 //            case 'C'://Print character list
 //                this.printCharacters();
 //                break;
-            case 'H': //pulls up help screen
-                this.displayHelpMenu();
-                break;
-            case 'E': // exit the program
-                return true;
-            default:
-                this.console.println("\n*** Invalid Selection *** Try Again");
-                break;
+                case 'H': //pulls up help screen
+                    this.displayHelpMenu();
+                    break;
+                case 'E': // exit the program
+                    return true;
+                default:
+                    this.console.println("\n*** Invalid Selection *** Try Again");
+                    break;
+            }
+
+        } catch (Exception e) {
+            this.console.println(e.getMessage());
         }
         return true;
     }
@@ -159,22 +159,17 @@ public class GameMenuView extends View {
         sb.append("\n");
         return sb.toString();
     }
-    
-    
 
-    /**private void printNotebook() {
-        //prompt for and get the name of the file to print the notbook to
-        this.console.println("\n\nEnter the file path to where the Notebook "
-                + "is to be printed to.");
-        String filePath = this.getInput();
-
-        try {
-            NotebookControl.printNotebook(filePath);
-        } catch (Exception ex) {
-            ErrorView.display("GameMenuView", ex.getMessage());
-        }
-    }
-**/
+    /**
+     * private void printNotebook() { //prompt for and get the name of the file
+     * to print the notbook to this.console.println("\n\nEnter the file path to
+     * where the Notebook " + "is to be printed to."); String filePath =
+     * this.getInput();
+     *
+     * try { NotebookControl.printNotebook(filePath); } catch (Exception ex) {
+     * ErrorView.display("GameMenuView", ex.getMessage()); } }
+     *
+     */
 //    private void printCharacters() {
 //        // prompt for user to enter the filepath to print to
 //        this.console.println("================================================="

@@ -43,5 +43,8 @@ public class NotebookView extends View {
                 + "\n  •Clue two"
                 + "\n  •Clue three"
                 + "\nthe collected clues still need to be figured out");
+        
+        
+        
     }
 }

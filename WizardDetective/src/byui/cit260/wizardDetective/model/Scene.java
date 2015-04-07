@@ -27,8 +27,12 @@ public enum Scene implements Serializable {
             + "\nteam has already been through here.", "PKT"),
     Balcony("\nYou notice the large balcony and go to take a look. The view is"
             + "\namazing but you don't see anything of interest.", "BAL"),
-    GuestRoom("\nYou enter a generic hotel room. You might or might not"
-            + "\nhave seen something or someone. Fix this discription!", "GST"),
+    GuestRoomOne("\nYou enter a generic hotel room with two beds and a bathroom."
+            + "\nNothing is out of the ordinary so you move on.", "GST"),
+    GuestRoomTwo("\nYou enter a generic hotel room and you see a crumpled paper in"
+            + "\nthe otherwise spotless room. You pick it up and smooth it out.", "GST"),
+    GuestRoomThree("\nYou enter a generic hotel room and you see someone!"
+            + "\nYou walk up to them and ask them a few questions", "GST"),
     Parlor("\nYou walk into the main entrance of the hotel and see the"
             + "\nBell Boy by the door. You go up and talk to him.", "PAR"),
     FrontDesk("\nYou approach the front desk and strike up a conversation"

@@ -54,16 +54,17 @@ public class SearchAreaView extends View {
     @Override
     public boolean doAction(Object obj) {
         double[] inputValues = (double[]) obj;
-        try{
+        try {
             double distance = SearchAreaControl.calcSearchArea(inputValues[0], inputValues[1]);
             this.console.println(
                     "\n\n========================================================"
                     + "\n You radio your men and they cover a " + distance + " mile"
                     + "\n radius around the hotel. After a few tense minutes the "
                     + "\n team on 3rd and 4th report they have the man detained."
+                    + "\n\n You have solved the case and won the game!"
                     + "\n========================================================");
         } catch (SearchAreaControlException s) {
-                this.console.println(s.getMessage());
+            this.console.println(s.getMessage());
         }
         return true;
 

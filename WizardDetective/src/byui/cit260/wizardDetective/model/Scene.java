@@ -69,7 +69,7 @@ public enum Scene implements Serializable {
             + "\nAfter struggling for a few minutes he knocks you down dazed and"
             + "\nruns out the door. As you slowly limp after him you follow him"
             + "\nwith your sight and see him pull out of the garage in his fancy"
-            + "\ncar. -this is where SearchAreaView is called-", "SAF"),
+            + "\ncar. Please go to the game menu and enter X to contiue.", "SAF"),
     Janitor("\nWhere the cleaning supplies and the Janitor's office is", "JNR");
 
     //class instance variables

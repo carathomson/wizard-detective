@@ -26,9 +26,8 @@ public class GameMenuView extends View {
                 + "\n-----------------------------------------------------------"
                 + "\n| Game Menu                                               |"
                 + "\n-----------------------------------------------------------"
-                + "\nC - Notebook Clues"
-                + "\nN - Navigate"
-                + "\nM - Chase Man"
+                + "\nN - Notebook Clues"
+                + "\nM - Map"
                 + "\nP - Print Notebook"
                 + "\nZ - Print Map"
                 + "\nH - Help"
@@ -45,16 +44,16 @@ public class GameMenuView extends View {
 
         try {
             switch (choice) {
-                case 'C': // Look at list of clues
+                case 'N': // Look at list of clues
                     this.seeNotebook();
                     break;
-                case 'N':// move Locations
+                case 'M':// move Locations
                     this.displayNavigationView();
                     break;
                 case 'Z':// print Map
                     this.printNavigationView();
                     break;
-                case 'M': // chase man
+                case 'X': // chase man
                     this.chaseMan();
                     break;
                 // case 'P'://Print Notebook

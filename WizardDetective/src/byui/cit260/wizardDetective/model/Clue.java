@@ -43,9 +43,8 @@ public enum Clue implements Serializable {
         this.description = description;
         this.clueType = new Clue[6];
     }
-    
-    
 
+    
     public Clue[] getClueType() {
         return clueType;
     }

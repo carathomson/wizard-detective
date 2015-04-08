@@ -10,6 +10,7 @@ import byui.cit260.wizardDetective.model.Actor;
 import byui.cit260.wizardDetective.model.Clue;
 import byui.cit260.wizardDetective.model.Location;
 import byui.cit260.wizardDetective.model.Notebook;
+import byui.cit260.wizardDetective.model.Scene;
 import wizarddetective.WizardDetective;
 import java.awt.Point;
 
@@ -33,6 +34,7 @@ public class ActorControl {
         Location[][] locations = WizardDetective.getCurrentGame().getMap().getLocations();
         newLocation = locations[coordinates.x][coordinates.y];
         newLocation.setActor(actor);
+        newLocation.setVisited(true);
         Point oldCoordinates = actor.getLocation();
         Location oldLocation = locations[oldCoordinates.x][oldCoordinates.y];
         oldLocation.setActor(null);
@@ -44,6 +46,8 @@ public class ActorControl {
         Notebook notebook = WizardDetective.getCurrentGame().getNotebook();
         NotebookControl.addClue(clue, notebook);
 
+
+        
         return newLocation;
     }
 

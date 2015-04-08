@@ -49,7 +49,6 @@ public class GameMenuView extends View {
                     this.seeNotebook();
                     break;
                 case 'N':// move Locations
-
                     this.displayNavigationView();
                     break;
                 case 'Z':// print Map

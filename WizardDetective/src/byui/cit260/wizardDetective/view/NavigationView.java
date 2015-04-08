@@ -7,6 +7,7 @@ package byui.cit260.wizardDetective.view;
 
 import byui.cit260.wizardDetective.control.ActorControl;
 import byui.cit260.wizardDetective.exceptions.GameControlException;
+import byui.cit260.wizardDetective.model.Clue;
 import byui.cit260.wizardDetective.model.Location;
 import byui.cit260.wizardDetective.model.Scene;
 import java.awt.Point;
@@ -47,6 +48,7 @@ public class NavigationView extends View {
             Location newLocation = locations[row][column];
             Scene scene = newLocation.getScene();
             this.console.println(scene.getDescription());
+            Clue clue = newLocation.getClue();
 //        displayMap(WizardDetective.getCurrentGame().getMap());
         } catch (GameControlException ge) {
             this.console.println(ge.getMessage());

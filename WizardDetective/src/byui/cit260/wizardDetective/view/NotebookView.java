@@ -5,6 +5,8 @@
  */
 package byui.cit260.wizardDetective.view;
 
+import byui.cit260.wizardDetective.model.Clue;
+import java.util.ArrayList;
 import wizarddetective.WizardDetective;
 
 /**
@@ -14,22 +16,24 @@ import wizarddetective.WizardDetective;
 public class NotebookView extends View {
 
     public NotebookView() {
-        super();
+        super("\n\n----------------------------------------------"
+                + "\n|   Notebook Menu                            |"
+                + "\n----------------------------------------------"
+                + "\nN - open notebook and look at clues"
+                + "\nE - go back to game menu"
+                + "\n----------------------------------------------");
     }
 
     @Override
     public boolean doAction(Object obj) {
-
-        this.console.println(WizardDetective.getCurrentGame().getNotebook().getClues());
-        this.console.println("------------------------------------"
-                + "\nEnter E to exit back to game menu.");
-        
-        
         
         String value = (String) obj;
         char choice = value.charAt(0);
 
         switch (choice) {
+            case 'N': // see clue
+                this.displayClues();
+                return true;
             case 'E': // exit the program
                 return true;
             default:
@@ -40,5 +44,12 @@ public class NotebookView extends View {
     }
 
     private void displayClues() {
+        this.console.println("\nCLUES COLLECTED:");
+        ArrayList <Clue> clues = WizardDetective.getCurrentGame().getNotebook().getClues();
+        for (Clue clue : clues) {
+            this.console.println(clue.getDescription());
+        }
+        
+        
     }
 }
